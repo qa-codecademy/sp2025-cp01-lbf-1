@@ -389,6 +389,10 @@ function calculateTotal(items) {
    - Use `git checkout branch-name` to switch branches
    - Make sure to commit or stash your changes first
 
+## Useful links
+
+- [Learn Git Branching](https://learngitbranching.js.org/)
+
 ## Need Help?
 
 If you encounter any issues:
