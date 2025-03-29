@@ -1,13 +1,26 @@
+import { v4 as uuid } from "uuid";
+
 export default class Program {
-  constructor(name, dateFrom, dateTo, steps, description, instructors, price) {
+  constructor(
+    id = null,
+    name,
+    dateFrom,
+    dateTo,
+    steps,
+    description,
+    instructors,
+    price
+  ) {
+    this.id = id;
     this.name = name;
     this.dateFrom = dateFrom;
     this.dateTo = dateTo;
-    this.totalDays = 0;
+    this.totalDays = this.calculateTotalDays();
     this.steps = steps;
     this.description = description;
     this.instructors = instructors;
     this.price = price;
+    this.dateCreated = new Date();
   }
 
   get name() {
@@ -20,11 +33,13 @@ export default class Program {
   get dateFrom() {
     return this._dateFrom;
   }
+
   set dateFrom(value) {
-    const currentDate = value;
+    const currentDate = new Date();
     const inputDate = new Date(value);
 
     if (inputDate < currentDate) {
+      console.log(inputDate);
       throw new Error(
         "The selected date cannot be in the past, please enter a valid date"
       );
@@ -38,12 +53,12 @@ export default class Program {
   }
 
   set dateTo(value) {
-    const currentDate = this._dateFrom;
-    const inputDate = new Date(value);
-
-    if (!currentDate) {
+    if (!this._dateFrom || isNaN(this._dateFrom)) {
       throw new Error("Please set 'dateFrom' before setting 'dateTo'.");
     }
+
+    const currentDate = new Date(this._dateFrom);
+    const inputDate = new Date(value);
 
     if (inputDate < currentDate) {
       throw new Error("The 'dateTo' cannot be earlier than 'dateFrom'.");
@@ -108,22 +123,22 @@ export default class Program {
     const oneDay = 24 * 60 * 60 * 1000;
     this.totalDays = Math.round(Math.abs((endDate - startDate) / oneDay));
 
-    console.log(this.totalDays);
+    return this.totalDays;
   }
 }
 
-const today = new Date();
-const upcoming = new Date();
-upcoming.setDate(today.getDate() + 7);
+// const today = new Date();
+// const upcoming = new Date();
+// upcoming.setDate(today.getDate() + 7);
 
-let program = new Program(
-  "Некоја си програма",
-  today,
-  upcoming,
-  2,
-  "Програма за бизнис деца претприемачи од 6 до 18 години",
-  ["Eden", "Dva"],
-  225
-);
+// let program = new Program(
+//   "Некоја си програма",
+//   today,
+//   upcoming,
+//   2,
+//   "Програма за бизнис деца претприемачи од 6 до 18 години",
+//   ["Eden", "Dva"],
+//   225
+// );
 
-console.log(program);
+// console.log(program);
