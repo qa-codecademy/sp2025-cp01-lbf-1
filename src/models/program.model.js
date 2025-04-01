@@ -1,7 +1,5 @@
-import { v4 as uuid } from "uuid";
-
 export default class Program {
-  constructor(
+  constructor({
     id = null,
     name,
     dateFrom,
@@ -9,8 +7,8 @@ export default class Program {
     steps,
     description,
     instructors,
-    price
-  ) {
+    price,
+  }) {
     this.id = id;
     this.name = name;
     this.dateFrom = dateFrom;
