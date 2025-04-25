@@ -30,58 +30,6 @@ export default class ProgramService {
     return foundProgram;
   }
 
-  static create(data) {
-    const programs = ProgramService.getAll();
-    const { name, dateFrom, dateTo, steps, description, instructors, price } =
-      data;
-
-    const newProgram = new Program({
-      id: uuid(),
-      name,
-      dateFrom,
-      dateTo,
-      steps,
-      description,
-      instructors,
-      price,
-    });
-
-    programs.push(newProgram);
-
-    localStorage.setItem("programs", JSON.stringify(programs));
-
-    return newProgram;
-  }
-
-  static update(id, data) {
-    const programs = ProgramService.getAll();
-    const index = programs.findIndex((program) => program.id === id);
-
-    if (index < 0) {
-      throw new Error("Program was not found.");
-    }
-
-    programs[index] = { ...programs[index], ...data };
-
-    localStorage.setItem("programs", JSON.stringify(programs));
-
-    return programs[index];
-  }
-
-  static delete(id) {
-    const programs = ProgramService.getAll();
-
-    const updatedPrograms = programs.filter((program) => program.id !== id);
-
-    if (programs.length === updatedPrograms.length) {
-      throw new Error("Program was not found.");
-    }
-
-    localStorage.setItem("programs", JSON.stringify(updatedPrograms));
-
-    return { message: "Program deleted successfully" };
-  }
-
   static sortPrograms(direction) {
     const programs = ProgramService.getAll();
     let sorted = [];
