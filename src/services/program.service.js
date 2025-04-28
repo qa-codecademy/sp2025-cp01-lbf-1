@@ -1,6 +1,4 @@
-import Program from "../models/program.model.js";
 import PROGRAMS from "../data/program.data.js";
-import { v4 as uuid } from "https://jspm.dev/uuid";
 
 export default class ProgramService {
   static getAll() {
@@ -30,21 +28,30 @@ export default class ProgramService {
     return foundProgram;
   }
 
-  static sortPrograms(direction) {
+  static sortPrograms(direction, sortBy) {
     const programs = ProgramService.getAll();
     let sorted = [];
-    if (direction === "asc") {
-      sorted = [...programs].sort((a, b) => {
-        return new Date(a.dateCreated) - new Date(b.dateCreated);
-      });
-    } else if (direction === "desc") {
-      sorted = [...programs].sort((a, b) => {
-        return new Date(b.dateCreated) - new Date(a.dateCreated);
-      });
+    if (sortBy === "name") {
+      if (direction === "asc") {
+        sorted = [...programs].sort((a, b) =>
+          a.name.localeCompare(b.name, "mk", { sensitivity: "base" })
+        );
+      } else if (direction === "desc") {
+        sorted = [...programs].sort((a, b) =>
+          b.name.localeCompare(a.name, "mk", { sensitivity: "base" })
+        );
+      }
+    } else if (sortBy === "price") {
+      if (direction === "asc") {
+        sorted = [...programs].sort((a, b) => a.price - b.price);
+      } else if (direction === "desc") {
+        sorted = [...programs].sort((a, b) => b.price - a.price);
+      }
     } else {
       sorted = programs;
     }
     localStorage.setItem("programs", JSON.stringify(sorted));
+    return sorted;
   }
 }
 
@@ -77,5 +84,6 @@ export default class ProgramService {
 // ProgramService.sortPrograms("asc");
 
 console.log(ProgramService.getAll());
+console.log(ProgramService.sortPrograms());
 
 // console.log(ProgramService.getById("123e4567-e89b-12d3-a456-426614174000"));
