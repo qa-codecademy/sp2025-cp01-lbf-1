@@ -11,10 +11,98 @@
       rel="stylesheet"
     />
     <title>Услуги | LittleBig Founders</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="bg-[#D9DCE2] font-bold" style="font-family: 'M PLUS Rounded 1c', sans-serif;">
+  <body class="bg-[#D9DCE2] font-bold overflow-y-auto h-screen" style="font-family: 'M PLUS Rounded 1c', sans-serif;">
     <!-- navbar -->
-    <nav></nav>
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="../docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="./index.html">ДОМА</a></li>
+          <li><a href="#">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="#">ПРЕДАВАЧИ</a></li>
+          <li><a href="#">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="./services.html">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="#" class="hover:text-blue-600">ДОМА</a>
+      <a href="#" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОТАКТ</a>
+    </div>
     <!-- header -->
      <main>
       <div class="header relative mt-20">
@@ -36,31 +124,31 @@
         <p class="mt-1 tracking-wide mx-5">Практични проекти, тимски предизвици и креативни работилници</p>
         <button class="mt-8 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#CC4541] text-center" title="Повеќе за Кампови"><a href="#">повеќе</a></button>
       </article>
-      <div class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white h-72 p-3">
+      <div class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3">
         <img src="./img/birthday-cake.png" alt="Birthday Cake Icon" class="w-14 relative left-5">
         <h1 class="relative left-5 mt-1 text-2xl text-[#A26702]">РОДЕНДЕНИ</h1>
         <p class="mt-9 tracking-wide mx-5">Едукативни и забавни роденденски прослави</p>
         <button class="mt-14 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#A26702] text-center" title="Повеќе за Родендени"><a href="#">повеќе</a></button>
       </div>
-      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl  mx-auto bg-white h-72 p-3">
+      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl  mx-auto bg-white p-3">
         <img src="./img/financial-growth.png" alt="Financial Growth Icon" class="w-14 relative left-5">
         <h1 class="relative left-5 mt-1 text-2xl text-[#44597A] w-[17rem]">ДЕТСКИ ИНВЕСТИЦИСКИ ПЛАН</h1>
         <p class="mt-4 tracking-wide mx-5 w-[18rem]">Пат кон финансиска самостојност - преку учење, штедење и инвестирање од детството</p>
         <button class="mt-5 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#44597A] text-center" title="Повеќе за Детски Инвестицки План"><a href="#">повеќе</a></button>
       </article>
-      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white h-72 p-3">
+      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3">
         <img src="./img/group.png" alt="Group Icon" class="w-14 relative left-5">
         <h1 class="relative left-5 mt-1 text-2xl text-[#A26702]">LITTLEBIG FOUNDERS КЛУБ</h1>
         <p class="mt-3 tracking-wide mx-5 w-[17rem]">Заедница што нуди континуирано учење, нови предизвици и развој со менторства и заеднички проекти</p>
         <button class="mt-4 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#A26702] text-center" title="Повеќе за Клуб"><a href="#">повеќе</a></button>
       </article>
-      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white h-72 p-3">
+      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3">
         <img src="./img/seminar.png" alt="Seminar Icon" class="w-14 relative left-5">
         <h1 class="relative left-5 mt-1 text-2xl text-[#44597A]">СЕМИНАРИ</h1>
         <p class="mt-10 tracking-wide mx-3 w-[18rem]">Инспиративни семинари што нудат практични вештини и нови перспективи за деца, родители и млади претприемачи</p>
         <button class="mt-5 mx-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#44597A] text-center" title="Повеќе за Семинари"><a href="#">повеќе</a></button>
       </article>
-      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#CC4541] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white h-72 p-3">
+      <article class="rounded-3xl w-[20rem] h-[21rem] border border-[#CC4541] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3">
         <img src="./img/parents.png" alt="Parents Icon" class="w-14 relative left-5">
         <h1 class="relative left-5 mt-1 text-2xl text-[#CC4541]">РОДИТЕЛСКИ КРУЖОК</h1>
         <p class="mt-9 tracking-wide mx-5 w-[17rem]">Инспиративни обуки за родители кои сакаат активно да учествуваат во успехот на своите деца</p>
@@ -70,5 +158,6 @@
      </main>
     <!-- footer -->
     <footer></footer>
+    <script src="./script.js"></script>
   </body>
 </html>
