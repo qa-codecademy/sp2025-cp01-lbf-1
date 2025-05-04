@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <title>Предавачи</title>
+  </head>
+  <body
+    class="bg-[#D9DCE2] font-bold"
+    style="font-family: 'M PLUS Rounded 1c', sans-serif"
+  >
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="../docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="#">ДОМА</a></li>
+          <li><a href="#">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="lecturers.html">ПРЕДАВАЧИ</a></li>
+          <li><a href="#">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="#">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="#" class="hover:text-blue-600">ДОМА</a>
+      <a href="#" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОТАКТ</a>
+    </div>
+    <main>
+      <h1
+        class="text-center m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88]"
+      >
+        ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
+      </h1>
+      <div
+        class="text-center m-10 text-base md:text-lg lg:text-xl leading-relaxed text-[#1F2C3D]"
+      >
+        Во <span class="text-[#000000]">LittleBig Founders</span>, веруваме дека
+        вистинската промена започнува со квалитетно менторство.
+        <br />
+        <br />
+        Запознај го нашиот тим што составен од искусни претприемачи, едукатори,
+        ментори и креативци кои ја споделуваат истата
+        <span class="text-[#0082F3]">мисија</span> – да ги инспирираат и
+        поддржат младите умови во нивното патување кон личен и професионален
+        раст.
+      </div>
+      <!-- Lecturers -->
+      <section
+        class="flex flex-wrap justify-center md:justify-between gap-10 m-10 md:m-20"
+      >
+        <!-- Card 1 -->
+        <a href="#card01">
+          <div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_3dbce1d1f2cb45cd8170554ce95dbffc~mv2.png"
+              class="relative w-60 h-80 object-cover rounded-lg z-10"
+              alt="Јана Џеков"
+              style="box-shadow: 8px 8px 10px #cc4541"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#CC4541] text-base md:text-lg lg:text-xl leading-relaxed"
+              >
+                ЈАНА ЏЕКОВ
+              </p>
+              <p>Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 2 -->
+        <a href="#card02">
+          <div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_23d63d3e5b2d4b919751098bf528cd64~mv2.png"
+              class="relative w-60 h-80 object-cover rounded-lg z-10"
+              alt="Виктор Митевски"
+              style="box-shadow: 8px 8px 10px #44597a"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#44597A] text-base md:text-lg lg:text-xl leading-relaxed"
+              >
+                ВИКТОР МИТЕВСКИ
+              </p>
+              <p>Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 3 -->
+        <a href="#card03"
+          ><div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_b2cb650bf8cf44dba89b14f3d6b8b895~mv2.png"
+              class="relative w-60 h-80 object-cover rounded-lg z-10"
+              alt="Деспина Стојановска"
+              style="box-shadow: 8px 8px 10px #a26702"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#A26702] text-base md:text-lg lg:text-xl leading-relaxed"
+              >
+                ДЕСПИНА СТОЈАНОВСКА
+              </p>
+              <p>Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 4 -->
+        <a href="#card04"
+          ><div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_6cb74fb4b8f643f3acfc7de6314f6566~mv2.jpeg"
+              class="relative w-60 h-80 object-cover rounded-lg z-10"
+              alt="Елена Хаџи Пецова"
+              style="box-shadow: 8px 8px 10px #387b88"
+            />
+            <div class="relative text-center top-5">
+              <p
+                class="text-[#387B88] text-base md:text-lg lg:text-xl leading-relaxed"
+              >
+                ЕЛЕНА ХАЏИ ПЕЦОВА
+              </p>
+              <p>Главен Предавач</p>
+            </div>
+          </div></a
+        >
+      </section>
+      <h1
+        class="text-center mt-40 mb-10 text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2C3D]"
+      >
+        ПРЕДАВАЧИ
+      </h1>
+      <!-- ЈАНА ЏЕКОВ -->
+      <div class="flex flex-col gap-10">
+        <section id="card01" class="p-6 max-w-5xl mx-auto">
+          <div
+            class="text-[#2B2B2B] text-justify leading-relaxed text-sm md:text-base lg:text-lg clear-both"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_3dbce1d1f2cb45cd8170554ce95dbffc~mv2.png"
+              alt="Јана Џеков"
+              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              style="box-shadow: 8px 8px 10px #cc4541"
+            />
+            <p class="text-pretty">
+              <span
+                class="text-[#CC4541] text-xl md:text-2xl lg:text-3xl leading-relaxed"
+              >
+                ЈАНА ЏЕКОВ
+              </span>
+              е специјалист за човечки ресурси со долгогодишно искуство во
+              талент менаџмент, регрутација, организациски развој и обука на
+              вработени. Работи како HR специјалист и е одговорна за процесите
+              на вработување, развој на човечкиот капитал и имплементација на HR
+              стратегии за подобрување на ангажираноста и продуктивноста на
+              тимот.
+            </p>
+            <p class="mt-4 text-pretty">
+              Покрај работата во областа на човечките ресурси, Јана има значајно
+              искуство во образованието и работа со деца. Била професор по
+              англиски јазик во приватното училиште IPS, како и активен предавач
+              и претприемач во семејниот бизнис – Училиште за англиски јазик,
+              каде што работела на наставни методологии и креативни пристапи во
+              учењето.
+            </p>
+            <p class="mt-4 text-pretty">
+              Јана е магистер по европски студии за интеграција и комуникации на
+              Универзитетот „Св. Кирил и Методиј“ во Скопје, а дополнително се
+              усовршила во областа на дигиталниот маркетинг преку програмата на
+              Semos Digital Marketing Academy. Нејзината кариера претставува
+              уникатна комбинација на човечки ресурси, едукација и комуникација,
+              што ѝ овозможува да даде значаен придонес во развојот на младите
+              кадри, корпоративната комуникација и образовните процеси.
+            </p>
+          </div>
+        </section>
+        <!-- ВИКТОР МИТЕВСКИ -->
+        <section id="card02" class="p-6 max-w-5xl mx-auto">
+          <div
+            class="text-[#2B2B2B] text-justify leading-relaxed text-sm md:text-base lg:text-lg clear-both"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_23d63d3e5b2d4b919751098bf528cd64~mv2.png"
+              alt="Виктор Митевски"
+              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              style="box-shadow: 8px 8px 10px #44597a"
+            />
+            <p class="text-pretty">
+              <span
+                class="text-[#44597A] text-xl md:text-2xl lg:text-3xl leading-relaxed"
+              >
+                ВИКТОР МИТЕВСКИ
+              </span>
+              е економист, стартап коуч и ментор со долгогодишно искуство во
+              поддршка на претприемачи и развој на бизнис екосистемот. Извршен
+              директор на Здружението за истражување и анализи – ЗМАИ и
+              коосновач на Startup Academy, каде што менторирал повеќе од 70
+              млади претприемачи во развојот на нивните бизнис идеи.
+            </p>
+            <p class="mt-4 text-pretty">
+              Работел како консултант за Обединетите Нации (UNFPA) и Светска
+              банка, фокусирајќи се на економски анализи, јавни финансии и
+              политики за одржлив развој. Неговото искуство вклучува работа со
+              државни институции во областите на економска стратегија, отворени
+              податоци и иновации. Тој е поранешен советник на Министер за
+              финансии.
+            </p>
+            <p class="mt-4 text-pretty">
+              Стекнал магистерска диплома по применета економија од Texas A&M
+              University и активно придонесува кон создавање претприемничка
+              средина преку тренинзи, менторство и стратешки анализи.
+            </p>
+          </div>
+        </section>
+        <!-- ДЕСПИНА СТОЈАНОВСКА -->
+        <section id="card03" class="p-6 max-w-5xl mx-auto">
+          <div
+            class="text-[#2B2B2B] text-justify leading-relaxed text-sm md:text-base lg:text-lg clear-both"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_b2cb650bf8cf44dba89b14f3d6b8b895~mv2.png"
+              alt="Деспина Стојановска"
+              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              style="box-shadow: 8px 8px 10px #a26702"
+            />
+            <p class="text-pretty">
+              <span
+                class="text-[#A26702] text-xl md:text-2xl lg:text-3xl leading-relaxed"
+              >
+                ДЕСПИНА СТОЈАНОВСКА
+              </span>
+              е психолог и психотерапевт со долгогодишно искуство во работа со
+              деца, родители и ранливи заедници. Нејзината практика опфаќа
+              индивидуална, семејна и групна терапија, со фокус на личен развој,
+              психолошка поддршка и ментално здравје. Таа е носител на
+              најзначајната европска лиценца за психотерапија, што ја
+              позиционира како еден од водечките професионалци во својата
+              област. Нејзината работа е особено насочена кон превенција и
+              интервенција кај децата и младите, а активно соработува со
+              родители за подобрување на семејната динамика и родителските
+              вештини.
+            </p>
+            <p class="mt-4 text-pretty">
+              Деспина е дипломиран психолог на Универзитетот „Св. Кирил и
+              Методиј“ и магистрант по Комуникации. Поседува сертификат за
+              Професионален обучувач на возрасни издаден од МОН. Во областа на
+              психотерапија завршила Интегративен пристап, Трансакциска анализа
+              и Системска и семејна психотерапија. Моментално е тренер по СС
+              Психотерапија. Таа е редовен гостин во медиумите на теми поврзани
+              со психологијата. Во изминатите години работела како
+              психотерапевт, обучувач и тренер во организации како Хопс, Прв
+              семеен центар на град Скопје, СОС Детско Село, Комора на
+              психолози, Нансен дијалог центар, каде што одржува обуки за
+              ментално здравје, справување со стрес, личен развој и тимска
+              работа. Како дел од кампањата против врсничко насилство, таа се
+              залага за подигнување на свеста, едукација и креирање безбедна
+              средина за децата. Со својот посветен пристап, широка експертиза и
+              долгогодишно искуство, таа активно работи на подобрување на
+              менталното здравје, личниот раст и психолошката благосостојба на
+              децата, младите и нивните семејства.
+            </p>
+          </div>
+        </section>
+        <!-- ЕЛЕНА ХАЏИ ПЕЦОВА -->
+        <section id="card04" class="p-6 max-w-5xl mx-auto">
+          <div
+            class="text-[#2B2B2B] text-justify leading-relaxed text-sm md:text-base lg:text-lg clear-both"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_6cb74fb4b8f643f3acfc7de6314f6566~mv2.jpeg"
+              alt="Елена Хаџи Пецова"
+              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              style="box-shadow: 8px 8px 10px #387b88"
+            />
+            <p class="text-pretty">
+              <span
+                class="text-[#387B88] text-xl md:text-2xl lg:text-3xl leading-relaxed"
+              >
+                ЕЛЕНА ХАЏИ ПЕЦОВА
+              </span>
+              е менаџер на CEED Hub Skopje, координатор на CEED Business Angels
+              Club со кој е член на EBAN (European Business Angel Network) и
+              член на Извршниот одбор на Фондацијата CEED Македонија. Со над 15
+              години искуство во поддршка на бизниси, таа е активен градител на
+              стартап екосистемот во Македонија, води програми за инвестициона
+              подготвеност, пред-акцелерација и акцелерација, како и процеси за
+              финансиска и нефинансиска поддршка на стартапи.
+            </p>
+            <p class="mt-4 text-pretty">
+              Покрај тоа, Елена е сертифициран консултант за стартапи од EBRD
+              (Cambridge Methodology) и обучувач за Impact Management and
+              Measurement методологија (EVPA). Како консултант на Фондот за
+              иновации и технолошки развој (ФИТР), таа има работено со повеќе од
+              200 компании во областа на корпоративни иновации, пристап до
+              финансии и развој на бизнис модели, помагајќи им да обезбедат
+              финансиска поддршка за своите иновативни проекти. Иницијатор и
+              основач на македонското учество во регионалната мрежа за
+              поврзување на стартапи и инвеститори – ADRIATIC INVESTORS.
+            </p>
+            <p class="mt-4 text-pretty">
+              Со долгогодишно искуство во управување со проекти, менторство,
+              инвестициско посредување и развој на пазарен пристап, Елена
+              активно придонесува кон создавање одржлива и динамична
+              претприемачка заедница. Како предавач и главен фасилитатор во
+              повеќе меѓународни и локални програми, таа соработувала со над 40
+              странски експерти, споделувајќи знаење и поттикнувајќи раст на
+              нови генерации претприемачи.​​
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
