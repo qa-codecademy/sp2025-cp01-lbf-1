@@ -13,7 +13,7 @@
     <title>Предавачи</title>
   </head>
   <body
-    class="bg-[#D9DCE2] font-bold"
+    class="bg-[#D9DCE2] font-bold overflow-y-auto h-screen"
     style="font-family: 'M PLUS Rounded 1c', sans-serif"
   >
     <nav
@@ -34,10 +34,10 @@
         <ul
           class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
         >
-          <li><a href="#">ДОМА</a></li>
+          <li><a href="./index.html">ДОМА</a></li>
           <li><a href="#">ЗА НАС</a></li>
           <li><a href="#">ПРОГРАМИ</a></li>
-          <li><a href="lecturers.html">ПРЕДАВАЧИ</a></li>
+          <li><a href="../src/lecturersPage.html">ПРЕДАВАЧИ</a></li>
           <li><a href="#">МЕТОДОЛОГИЈА</a></li>
           <li><a href="#">УСЛУГИ</a></li>
           <li><a href="#">КОНТАКТ</a></li>
@@ -94,24 +94,26 @@
     <!-- Mobile  -->
     <div
       id="mobileMenu"
-      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex flex-col transition-all duration-500 ease-in-out"
     >
       <a href="#" class="hover:text-blue-600">ДОМА</a>
       <a href="#" class="hover:text-blue-600">ЗА НАС </a>
       <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
-      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="../src/lecturersPage.html" class="hover:text-blue-600"
+        >ПРЕДАВАЧИ</a
+      >
       <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
       <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
-      <a href="#" class="hover:text-blue-600">КОТАКТ</a>
+      <a href="#" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
     <main>
       <h1
-        class="text-center m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88]"
+        class="text-center -mt-64 md:m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88]"
       >
         ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
       </h1>
       <div
-        class="text-center m-10 text-base md:text-lg lg:text-xl leading-relaxed text-[#1F2C3D]"
+        class="text-center m-16 text-base md:text-lg lg:text-xl leading-relaxed text-[#1F2C3D]"
       >
         Во <span class="text-[#000000]">LittleBig Founders</span>, веруваме дека
         вистинската промена започнува со квалитетно менторство.
@@ -221,7 +223,7 @@
         ПРЕДАВАЧИ
       </h1>
       <!-- ЈАНА ЏЕКОВ -->
-      <div class="flex flex-col gap-10">
+      <div class="flex flex-wrap flex-col gap-10 ml-10 mr-10">
         <section id="card01" class="p-6 max-w-5xl mx-auto">
           <div
             class="text-[#2B2B2B] text-justify leading-relaxed text-sm md:text-base lg:text-lg clear-both"
@@ -229,7 +231,7 @@
             <img
               src="https://static.wixstatic.com/media/4800e5_3dbce1d1f2cb45cd8170554ce95dbffc~mv2.png"
               alt="Јана Џеков"
-              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              class="block mx-auto md:float-left w-40 h-60 object-cover rounded-lg md:mr-5 mb-5 mt-4"
               style="box-shadow: 8px 8px 10px #cc4541"
             />
             <p class="text-pretty">
@@ -272,7 +274,7 @@
             <img
               src="https://static.wixstatic.com/media/4800e5_23d63d3e5b2d4b919751098bf528cd64~mv2.png"
               alt="Виктор Митевски"
-              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              class="block mx-auto md:float-left w-40 h-60 object-cover rounded-lg md:mr-5 mb-5 mt-4"
               style="box-shadow: 8px 8px 10px #44597a"
             />
             <p class="text-pretty">
@@ -310,7 +312,7 @@
             <img
               src="https://static.wixstatic.com/media/4800e5_b2cb650bf8cf44dba89b14f3d6b8b895~mv2.png"
               alt="Деспина Стојановска"
-              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              class="block mx-auto md:float-left w-40 h-60 object-cover rounded-lg md:mr-5 mb-5 mt-4"
               style="box-shadow: 8px 8px 10px #a26702"
             />
             <p class="text-pretty">
@@ -359,7 +361,7 @@
             <img
               src="https://static.wixstatic.com/media/4800e5_6cb74fb4b8f643f3acfc7de6314f6566~mv2.jpeg"
               alt="Елена Хаџи Пецова"
-              class="float-left w-40 h-60 object-cover rounded-lg mr-5 mb-5 mt-4"
+              class="block mx-auto md:float-left w-40 h-60 object-cover rounded-lg md:mr-5 mb-5 mt-4"
               style="box-shadow: 8px 8px 10px #387b88"
             />
             <p class="text-pretty">
