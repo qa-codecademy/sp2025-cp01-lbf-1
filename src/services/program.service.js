@@ -55,35 +55,5 @@ export default class ProgramService {
   }
 }
 
-// ProgramService.initializeStorage();
-
-// ProgramService.update("123e4567-e89b-12d3-a456-426614174000", {
-//   _name: "How To Create Stuff",
-//   _dateFrom: "2026-07-05",
-//   _dateTo: "2026-07-08",
-//   _steps: 4,
-//   _description: "Learn the agile framework for project management",
-//   _instructors: ["Sirius Black"],
-//   _price: 600,
-//   dateCreated: 20,
-// });
-
-// // ProgramService.create({
-// //   name: "How To Create More Stuff",
-// //   dateFrom: "2026-07-05",
-// //   dateTo: "2026-07-08",
-// //   steps: 4,
-// //   description: "Learn the agile framework for project management",
-// //   instructors: ["Sirius Potter Black"],
-// //   price: 600,
-// //   dateCreated: 20,
-// // });
-
-// ProgramService.delete("123e4567-e89b-12d3-a456-426614174010");
-
-// ProgramService.sortPrograms("asc");
-
-console.log(ProgramService.getAll());
-console.log(ProgramService.sortPrograms());
-
-// console.log(ProgramService.getById("123e4567-e89b-12d3-a456-426614174000"));
+// ProgramService.getAll();
+// ProgramService.sortPrograms("desc", "price");
