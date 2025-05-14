@@ -17,8 +17,11 @@ export default class ProgramService {
     }
   }
 
-  static getById(id) {
+  static getById(programId) {
     const programs = ProgramService.getAll();
+
+    const id = programId.toString();
+
     const foundProgram = programs.find((program) => program.id === id);
 
     if (!foundProgram) {
@@ -26,6 +29,16 @@ export default class ProgramService {
     }
 
     return foundProgram;
+  }
+
+  static generateShortDescription(charNum, programId) {
+    const id = programId.toString();
+
+    const program = this.getById(id);
+
+    program.shortDescription = program.description.slice(0, charNum);
+
+    return program.shortDescription;
   }
 
   static sortPrograms(direction, sortBy) {
@@ -56,4 +69,6 @@ export default class ProgramService {
 }
 
 // ProgramService.getAll();
+// ProgramService.getById(2);
 // ProgramService.sortPrograms("desc", "price");
+// ProgramService.generateShortDescription(150, 2);

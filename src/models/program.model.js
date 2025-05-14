@@ -18,7 +18,7 @@ export default class Program {
     this.dateTo = dateTo;
     this.totalDays = totalDays;
     this.description = description;
-    this.shortDescription = `${this.description.slice(0, 150)} ...`;
+    this.shortDescription = shortDescription;
     this.instructors = instructors;
     this.price = price;
   }
