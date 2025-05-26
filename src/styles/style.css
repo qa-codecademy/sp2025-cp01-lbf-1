@@ -12,6 +12,10 @@ nav a {
   text-decoration: none;
 }
 
+nav {
+  z-index: 9999;
+}
+
 nav a::after {
   content: "";
   position: absolute;
