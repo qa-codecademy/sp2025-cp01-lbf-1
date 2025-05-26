@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LittleBig Founders е иновативен проект посветен на развој на претприемачкиот дух кај децата и младите. Со 15+ години експертиза во поддршка на бизниси и стартапи, нашата мисија е да ги оспособиме младите умови да размислуваат критички, да решаваат проблеми и да ги претворат своите идеи во реалност."
+    />
+    <meta
+      name="keywords"
+      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
+    />
+
+    <title>LittleBig Founders</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-rounded-mplus {
+        font-family: "Rounded Mplus 1c", sans-serif;
+        font-weight: 700;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#D9DCE2] overflow-y-auto h-screen">
+    <!-- Navbar -->
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="./img/logo.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="#">ДОМА</a></li>
+          <li><a href="#">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="#">ПРЕДАВАЧИ</a></li>
+          <li><a href="#">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="#">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="#" class="hover:text-blue-600">ДОМА</a>
+      <a href="#" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОТАКТ</a>
+    </div>
+
+    <!-- Home page -->
+    <!-- Introduction -->
+    <div class="min-h-screen flex items-center gap-x-2 md:gap-x-6 lg:gap-x-32">
+      <div>
+        <div class="max-w-4xl ml-[10vw] p-3">
+          <h1
+            class="font-rounded-mplus text-[#44597A] text-[5rem] tracking-tight leading-tight font-bold text-left"
+          >
+            ШКОЛО ЗА БИЗНИС
+          </h1>
+          <h1
+            class="font-rounded-mplus text-[#387b88] text-[5rem] tracking-tight leading-tight font-bold text-left"
+          >
+            ЗА ДЕЦА И МЛАДИ
+          </h1>
+        </div>
+        <div class="max-w-4xl ml-[10vw] p-3">
+          <h2
+            class="font-rounded-mplus text-[#1F2C3D] text-2xl tracking-tight leading-normal font-bold text-left"
+          >
+            За мали умови со големи идеи!
+          </h2>
+          <h2
+            class="font-rounded-mplus text-[#1F2C3D] text-2xl tracking-tight leading-normal font-bold text-left"
+          >
+            Инспирирај се, учи, создавај и остави свој белег во светот!
+          </h2>
+          <h2
+            class="font-rounded-mplus text-[#1F2C3D] text-2xl tracking-tight leading-normal font-bold text-left"
+          >
+            Започни ја својата бизнис авантура денес!
+          </h2>
+          <div class="mt-10">
+            <a href=""
+              ><button
+                class="font-rounded-mplus bg-[#CC4541] text-white p-4 rounded-[20px] w-[65%] h-[30%] min-w-[100px] max-w-[150px] flex flex-col items-center justify-center text-center tracking-wide md:hover:scale-110"
+              >
+                ПРИЈАВИ СЕ
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="relative w-72 overflow-hidden rounded-tl-[35px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px] shadow-lg border-4 border-[#397c86]"
+        >
+          <img
+            src="./img/home-page-img.jpg"
+            alt="Деца учат бизнис"
+            class="h-96 object-cover rounded-tl-[35px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px]"
+          />
+        </div>
+        <div
+          class="font-rounded-mplus absolute top-[55%] right-[28%] bg-[#397c86] text-white p-4 rounded-[20px] w-[65%] h-[30%] min-w-[100px] max-w-[150px] flex flex-col items-center justify-center text-center"
+        >
+          <div class="text-[2.2em] font-bold leading-tight">15</div>
+          <div class="text-base">години</div>
+          <div class="text-sm mt-2 leading-snug">
+            искуство<br />
+            во градење<br />
+            успешни приказни
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-0"></div>
+
+    <!-- Programs -->
+    <main
+      class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center"
+    >
+      <!-- Header -->
+      <div class="header -mt-52 md:mt-12">
+        <h1 class="text-center text-[#387B88] text-4xl px-2 font-rounded-mplus">
+          ПРОГРАМИ
+          <span class="text-[#44597A]">ШТО ГО РАЗВИВААТ</span>
+          ПОТЕНЦИЈАЛОТ
+        </h1>
+      </div>
+
+      <!-- Cards-->
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 px-10 lg:px-24 text-white mt-20 tracking-wide justify-items-center"
+      >
+        <!-- Card 1 -->
+        <article
+          class="bg-[#CC4541] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+        >
+          <div class="relative mt-2" id="image1">
+            <img
+              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
+              src="./img/business-kids(6-9 years).jpg"
+              alt="business kids (6-9 years) image"
+            />
+
+            <div
+              class="absolute top-2 right-3 z-10 bg-[#CC4541] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
+              id="program1-ageLimit"
+            ></div>
+          </div>
+
+          <div class="text-center mt-2 mb-2">
+            <h3 class="mb-1 text-xl" id="program1-title"></h3>
+            <p
+              class="text-xs leading-5 mx-5 font-[500] tracking-wide"
+              id="program1-description"
+            ></p>
+            <button id="btn-1">▼</button>
+          </div>
+
+          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
+            <p id="program1-price"></p>
+            <a
+              href="#"
+              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#CC4541]"
+            >
+              ПРИЈАВИ СЕ
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="bg-[#A26702] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+        >
+          <div class="relative mt-2" id="image2">
+            <img
+              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
+              src="./img/business-kids(10-14 years).jpg"
+              alt="business kids (10-14 years) image"
+            />
+            <div
+              class="absolute top-2 right-3 z-10 bg-[#A26702] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
+              id="program2-ageLimit"
+            ></div>
+          </div>
+
+          <div class="text-center mt-2 mb-2" id="description-div">
+            <h3 class="mb-1 text-xl" id="program2-title"></h3>
+            <p
+              class="text-xs leading-5 mx-5 font-[500]"
+              id="program2-description"
+            ></p>
+            <button id="btn-2">▼</button>
+          </div>
+
+          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
+            <p id="program2-price"></p>
+            <a
+              href="#"
+              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#A26702]"
+            >
+              ПРИЈАВИ СЕ
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="bg-[#44597A] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center md:col-span-2 xl:col-span-1 duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+        >
+          <div class="relative mt-2" id="image3">
+            <img
+              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
+              src="./img/business-kids(15-18 years).jpg"
+              alt="business kids (15-18) image"
+            />
+            <div
+              class="absolute top-2 right-3 z-10 bg-[#44597A] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
+              id="program3-ageLimit"
+            ></div>
+          </div>
+
+          <div class="text-center mt-2 mb-2">
+            <h3 class="mb-1 text-xl" id="program3-title"></h3>
+            <p
+              class="text-xs leading-5 mx-5 font-[500]"
+              id="program3-description"
+            ></p>
+            <button id="btn-3">▼</button>
+          </div>
+
+          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
+            <p id="program3-price"></p>
+            <a
+              href="#"
+              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#44597A]"
+            >
+              ПРИЈАВИ СЕ
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-5"></div>
+
+    <section>
+      <!-- Lecturers -->
+      <h1
+        class="text-center -mt-64 md:m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88] font-rounded-mplus"
+      >
+        ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
+      </h1>
+      <section
+        class="flex flex-wrap justify-center md:justify-between gap-20 m-10 md:m-20"
+      >
+        <br />
+        <!-- Card 1 -->
+        <a href="#card01">
+          <div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_3dbce1d1f2cb45cd8170554ce95dbffc~mv2.png"
+              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#cc4541]"
+              alt="Јана Џеков"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#CC4541] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+              >
+                ЈАНА ЏЕКОВ
+              </p>
+              <br />
+              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 2 -->
+        <a href="#card02">
+          <div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_23d63d3e5b2d4b919751098bf528cd64~mv2.png"
+              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#44597a]"
+              alt="Виктор Митевски"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#44597A] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+              >
+                ВИКТОР МИТЕВСКИ
+              </p>
+              <br />
+              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 3 -->
+        <a href="#card03"
+          ><div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_b2cb650bf8cf44dba89b14f3d6b8b895~mv2.png"
+              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#A26702]"
+              alt="Деспина Стојановска"
+            />
+            <div class="text-center relative top-5">
+              <p
+                class="text-[#A26702] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+              >
+                ДЕСПИНА СТОЈАНОВСКА
+              </p>
+              <br />
+              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+            </div>
+          </div></a
+        >
+
+        <!-- Card 4 -->
+        <a href="#card04"
+          ><div
+            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+          >
+            <img
+              src="https://static.wixstatic.com/media/4800e5_6cb74fb4b8f643f3acfc7de6314f6566~mv2.jpeg"
+              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#387B88]"
+              alt="Елена Хаџи Пецова"
+            />
+            <div class="relative text-center top-5">
+              <p
+                class="text-[#387B88] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+              >
+                ЕЛЕНА ХАЏИ ПЕЦОВА
+              </p>
+              <br />
+              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+            </div>
+          </div></a
+        >
+      </section>
+      <div class="flex justify-center">
+        <a href="./lecturersPage.html"
+          ><button
+            class="font-rounded-mplus bg-[#CC4541] text-white p-4 rounded-[20px] w-full md:hover:scale-110"
+          >
+            ДОЗНАЈ ПОВЕЌЕ
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+
+    <!-- Services -->
+    <section>
+      <div class="text-center -mt-64 md:m-20">
+        <h1
+          class="text-center text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
+        >
+          <span class="text-[#387B88]">Услуги</span> што инспирираат, едуцираат
+          и поврзуваат
+        </h1>
+        <!-- secondary header -->
+        <p
+          class="text-center text-2xl text-[#44597A] max-w-4xl mx-auto mt-10 font-rounded-mplus"
+        >
+          Во <span class="text-[#1F2C3D]">LittleBig Founders</span> создаваме
+          искуства што инспирираат, едуцираат и поврзуваат - за деца, млади и
+          родители. Нашите програми поттикнуваат креативност, самодоверба и
+          практични вештини преку:
+        </p>
+      </div>
+      <!-- cards -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12 my-16 w-full max-w-[64rem] mx-auto px-4"
+      >
+        <article
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#CC4541] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/backpack.png"
+            alt="Backpack Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#CC4541] font-rounded-mplus"
+          >
+            КАМПОВИ ЗА СИТЕ ВОЗРАСТИ
+          </h1>
+          <p class="mt-1 tracking-wide mx-5 font-rounded-mplus">
+            Практични проекти, тимски предизвици и креативни работилници
+          </p>
+          <button
+            class="mt-8 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#CC4541] text-center"
+            title="Повеќе за Кампови"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </article>
+        <div
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/birthday-cake.png"
+            alt="Birthday Cake Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#A26702] font-rounded-mplus"
+          >
+            РОДЕНДЕНИ
+          </h1>
+          <p class="mt-9 tracking-wide mx-5 font-rounded-mplus">
+            Едукативни и забавни роденденски прослави
+          </p>
+          <button
+            class="mt-14 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#A26702] text-center"
+            title="Повеќе за Родендени"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </div>
+        <article
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/financial-growth.png"
+            alt="Financial Growth Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#44597A] w-[17rem] font-rounded-mplus"
+          >
+            ДЕТСКИ ИНВЕСТИЦИСКИ ПЛАН
+          </h1>
+          <p class="mt-4 tracking-wide mx-5 w-[18rem] font-rounded-mplus">
+            Пат кон финансиска самостојност - преку учење, штедење и инвестирање
+            од детството
+          </p>
+          <button
+            class="mt-5 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#44597A] text-center"
+            title="Повеќе за Детски Инвестицки План"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#A26702] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/group.png"
+            alt="Group Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#A26702] font-rounded-mplus"
+          >
+            LITTLEBIG FOUNDERS КЛУБ
+          </h1>
+          <p class="mt-3 tracking-wide mx-5 w-[17rem] font-rounded-mplus">
+            Заедница што нуди континуирано учење, нови предизвици и развој со
+            менторства и заеднички проекти
+          </p>
+          <button
+            class="mt-4 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#A26702] text-center"
+            title="Повеќе за Клуб"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#44597A] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/seminar.png"
+            alt="Seminar Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#44597A] font-rounded-mplus"
+          >
+            СЕМИНАРИ
+          </h1>
+          <p class="mt-10 tracking-wide mx-3 w-[18rem] font-rounded-mplus">
+            Инспиративни семинари што нудат практични вештини и нови перспективи
+            за деца, родители и млади претприемачи
+          </p>
+          <button
+            class="mt-5 mx-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#44597A] text-center"
+            title="Повеќе за Семинари"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[21rem] border border-[#CC4541] duration-500 ease-in-out hover:scale-105 hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/parents.png"
+            alt="Parents Icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-5 mt-1 text-2xl text-[#CC4541] font-rounded-mplus"
+          >
+            РОДИТЕЛСКИ КРУЖОК
+          </h1>
+          <p class="mt-9 tracking-wide mx-5 w-[17rem] font-rounded-mplus">
+            Инспиративни обуки за родители кои сакаат активно да учествуваат во
+            успехот на своите деца
+          </p>
+          <button
+            class="mt-6 mx-5 w-32 rounded-3xl text-white font-medium text-lg text-md h-9 bg-[#CC4541] text-center"
+            title="Повеќе за Родители"
+          >
+            <a href="#">повеќе</a>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+
+    <!-- Methodology section -->
+    <section>
+      <div class="text-center -mt-64 md:m-20">
+        <h1
+          class="text-center text-5xl tracking-wider text-[#A26702] font-rounded-mplus"
+        >
+          МЕТОДОЛОГИЈА
+        </h1>
+        <!-- secondary header -->
+        <p
+          class="text-center text-2xl text-[#44597A] max-w-4xl mx-auto mt-5 font-rounded-mplus"
+        >
+          нашиот пристап кон учење
+        </p>
+      </div>
+
+      <!-- cards -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-16 gap-y-16 w-full max-w-[80rem] mx-auto px-4 lg:px-0"
+      >
+        <article
+          class="rounded-3xl w-[19rem] h-[16rem] border border-[#44597A] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/learning.png"
+            alt="Books and light bulb icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#44597A] font-rounded-mplus"
+          >
+            МОНТЕСОРИ ПРИСТАП
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Внимателно пристапуваме кон способностите на учење на децата
+          </p>
+        </article>
+        <article
+          class="rounded-3xl w-[19rem] h-[16rem] border border-[#CC4541] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/health.png"
+            alt="Health icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#CC4541] font-rounded-mplus"
+          >
+            ЗДРАВО ТЕЛО, УМ И ДУХ
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Се грижиме за целокупната состојва на нашите деца
+          </p>
+        </article>
+        <article
+          class="rounded-3xl w-[19rem] h-[16rem] border border-[#387B88] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/teachers.png"
+            alt="Teachers icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#387B88] font-rounded-mplus"
+          >
+            ВРВНИ ИНСТРУКТОРИ И ПРЕДАВАЧИ
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Ги избираме најдобрите
+          </p>
+        </article>
+        <article
+          class="rounded-3xl w-[19rem] h-[16rem] border border-[#A26702] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/company.png"
+            alt="Company icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#A26702] font-rounded-mplus"
+          >
+            ИГРАЊЕ УЛОГИ И ПОСЕТА НА КОМПАНИИ
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Одиме на терен, во вистинскиот свет
+          </p>
+        </article>
+      </div>
+
+      <br />
+      <div class="flex justify-center">
+        <a href="#"
+          ><button
+            class="font-rounded-mplus bg-[#CC4541] text-white p-4 rounded-[20px] w-full md:hover:scale-110"
+          >
+            ДОЗНАЈ ПОВЕЌЕ
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+
+    <!-- Testimonials section -->
+    <section>
+      <div class="text-center -mt-64 md:m-20">
+        <h1
+          class="text-center text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
+        >
+          ГЛАСОТ НА НАШИТЕ <span class="text-[#387B88]">МАЛИ ПРЕТПРИЕМАЧИ</span>
+        </h1>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-start gap-10 px-4 py-10"
+      >
+        <!-- Testimonial 1 -->
+        <div class="relative flex flex-col items-center">
+          <!-- Circle Photo -->
+          <img
+            src="./img/borjana_testimonials_1.avif"
+            alt="Borjana Stojanovska testimonial"
+            class="w-20 h-20 rounded-full z-10 -mb-10"
+          />
+          <!-- Article Box -->
+          <article
+            class="rounded-3xl w-[24rem] h-[18rem] bg-[#e89d9a] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+          >
+            <h1 class="text-2xl text-[#1F2C3D] text-center font-rounded-mplus">
+              БОРЈАНА СТОЈАНОВСКА
+            </h1>
+            <br />
+            <p
+              class="tracking-wide mx-4 text-sm leading-tight font-rounded-mplus"
+            >
+              „Кога имав 8 години Елена ми предаваше претприемништво во
+              претприемничка програма за деца. Тоа искуство ми ја промени
+              перцепцијата за себе. Сега сум 3та година средно, учам во Америка,
+              верувам дека сѐ е достижно и се надевам дека ќе бидам успешен
+              претприемач.“
+            </p>
+          </article>
+        </div>
+        <div class="relative flex flex-col items-center">
+          <img
+            src="./img/marija_testimonials_2.avif"
+            alt="Marija Burgieva testimonial"
+            class="w-20 h-20 rounded-full z-10 -mb-10"
+          />
+          <article
+            class="rounded-3xl w-[24rem] h-[18rem] bg-[#b5e3f2] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+          >
+            <h1
+              class="relative mt-1 text-2xl text-[#1F2C3D] font-rounded-mplus text-center"
+            >
+              МАРИЈА БУРГИЕВА
+            </h1>
+            <br />
+            <p
+              class="mt-1 tracking-wide mx-4 font-rounded-mplus text-sm leading-tight"
+            >
+              „Како учесничка на претприемачката програма за млади каде што
+              предаваше Елена ја добив потребната основа да бидам претприемач на
+              еден иновативен и забавен начин, со квалитетни ментори и можност
+              за посета на едни од најуспешните македонски компании од кои може
+              да се научи многу.“
+            </p>
+          </article>
+        </div>
+        <div class="relative flex flex-col items-center">
+          <img
+            src="./img/kjara_testimonials_3.avif"
+            alt="Kjara Tosevska testimonial"
+            class="w-20 h-20 rounded-full z-10 -mb-10"
+          />
+          <article
+            class="rounded-3xl w-[24rem] h-[18rem] bg-[#f0c980] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+          >
+            <h1
+              class="relative mt-1 text-2xl text-[#1F2C3D] font-rounded-mplus text-center"
+            >
+              КЈАРА ТОШЕВСКА
+            </h1>
+            <br />
+            <p
+              class="mt-1 tracking-wide mx-4 font-rounded-mplus text-sm leading-tight"
+            >
+              „Од основно училиште слушам дека татко ми е претприемач, ама не
+              знаев што значи тоа. Низ претприемачката програма за деца и млади
+              кај Елена сфатив колку интересна и одговорна работа има и оттогаш
+              сме рамо до рамо во семејниот бизнис. Сега помагам во развој на
+              иновации, нешто што го засакав токму во програмата.“
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--Line between sections -->
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+
+    <!-- Contacts -->
+    <section class="h-screen -mt-64 md:m-20">
+      <div class="text-center -mt-64 md:m-20">
+        <h1
+          class="text-center text-5xl tracking-wider text-[#44597A] font-rounded-mplus"
+        >
+          БИДИ ВО <span class="text-[#387B88]">КОНТАКТ</span> СО ИДНИНАТА
+        </h1>
+      </div>
+      <!-- Contacts div -->
+
+      <div class="relative w-full flex justify-center mt-40">
+        <div
+          class="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10 bg-[#387B8898] w-[45rem] h-[10rem] rounded-[20px] flex justify-center items-center p-4 text-[#1F2C3D] text-xl text-center font-rounded-mplus"
+        >
+          <h2>
+            Имате <span class="underline">прашања</span> или сакате да се
+            <span class="underline"
+              >приклучите на некоја од нашите програми?</span
+            >
+            <br />
+            <span class="text-white"
+              >Пополнете го формуларот и ќе ви се јавиме наскоро!</span
+            >
+          </h2>
+        </div>
+        <!-- form and contact info -->
+        <div
+          class="-mt-[1px] font-rounded-mplus text-[#1F2C3D] text-xl flex columns-2 gap-4 items-center bg-white w-[65rem] h-[50rem] rounded-[40px] p-8 pt-36 border-[#44597A] z-0"
+        >
+          <div class="flex-1 flex-col gap-4 text-[#44597A] mx-3 text-2xl">
+            <form>
+              <label class="font-rounded-mplus">Вашето Име</label>
+              <br />
+              <input
+                type="text"
+                placeholder="Внеси тука..."
+                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
+              />
+              <br />
+              <br />
+
+              <label class="font-rounded-mplus">Вашето Презиме</label>
+              <br />
+              <input
+                type="text"
+                placeholder="Внеси тука..."
+                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
+              />
+              <br />
+              <br />
+
+              <label class="font-rounded-mplus">Вашата Е-маил Адреса</label>
+              <br />
+              <input
+                type="email"
+                placeholder="Внеси тука..."
+                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
+              />
+              <br />
+              <br />
+
+              <label class="font-rounded-mplus">Налов На Пораката</label>
+              <br />
+              <input
+                type="text"
+                placeholder="Внеси тука..."
+                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[90%] px-4"
+              />
+              <br />
+              <br />
+
+              <label class="font-rounded-mplus">Порака</label>
+              <br />
+              <textarea
+                placeholder="Внеси тука..."
+                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[90%] px-4"
+              ></textarea>
+              <br />
+              <br />
+
+              <button
+                type="submit"
+                class="font-rounded-mplus bg-[#1F2C3D] text-white text-xl rounded-[20px] w-[9rem] h-[3rem] md:hover:scale-110"
+              >
+                ИСПРАТИ
+              </button>
+            </form>
+          </div>
+
+          <!-- divider line  -->
+          <div class="hidden md:block w-[0.5%] bg-[#387B88] h-[80%]"></div>
+
+          <div
+            class="flex-1 flex-col space-y-4 text-[#1F2C3D] w-full text-center"
+          >
+            <p class="flex items-center space-x-4">
+              <img src="./img/phone.png" alt="phone icon" class="w-14" />
+              <span>+389(0)70800651</span>
+            </p>
+            <br />
+            <p class="flex items-center space-x-4">
+              <img src="./img/email.png" alt="email icon" class="w-14" />
+
+              <span>littlebigfounders@gmail.com</span>
+            </p>
+            <br />
+            <p class="flex items-center space-x-4">
+              <img
+                src="./img/location.png"
+                alt="location icon"
+                class="w-14 text-center"
+              />
+              <span>Бул. Партизански Одреди 6/1<br />Скопје, Македонија</span>
+            </p>
+            <br />
+            <iframe
+              src="https://www.google.com/maps?q=Bul.+Partizanski+Odredi+6%2F1+Skopje&output=embed"
+              width="300"
+              height="200"
+              style="
+                border-color: #1f2c3d;
+                border-width: 2px;
+                border-radius: 10%;
+              "
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
