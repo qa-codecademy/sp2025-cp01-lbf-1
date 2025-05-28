@@ -9,15 +9,110 @@
     />
     <meta
       name="keywords"
-      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реализација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
+      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
     />
 
     <title>LittleBig Founders</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
+<<<<<<< HEAD
   <body>
     <script src="./scripts/script.js"></script>
     <script type="module" src="./data/program.data.js"></script>
     <script type="module" src="./services/program.service.js"></script>
+=======
+  <body class="bg-[#D9DCE2] overflow-y-auto">
+    <!-- Navbar -->
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="/docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="#">ДОМА</a></li>
+          <li><a href="#">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="#">ПРЕДАВАЧИ</a></li>
+          <li><a href="#">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="#">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="#" class="hover:text-blue-600">ДОМА</a>
+      <a href="#" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОТАКТ</a>
+    </div>
+    <script src="./script.js"></script>
+>>>>>>> navigation-bar
   </body>
 </html>
