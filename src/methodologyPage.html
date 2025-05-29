@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="m-0 b-0 scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <title>Методологија | LittleBig Founders</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body
+    style="font-family: 'M PLUS Rounded 1c', sans-serif"
+    class="m-0 b-0 overflow-x-hidden scroll-smooth bg-[#D9DCE2] font-bold overflow-y-auto h-screen"
+  >
+    <!-- Navbar -->
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="/docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="./index.html">ДОМА</a></li>
+          <li><a href="#">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="#">ПРЕДАВАЧИ</a></li>
+          <li><a href="./methodolgyPage.html">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="./services.html">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="./index.html" class="hover:text-blue-600">ДОМА</a>
+      <a href="#" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="./methodolgyPage.html" class="hover:text-blue-600"
+        >МЕТОДОЛОГИЈА</a
+      >
+      <a href="./services.html" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОНТАКТ</a>
+    </div>
+    <main>
+      <!-- header-->
+      <div class="-mt-96 md:mt-16 text-center l:mt-2">
+        <h1
+          class="text-3xl sm:text-4xl lg:text-6xl md:text-5xl tracking-wider text-[#A26702]"
+        >
+          МЕТОДОЛОГИЈА
+        </h1>
+        <p class="text-3xl text-[#44597A]">нашиот пристап кон учење</p>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 mt-12 max-w-7xl mx-auto"
+      >
+        <article
+          class="rounded-3xl w-[20rem] h-[20rem] border border-[#44597A] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/learning.png"
+            alt="Books and light bulb icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#44597A] font-rounded-mplus"
+          >
+            МОНТЕСОРИ ПРИСТАП
+          </h1>
+          <br />
+          <p class="mt-7 tracking-wide mx-4 font-rounded-mplus">
+            Внимателно пристапуваме кон способностите на учење на децата
+          </p>
+          <button
+            class="mt-4 ml-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-8 bg-[#44597A] text-center"
+            title="Повеќе за монтесори пристап"
+          >
+            <a href="#montesori">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[20rem] border border-[#CC4541] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/vegetarian.png"
+            alt="Health icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#CC4541] font-rounded-mplus"
+          >
+            ЗДРАВО ТЕЛО, УМ И ДУХ
+          </h1>
+          <br />
+          <p class="mt-8 tracking-wide mx-4 font-rounded-mplus">
+            Се грижиме за целокупната состојва на нашите деца
+          </p>
+          <button
+            class="mt-9 ml-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-8 bg-[#CC4541] text-center"
+            title="Повеќе за здраво тело и здрав дух"
+          >
+            <a href="#telo">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[20rem] border border-[#387B88] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/female.png"
+            alt="Teachers icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#387B88] font-rounded-mplus"
+          >
+            ВРВНИ ИНСТРУКТОРИ И ПРЕДАВАЧИ
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Ги избираме најдобрите
+          </p>
+          <button
+            class="mt-14 ml-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-8 bg-[#387B88] text-center"
+            title="Повеќе за инструктори и предавачи"
+          >
+            <a href="#instruktori">повеќе</a>
+          </button>
+        </article>
+        <article
+          class="rounded-3xl w-[20rem] h-[20rem] border border-[#A26702] md:duration-500 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl mx-auto bg-white p-3"
+        >
+          <img
+            src="./img/office-building.png"
+            alt="Company icon"
+            class="w-14 relative left-5"
+          />
+          <h1
+            class="relative left-3 mt-1 text-2xl text-[#A26702] font-rounded-mplus"
+          >
+            ИГРАЊЕ УЛОГИ И ПОСЕТА НА КОМПАНИИ
+          </h1>
+          <br />
+          <p class="mt-1 tracking-wide mx-4 font-rounded-mplus">
+            Одиме на терен, во вистинскиот свет
+          </p>
+          <button
+            class="mt-8 ml-4 w-32 rounded-3xl text-white font-medium text-lg text-md h-8 bg-[#A26702] text-center"
+            title="Повеќе за Улоги и посета на компании"
+          >
+            <a href="#ulogi">повеќе</a>
+          </button>
+        </article>
+      </div>
+      <section id="montesori" class=" bg-[#D9DCE2] w-full mt-24">
+        <h1
+          class="flex justify-center ml-4 items-center gap-8 text-2xl text-[#44597A] w-full text-center"
+        >
+          <img src="./img/learning.png" class="w-14 left-5" alt="" />МОНТЕСОРИ
+          ПРИСТАП
+        </h1>
+        <p class="xl:mx-52 text-lg sm:mx-12 text-center mt-12 tracking-wider">
+          Монтесори пристапот во училиштето за претприемништво за деца е
+          дизајниран да поттикнува самостојност, креативност и практично учење
+          преку интерактивни и динамични активности. Децата и младите учат преку
+          истражување, искуствено учење и проекти, наместо традиционални
+          предавања, овозможувајќи им да развиваат иницијатива, критичко
+          размислување и решавање на проблеми.
+        </p>
+        <p class="text-xl text-center mt-6 mb-8 tracking-wider">
+          Клучни елементи на Монтесори пристапот во претприемништвото:
+        </p>
+        <article class="px-4 mt-12">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl mx-auto md:items-center md:justify-center xl:items-center xl:justify-center"
+          >
+            <div class="flex flex-col items-center md:items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-full bg-[#1F2C3D] flex items-center justify-center"
+              >
+                <img
+                  class="p-1"
+                  src="./img/motivation.png"
+                  alt="feast bump motivation"
+                />
+              </div>
+              <p class="w-40 text-center text-lg md:text-lg">
+                Самостојност и лична одговорност
+              </p>
+            </div>
+            <div
+              class="mt-8 sm:mt-0 sm:ml-8 text-[#1F2C3D] gap-2 md:text-xl flex flex-col l:items-center l:w-9/12 xl:items-center w-6/12"
+            >
+              <p>
+                Децата избираат проекти според своите интереси и темпо на учење.
+              </p>
+              <p>
+                Ги преземаат одговорностите за своите идеи, од развој до
+                изведба.
+              </p>
+            </div>
+          </div>
+          <hr
+            class="2xl:w-5/12 xl:w-6/12 md:w-7/12 sm:w-8/12 w-7/12 mx-auto border-t-2 border-[#A26702] my-8"
+          />
+        </article>
+        <article class="px-4 mt-12">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl mx-auto md:items-center md:justify-center xl:items-center xl:justify-center"
+          >
+            <div class="flex flex-col items-center md:items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-full bg-[#1F2C3D] flex items-center justify-center"
+              >
+                <img src="./img/quality.png" alt="feast bump motivation" />
+              </div>
+              <p class="w-40 text-center text-lg md:text-lg">
+                Практично искуство преку работи на реални проекти
+              </p>
+            </div>
+            <div
+              class="mt-8 sm:mt-0 sm:ml-8 text-[#1F2C3D] gap-2 md:text-xl flex flex-col l:items-center l:w-9/12 xl:items-center w-6/12"
+            >
+              <p>
+                Наместо теоретски концепти, децата тестираат идеи во реални
+                мини-бизниси.
+              </p>
+              <p>
+                Преку практични работилници, симулации и продажни активности,
+                развиваат вештини за управување со ресурси, маркетинг и
+                финансии.
+              </p>
+            </div>
+          </div>
+        </article>
+        <hr
+          class="2xl:w-5/12 xl:w-6/12 md:w-7/12 sm:w-8/12 w-7/12 mx-auto border-t-2 border-[#A26702] my-8"
+        />
+        <article class="px-4 mt-12">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl mx-auto md:items-center md:justify-center xl:items-center xl:justify-center"
+          >
+            <div class="flex flex-col items-center md:items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-full bg-[#1F2C3D] flex items-center justify-center"
+              >
+                <img
+                  class="p-2"
+                  src="./img/teamwork.png"
+                  alt="feast bump motivation"
+                />
+              </div>
+              <p class="w-40 text-center text-lg md:text-lg">
+                Кооперативно учење и тимска работа
+              </p>
+            </div>
+            <div
+              class="mt-8 sm:mt-0 sm:ml-8 text-[#1F2C3D] gap-2 md:text-xl flex flex-col l:items-center l:w-9/12 xl:items-center w-6/12"
+            >
+              <p>
+                Работејќи заедно, децата развиваат комуникациски и лидерски
+                вештини.
+              </p>
+              <p>
+                Тимските проекти ги учат како да решаваат конфликти и да
+                преземаат различни улоги во групата.
+              </p>
+            </div>
+          </div>
+        </article>
+        <hr
+          class="2xl:w-5/12 xl:w-6/12 md:w-7/12 sm:w-8/12 w-7/12 mx-auto border-t-2 border-[#A26702] my-8"
+        />
+        <article class="px-4 mt-12">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl mx-auto md:items-center md:justify-center xl:items-center xl:justify-center"
+          >
+            <div class="flex flex-col items-center md:items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-full bg-[#1F2C3D] flex items-center justify-center"
+              >
+                <img
+                  class="p-2"
+                  src="./img/financial.png"
+                  alt="feast bump motivation"
+                />
+              </div>
+              <p class="w-40 text-center text-lg md:text-lg">
+                Интерактивно истражување и иновација
+              </p>
+            </div>
+            <div
+              class="mt-8 sm:mt-0 sm:ml-8 text-[#1F2C3D] gap-2 md:text-xl flex flex-col l:items-center l:w-9/12 xl:items-center w-6/12"
+            >
+              <p>
+                Децата истражуваат нови технологии, одржливи деловни модели и
+                иновативни пристапи.
+              </p>
+              <p>
+                Се охрабруваат да експериментираат и да ги користат грешките
+                како можности за учење.
+              </p>
+            </div>
+          </div>
+        </article>
+        <hr
+          class="2xl:w-5/12 xl:w-6/12 md:w-7/12 sm:w-8/12 w-7/12 mx-auto border-t-2 border-[#A26702] my-8"
+        />
+        <article class="px-4 mt-12">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-6xl mx-auto md:items-center md:justify-center xl:items-center xl:justify-center"
+          >
+            <div class="flex flex-col items-center md:items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-full bg-[#1F2C3D] flex items-center justify-center"
+              >
+                <img
+                  class="p-3"
+                  src="./img/e-book.png"
+                  alt="feast bump motivation"
+                />
+              </div>
+              <p class="w-40 text-center text-lg md:text-lg">
+                Одговорно користење на вештачка интелегенција
+              </p>
+            </div>
+            <div
+              class="mt-8 sm:mt-0 sm:ml-8 text-[#1F2C3D] gap-2 md:text-xl flex flex-col l:items-center l:w-9/12 xl:items-center w-6/12"
+            >
+              <p>
+                Децата учат како етички и свесно да користат алатки базирани на
+                вештачка интелигенција за истражување, анализирање на податоци и
+                развој на идеи.
+              </p>
+              <p>
+                Разбираат како AI може да биде помошник во претприемништвото, но
+                не и замена за критичко размислување.
+              </p>
+              <p>
+                Се поттикнува свесност за заштита на податоци, дигитална етика и
+                одговорно креирање на содржини.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="telo" class="mt-32">
+        <h1
+          class="flex justify-center ml-4 mt-12 items-center gap-8 text-2xl text-[#CC4541] w-full text-center"
+        >
+          <img src="./img/vegetarian.png" class="w-14 left-5" alt="" />ЗДРАВО ТЕЛО, УМ И ДУХ
+        </h1>
+      </section>
+      <section id="instruktori" class="mt-32">
+        <h1
+          class="flex justify-center ml-4 mt-12 items-center gap-8 text-2xl text-[#387B88] w-full text-center"
+        >
+          <img src="./img/female.png" class="w-14 left-5" alt="" />ВРВНИ ИНСТРУКТОРИ И ПРЕДАВАЧИ
+        </h1>
+      </section>
+      <section id="ulogi" class="mt-32">
+        <h1
+          class="flex justify-center ml-4 mt-12 items-center gap-8 text-2xl text-[#A26702] w-full text-center"
+        >
+          <img src="./img/office-building.png" class="w-14 left-5" alt="" />ИГРАЊЕ УЛОГИ И ПОСЕТА НА КОМПАНИИ
+        </h1>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="./script.js"></script>
+</html>
