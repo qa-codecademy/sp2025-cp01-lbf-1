@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[#D9DCE2] overflow-y-auto h-screen">
+  <body class="bg-[#D9DCE2] overflow-y-auto">
     <!-- Navbar -->
     <nav
       class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
@@ -36,7 +36,7 @@
       <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
         <img
           id="customLogo"
-          src="./img/logo.png"
+          src="/docs/client-info/image.png"
           alt="Logo"
           class="h-10 w-auto object-contain mix-blend-multiply"
         />
@@ -121,28 +121,30 @@
 
     <!-- Home page -->
     <!-- Introduction -->
-    <div class="min-h-screen flex items-center gap-x-2 md:gap-x-6 lg:gap-x-32">
+    <div
+      class="min-h-screen flex flex-col md:flex-row items-center gap-y-10 md:gap-x-6 lg:gap-x-32"
+    >
       <div>
         <div class="max-w-4xl ml-[10vw] p-3">
           <h1
-            class="font-rounded-mplus text-[#44597A] text-[5rem] tracking-tight leading-tight font-bold text-left"
+            class="font-rounded-mplus text-[#44597A] tracking-tight leading-tight font-bold text-left text-5xl sm:text-5xl md:text-6xl"
           >
             ШКОЛО ЗА БИЗНИС
           </h1>
           <h1
-            class="font-rounded-mplus text-[#387b88] text-[5rem] tracking-tight leading-tight font-bold text-left"
+            class="font-rounded-mplus text-[#387b88] tracking-tight leading-tight font-bold text-left text-5xl sm:text-5xl md:text-6xl"
           >
             ЗА ДЕЦА И МЛАДИ
           </h1>
         </div>
         <div class="max-w-4xl ml-[10vw] p-3">
           <h2
-            class="font-rounded-mplus text-[#1F2C3D] text-2xl tracking-tight leading-normal font-bold text-left"
+            class="font-rounded-mplus text-[#1F2C3D] text-2xl sm:text-xs md:text-2xl tracking-tight leading-normal font-bold text-left"
           >
             За мали умови со големи идеи!
           </h2>
           <h2
-            class="font-rounded-mplus text-[#1F2C3D] text-2xl tracking-tight leading-normal font-bold text-left"
+            class="font-rounded-mplus text-[#1F2C3D] text-2xl sm:text-xs md:text-2xl tracking-tight leading-normal font-bold text-left"
           >
             Инспирирај се, учи, создавај и остави свој белег во светот!
           </h2>
@@ -162,7 +164,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="flex-col">
         <div
           class="relative w-72 overflow-hidden rounded-tl-[35px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px] shadow-lg border-4 border-[#397c86]"
         >
@@ -173,7 +175,7 @@
           />
         </div>
         <div
-          class="font-rounded-mplus absolute top-[55%] right-[28%] bg-[#397c86] text-white p-4 rounded-[20px] w-[65%] h-[30%] min-w-[100px] max-w-[150px] flex flex-col items-center justify-center text-center"
+          class="font-rounded-mplus mt-4 bg-[#397c86] text-white p-4 rounded-[20px] w-[75%] min-w-[100px] max-w-[150px] flex flex-col items-center justify-center text-center md:absolute md:top-[55%] md:left-[65%]"
         >
           <div class="text-[2.2em] font-bold leading-tight">15</div>
           <div class="text-base">години</div>
@@ -187,15 +189,17 @@
     </div>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-0"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <!-- Programs -->
-    <main
-      class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center"
+    <section
+      class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center py-10 md:py-20"
     >
       <!-- Header -->
-      <div class="header -mt-52 md:mt-12">
-        <h1 class="text-center text-[#387B88] text-4xl px-2 font-rounded-mplus">
+      <div class="header mt-10 md:mt-12">
+        <h1
+          class="text-center text-[#387B88] text-3xl sm:text-5xl md:text-5xl px-4 font-rounded-mplus leading-tight break-words w-full"
+        >
           ПРОГРАМИ
           <span class="text-[#44597A]">ШТО ГО РАЗВИВААТ</span>
           ПОТЕНЦИЈАЛОТ
@@ -315,15 +319,15 @@
           </div>
         </article>
       </section>
-    </main>
+    </section>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-5"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <section>
       <!-- Lecturers -->
       <h1
-        class="text-center -mt-64 md:m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88] font-rounded-mplus"
+        class="text-center mt-10 md:mt-12 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88] font-rounded-mplus sm:text-5xl md:text-[5rem]"
       >
         ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
       </h1>
@@ -431,20 +435,20 @@
     </section>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <!-- Services -->
     <section>
-      <div class="text-center -mt-64 md:m-20">
+      <div class="text-center mt-10 md:mt-12">
         <h1
-          class="text-center text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
+          class="text-center text-3xl tracking-wider text-[#1F2C3D] font-rounded-mplus sm:text-3xl md:text-5xl"
         >
           <span class="text-[#387B88]">Услуги</span> што инспирираат, едуцираат
           и поврзуваат
         </h1>
         <!-- secondary header -->
         <p
-          class="text-center text-2xl text-[#44597A] max-w-4xl mx-auto mt-10 font-rounded-mplus"
+          class="text-center text-xl text-[#44597A] max-w-4xl mx-auto mt-10 font-rounded-mplus sm:text-xl md:text-3xl"
         >
           Во <span class="text-[#1F2C3D]">LittleBig Founders</span> создаваме
           искуства што инспирираат, едуцираат и поврзуваат - за деца, млади и
@@ -602,24 +606,24 @@
     </section>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <!-- Methodology section -->
     <section>
-      <div class="text-center -mt-64 md:m-20">
+      <div class="text-center mt-10 md:mt-12">
         <h1
-          class="text-center text-5xl tracking-wider text-[#A26702] font-rounded-mplus"
+          class="text-center text-2xl tracking-wider text-[#A26702] font-rounded-mplus sm:text-2xl md:text-5xl"
         >
           МЕТОДОЛОГИЈА
         </h1>
         <!-- secondary header -->
         <p
-          class="text-center text-2xl text-[#44597A] max-w-4xl mx-auto mt-5 font-rounded-mplus"
+          class="text-center text-xl text-[#44597A] max-w-4xl mx-auto mt-5 font-rounded-mplus sm:text-xl md:text-2xl"
         >
           нашиот пристап кон учење
         </p>
       </div>
-
+      <br />
       <!-- cards -->
       <div
         class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-16 gap-y-16 w-full max-w-[80rem] mx-auto px-4 lg:px-0"
@@ -711,13 +715,13 @@
     </section>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <!-- Testimonials section -->
     <section>
-      <div class="text-center -mt-64 md:m-20">
+      <div class="text-center mt-10 md:mt-12">
         <h1
-          class="text-center text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
+          class="text-center text-2xl tracking-wider text-[#1F2C3D] font-rounded-mplus sm:text-2xl md:text-5xl"
         >
           ГЛАСОТ НА НАШИТЕ <span class="text-[#387B88]">МАЛИ ПРЕТПРИЕМАЧИ</span>
         </h1>
@@ -736,7 +740,7 @@
           />
           <!-- Article Box -->
           <article
-            class="rounded-3xl w-[24rem] h-[18rem] bg-[#e89d9a] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+            class="rounded-3xl w-[16rem] h-[26rem] sm:w-[24rem] sm:h-[18rem] bg-[#e89d9a] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
           >
             <h1 class="text-2xl text-[#1F2C3D] text-center font-rounded-mplus">
               БОРЈАНА СТОЈАНОВСКА
@@ -753,6 +757,7 @@
             </p>
           </article>
         </div>
+        <!-- Testimonial 2 -->
         <div class="relative flex flex-col items-center">
           <img
             src="./img/marija_testimonials_2.avif"
@@ -760,7 +765,7 @@
             class="w-20 h-20 rounded-full z-10 -mb-10"
           />
           <article
-            class="rounded-3xl w-[24rem] h-[18rem] bg-[#b5e3f2] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+            class="rounded-3xl w-[16rem] h-[26rem] sm:w-[24rem] sm:h-[18rem] bg-[#b5e3f2] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
           >
             <h1
               class="relative mt-1 text-2xl text-[#1F2C3D] font-rounded-mplus text-center"
@@ -779,6 +784,7 @@
             </p>
           </article>
         </div>
+        <!-- Testimonial 3 -->
         <div class="relative flex flex-col items-center">
           <img
             src="./img/kjara_testimonials_3.avif"
@@ -786,7 +792,7 @@
             class="w-20 h-20 rounded-full z-10 -mb-10"
           />
           <article
-            class="rounded-3xl w-[24rem] h-[18rem] bg-[#f0c980] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
+            class="rounded-3xl w-[16rem] h-[26rem] sm:w-[24rem] sm:h-[18rem] bg-[#f0c980] p-4 pt-12 shadow-md hover:shadow-xl transition-transform duration-500 ease-in-out"
           >
             <h1
               class="relative mt-1 text-2xl text-[#1F2C3D] font-rounded-mplus text-center"
@@ -809,138 +815,31 @@
     </section>
 
     <!--Line between sections -->
-    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-10 mb-0"></div>
+    <div class="border-t-2 border-[#44597A] w-[80%] mx-auto mt-14"></div>
 
     <!-- Contacts -->
-    <section class="h-screen -mt-64 md:m-20">
-      <div class="text-center -mt-64 md:m-20">
-        <h1
-          class="text-center text-5xl tracking-wider text-[#44597A] font-rounded-mplus"
-        >
-          БИДИ ВО <span class="text-[#387B88]">КОНТАКТ</span> СО ИДНИНАТА
-        </h1>
-      </div>
-      <!-- Contacts div -->
 
-      <div class="relative w-full flex justify-center mt-40">
-        <div
-          class="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10 bg-[#387B8898] w-[45rem] h-[10rem] rounded-[20px] flex justify-center items-center p-4 text-[#1F2C3D] text-xl text-center font-rounded-mplus"
-        >
-          <h2>
-            Имате <span class="underline">прашања</span> или сакате да се
-            <span class="underline"
-              >приклучите на некоја од нашите програми?</span
-            >
-            <br />
-            <span class="text-white"
-              >Пополнете го формуларот и ќе ви се јавиме наскоро!</span
-            >
-          </h2>
-        </div>
-        <!-- form and contact info -->
-        <div
-          class="-mt-[1px] font-rounded-mplus text-[#1F2C3D] text-xl flex columns-2 gap-4 items-center bg-white w-[65rem] h-[50rem] rounded-[40px] p-8 pt-36 border-[#44597A] z-0"
-        >
-          <div class="flex-1 flex-col gap-4 text-[#44597A] mx-3 text-2xl">
-            <form>
-              <label class="font-rounded-mplus">Вашето Име</label>
-              <br />
-              <input
-                type="text"
-                placeholder="Внеси тука..."
-                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
-              />
-              <br />
-              <br />
-
-              <label class="font-rounded-mplus">Вашето Презиме</label>
-              <br />
-              <input
-                type="text"
-                placeholder="Внеси тука..."
-                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
-              />
-              <br />
-              <br />
-
-              <label class="font-rounded-mplus">Вашата Е-маил Адреса</label>
-              <br />
-              <input
-                type="email"
-                placeholder="Внеси тука..."
-                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[80%] px-4"
-              />
-              <br />
-              <br />
-
-              <label class="font-rounded-mplus">Налов На Пораката</label>
-              <br />
-              <input
-                type="text"
-                placeholder="Внеси тука..."
-                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[90%] px-4"
-              />
-              <br />
-              <br />
-
-              <label class="font-rounded-mplus">Порака</label>
-              <br />
-              <textarea
-                placeholder="Внеси тука..."
-                class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-[90%] px-4"
-              ></textarea>
-              <br />
-              <br />
-
-              <button
-                type="submit"
-                class="font-rounded-mplus bg-[#1F2C3D] text-white text-xl rounded-[20px] w-[9rem] h-[3rem] md:hover:scale-110"
-              >
-                ИСПРАТИ
-              </button>
-            </form>
-          </div>
-
-          <!-- divider line  -->
-          <div class="hidden md:block w-[0.5%] bg-[#387B88] h-[80%]"></div>
-
-          <div
-            class="flex-1 flex-col space-y-4 text-[#1F2C3D] w-full text-center"
+    <section class="gap-10 px-4 py-10">
+      <h1
+        class="font-rounded-mplus text-[#CC4541] text-3xl tracking-tight font-bold text-center"
+      >
+        Имат е <span class="underline">прашања</span> или сакате да се
+        <span class="underline">приклучите на</span>
+      </h1>
+      <h1
+        class="font-rounded-mplus text-[#CC4541] text-3xl tracking-tight font-bold text-center"
+      >
+        <span class="underline">некоја од нашите програми?</span>
+      </h1>
+      <br />
+      <div class="flex justify-center">
+        <a href="#"
+          ><button
+            class="font-rounded-mplus bg-[#CC4541] text-white p-4 rounded-[20px] md:hover:scale-110"
           >
-            <p class="flex items-center space-x-4">
-              <img src="./img/phone.png" alt="phone icon" class="w-14" />
-              <span>+389(0)70800651</span>
-            </p>
-            <br />
-            <p class="flex items-center space-x-4">
-              <img src="./img/email.png" alt="email icon" class="w-14" />
-
-              <span>littlebigfounders@gmail.com</span>
-            </p>
-            <br />
-            <p class="flex items-center space-x-4">
-              <img
-                src="./img/location.png"
-                alt="location icon"
-                class="w-14 text-center"
-              />
-              <span>Бул. Партизански Одреди 6/1<br />Скопје, Македонија</span>
-            </p>
-            <br />
-            <iframe
-              src="https://www.google.com/maps?q=Bul.+Partizanski+Odredi+6%2F1+Skopje&output=embed"
-              width="300"
-              height="200"
-              style="
-                border-color: #1f2c3d;
-                border-width: 2px;
-                border-radius: 10%;
-              "
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
+            ДОЗНАЈ ПОВЕЌЕ
+          </button></a
+        >
       </div>
     </section>
 
@@ -948,5 +847,6 @@
     <footer></footer>
     <script src="./script.js"></script>
     <script type="module" src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
