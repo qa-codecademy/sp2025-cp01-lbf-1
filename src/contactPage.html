@@ -121,12 +121,14 @@
 
     <section class="h-screen md:m-20">
       <div
-        class="h-screen bg-cover bg-center absolute inset-0"
+        class="h-screen bg-cover bg-center absolute inset-0 sm:-mt-30"
         style="background-image: url(./img/contactPage-img.jpg)"
       ></div>
       <div class="absolute inset-0 bg-white/50"></div>
 
-      <div class="relative z-20 px-4 py-8 md:py-0 md:max-w-none mx-auto">
+      <div
+        class="relative z-20 px-4 py-8 md:py-0 md:max-w-none mx-auto mt-[-2rem] sm:mt-0"
+      >
         <h1
           class="text-center text-3xl sm:text-4xl md:text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
         >
@@ -206,37 +208,37 @@
             <div class="hidden md:block w-[0.5%] bg-[#387B88] h-[80%]"></div>
 
             <div
-              class="flex-1 flex flex-col space-y-4 text-[#1F2C3D] w-full text-center px-4 sm:px-8"
+              class="flex-1 flex-col items-start justify-center space-y-6 text-[#1F2C3D] px-4 sm:px-8 font-rounded-mplus"
             >
-              <p
-                class="flex items-center space-x-4 justify-center text-sm sm:text-base"
-              >
+              <p class="flex items-center space-x-4">
                 <img
                   src="./img/phone.png"
                   alt="phone icon"
-                  class="w-10 sm:w-14"
+                  class="w-6 sm:w-10 h-auto rounded-full"
                 />
-                <span>+389(0)70800651</span>
+                <span class="md:text-xl text-sm" style="word-break: normal"
+                  >+389(0)70800651</span
+                >
               </p>
-              <p
-                class="flex items-center space-x-4 justify-center text-sm sm:text-base"
-              >
+              <p class="flex items-center space-x-4">
                 <img
                   src="./img/email.png"
                   alt="email icon"
-                  class="w-10 sm:w-14"
+                  class="w-6 sm:w-10 h-auto rounded-full"
                 />
-                <span>littlebigfounders@gmail.com</span>
+                <span class="md:text-xl text-sm" style="line-break: normal"
+                  >littlebigfounders@gmail.com</span
+                >
               </p>
-              <p
-                class="flex items-center space-x-4 justify-center text-sm sm:text-base"
-              >
+              <p class="flex items-center space-x-4">
                 <img
                   src="./img/location.png"
                   alt="location icon"
-                  class="w-10 sm:w-14"
+                  class="w-6 sm:w-10 h-auto rounded-full"
                 />
-                <span>Бул. Партизански Одреди 6/1<br />Скопје, Македонија</span>
+                <span class="md:text-xl text-sm" style="word-break: normal"
+                  >Бул. Партизански Одреди 6/1 Скопје, Македонија</span
+                >
               </p>
               <iframe
                 src="https://www.google.com/maps?q=Bul.+Partizanski+Odredi+6%2F1+Skopje&output=embed"
