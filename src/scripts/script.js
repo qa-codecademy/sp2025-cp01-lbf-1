@@ -1,4 +1,4 @@
-import ProgramService from "../services/program.service.js";
+import ProgramService from "../services/program.service";
 
 function displayPrograms(programId, prefix) {
   const program = ProgramService.getById(programId);
