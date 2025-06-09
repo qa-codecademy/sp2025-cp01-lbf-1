@@ -11,9 +11,9 @@
       name="keywords"
       content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
     />
-    <script src="./data/program.data.js"></script>
     <script src="./scripts/script.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./data/program.data.js"></script>
+    <script type="module" src="./services/program.service.js"></script>
     <title>LittleBig Founders</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@700&display=swap"
@@ -334,97 +334,101 @@
         ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
       </h1>
       <section
-        class="flex flex-wrap justify-center md:justify-between gap-20 m-10 md:m-20"
+        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-16 gap-x-10 px-6 py-12 md:px-20"
       >
-        <br />
-        <!-- Card 1 -->
-        <a href="#card01">
+        <!-- Card -->
+        <a href="#card01" class="flex justify-center">
           <div
-            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+            class="w-60 transform transition duration-300 hover:scale-105 text-center"
           >
             <img
               src="https://static.wixstatic.com/media/4800e5_3dbce1d1f2cb45cd8170554ce95dbffc~mv2.png"
-              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#cc4541]"
               alt="Јана Џеков"
+              class="w-60 h-60 object-cover rounded-full border-4 border-[#cc4541] mx-auto"
             />
-            <div class="text-center relative top-5">
+            <div class="mt-5">
               <p
-                class="text-[#CC4541] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+                class="text-[#CC4541] text-lg lg:text-2xl font-bold font-rounded-mplus"
               >
                 ЈАНА ЏЕКОВ
               </p>
-              <br />
-              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+              <p class="font-bold font-rounded-mplus text-sm mt-1">
+                Главен Предавач
+              </p>
             </div>
-          </div></a
-        >
+          </div>
+        </a>
 
-        <!-- Card 2 -->
-        <a href="#card02">
+        <!-- Card -->
+        <a href="#card02" class="flex justify-center">
           <div
-            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+            class="w-60 transform transition duration-300 hover:scale-105 text-center"
           >
             <img
               src="https://static.wixstatic.com/media/4800e5_23d63d3e5b2d4b919751098bf528cd64~mv2.png"
-              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#44597a]"
               alt="Виктор Митевски"
+              class="w-60 h-60 object-cover rounded-full border-4 border-[#44597a] mx-auto"
             />
-            <div class="text-center relative top-5">
+            <div class="mt-5">
               <p
-                class="text-[#44597A] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+                class="text-[#44597A] text-lg lg:text-2xl font-bold font-rounded-mplus"
               >
                 ВИКТОР МИТЕВСКИ
               </p>
-              <br />
-              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+              <p class="font-bold font-rounded-mplus text-sm mt-1">
+                Главен Предавач
+              </p>
             </div>
-          </div></a
-        >
+          </div>
+        </a>
 
-        <!-- Card 3 -->
-        <a href="#card03"
-          ><div
-            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+        <!-- Card -->
+        <a href="#card03" class="flex justify-center">
+          <div
+            class="w-60 transform transition duration-300 hover:scale-105 text-center"
           >
             <img
               src="https://static.wixstatic.com/media/4800e5_b2cb650bf8cf44dba89b14f3d6b8b895~mv2.png"
-              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#A26702]"
               alt="Деспина Стојановска"
+              class="w-60 h-60 object-cover rounded-full border-4 border-[#A26702] mx-auto"
             />
-            <div class="text-center relative top-5">
+            <div class="mt-5">
               <p
-                class="text-[#A26702] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+                class="text-[#A26702] text-lg lg:text-2xl font-bold font-rounded-mplus"
               >
                 ДЕСПИНА СТОЈАНОВСКА
               </p>
-              <br />
-              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+              <p class="font-bold font-rounded-mplus text-sm mt-1">
+                Главен Предавач
+              </p>
             </div>
-          </div></a
-        >
+          </div>
+        </a>
 
-        <!-- Card 4 -->
-        <a href="#card04"
-          ><div
-            class="relative w-60 h-100 transform transition duration-300 md:hover:scale-105"
+        <!-- Card -->
+        <a href="#card04" class="flex justify-center">
+          <div
+            class="w-60 transform transition duration-300 hover:scale-105 text-center"
           >
             <img
               src="https://static.wixstatic.com/media/4800e5_6cb74fb4b8f643f3acfc7de6314f6566~mv2.jpeg"
-              class="relative w-60 h-60 object-cover rounded-full z-10 border-4 border-[#387B88]"
               alt="Елена Хаџи Пецова"
+              class="w-60 h-60 object-cover rounded-full border-4 border-[#387B88] mx-auto"
             />
-            <div class="relative text-center top-5">
+            <div class="mt-5">
               <p
-                class="text-[#387B88] text-base md:text-lg lg:text-3xl leading-relaxed font-bold font-rounded-mplus"
+                class="text-[#387B88] text-lg lg:text-2xl font-bold font-rounded-mplus"
               >
                 ЕЛЕНА ХАЏИ ПЕЦОВА
               </p>
-              <br />
-              <p class="font-bold font-rounded-mplus">Главен Предавач</p>
+              <p class="font-bold font-rounded-mplus text-sm mt-1">
+                Главен Предавач
+              </p>
             </div>
-          </div></a
-        >
+          </div>
+        </a>
       </section>
+
       <div class="flex justify-center">
         <a href="./lecturersPage.html"
           ><button
