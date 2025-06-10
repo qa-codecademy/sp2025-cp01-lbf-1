@@ -1,7 +1,5 @@
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
-<<<<<<< HEAD
-=======
 const profile01 = document.getElementById("profile01");
 const profile02 = document.getElementById("profile02");
 const profile03 = document.getElementById("profile03");
@@ -11,17 +9,11 @@ const card02 = document.getElementById("card02");
 const card03 = document.getElementById("card03");
 const card04 = document.getElementById("card04");
 const cards = document.getElementById("lecturersHome");
->>>>>>> feature/LecturersPage
 
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("opacity-0");
   mobileMenu.classList.toggle("invisible");
   mobileMenu.classList.toggle("visible");
-<<<<<<< HEAD
-  mobileMenu.classList.toggle("mb-96")
-});
-
-=======
   mobileMenu.classList.toggle("mb-72");
 });
 
@@ -45,4 +37,3 @@ card04.addEventListener("click", () => {
   cards.style.display = "none";
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
->>>>>>> feature/LecturersPage
