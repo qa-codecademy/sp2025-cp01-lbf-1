@@ -7,4 +7,3 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("visible");
   mobileMenu.classList.toggle("mb-96")
 });
-
