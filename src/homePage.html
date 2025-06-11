@@ -124,7 +124,7 @@
     <!-- Home page -->
     <!-- Introduction -->
     <div
-      class="min-h-screen flex flex-col md:flex-row items-center gap-y-10 md:gap-x-6 lg:gap-x-32"
+      class="min-h-screen flex flex-col md:flex-row justify-between items-center gap-2"
     >
       <div>
         <div class="max-w-4xl ml-[10vw] p-3">
@@ -166,18 +166,15 @@
           </div>
         </div>
       </div>
-      <div class="flex-col justify-between">
+      <!-- image and text -->
+      <div class="flex flex-row justify-between relative">
+        <img
+          src="./img/home-page-img.jpg"
+          alt="Деца учат бизнис"
+          class="absolute object-cover rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px] rounded-tl-[35px] overflow-hidden shadow-lg border-4 border-[#397c86]"
+        />
         <div
-          class="relative w-72 overflow-hidden rounded-tl-[35px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px] shadow-lg border-4 border-[#397c86]"
-        >
-          <img
-            src="./img/home-page-img.jpg"
-            alt="Деца учат бизнис"
-            class="h-96 object-cover rounded-tl-[35px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[35px]"
-          />
-        </div>
-        <div
-          class="font-rounded-mplus text-center bg-[#397c86] text-white p-4 mt-4 rounded-[20px] w-[75%] min-w-[150px] sm:relative sm:w-[500px] md:max-w-[150px] md:absolute md:top-[57%] md:left-[60%]"
+          class="absolute text-center bg-[#397c86] text-white p-4 mt-4 rounded-[20px] w-[75%] h-[45%] min-w-[150px] sm: relative w-[500px] md:max-w-[150px] z-10"
         >
           <div class="text-[2.2rem] font-bold leading-tight">15</div>
           <div class="text-base">години</div>
