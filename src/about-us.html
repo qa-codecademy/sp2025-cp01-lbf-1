@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleBig Founders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#E5E7EB] text-[#1F2937] font-sans">
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="./logo.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="index.html">ДОМА</a></li>
+          <li><a href="about.html">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="#">ПРЕДАВАЧИ</a></li>
+          <li><a href="#">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="#">УСЛУГИ</a></li>
+          <li><a href="contact.html">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="index.html" class="hover:text-blue-600">ДОМА</a>
+      <a href="about.html" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="contact.html" class="hover:text-blue-600">КОТАКТ</a>
+    </div>
+
+    <main class="main-content">
+      <section class="text-center px-4 pt-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-[#44597A]">
+          Добредојдовте во
+          <span class="text-[#387B88]">LittleBig Founders</span>!
+        </h1>
+        <p
+          class="mt-4 text-lg md:text-xl text-[#000000] flex items-center justify-center gap-2 mx-auto"
+        >
+          ⭐ Секое дете носи потенцијал за креативност, иновација и лидерство!
+        </p>
+        <p
+          class="text-lg md:text-xl text-[#000000] flex items-center justify-center gap-2 mx-auto"
+        >
+          ⭐ Нашиот тим од искусни претприемачи и едукатори е тука да го развие
+          претприемачкиот дух кај младите!
+        </p>
+      </section>
+
+      <section
+        class="text-center my-7 px-6 py-6 font-semibold text-xl text-[#387B88] max-w-[79rem] mx-auto"
+      >
+        <span class="text-[#A26702]">15+ години</span> искуство како
+        консултанти, инвеститори и претприемачи, имаме привилегија да поддржиме
+        безброј бизниси и стартапи во нивниот раст и напредок, помагајќи им да
+        ги надминат предизвиците на конкурентни пазари.
+      </section>
+
+      <section
+        class="bg-opacity-80 bg-[#387B88] text-white py-10 px-6 rounded-[50px] max-w-6xl mx-1 sm:mx-auto text-center -mb-[7rem] relative"
+      >
+        <h2 class="text-[white] font-semibold text-2xl">
+          Со иновативни програми засновани на
+          <span class="text-[#1F2C3D] underline">Монтесори методологијата</span
+          >, поттикнуваме:
+        </h2>
+        <br />
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center font-semibold text-xl"
+        >
+          <div>
+            <div
+              class="w-14 h-14 mx-auto bg-[#1F2C3D] rounded-full mb-2 p-[10px]"
+            >
+              <svg
+                class="fill-[white]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M192 0c17.7 0 32 14.3 32 32l0 112-64 0 0-112c0-17.7 14.3-32 32-32zM64 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 80-64 0 0-80zm192 0c0-17.7 14.3-32 32-32s32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96zm96 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64zm-96 88l0-.6c9.4 5.4 20.3 8.6 32 8.6c13.2 0 25.4-4 35.6-10.8c8.7 24.9 32.5 42.8 60.4 42.8c11.7 0 22.6-3.1 32-8.6l0 8.6c0 52.3-25.1 98.8-64 128l0 96c0 17.7-14.3 32-32 32l-160 0c-17.7 0-32-14.3-32-32l0-78.4c-17.3-7.9-33.2-18.8-46.9-32.5L69.5 357.5C45.5 333.5 32 300.9 32 267l0-27c0-35.3 28.7-64 64-64l88 0c22.1 0 40 17.9 40 40s-17.9 40-40 40l-56 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l56 0c39.8 0 72-32.2 72-72z"
+                />
+              </svg>
+            </div>
+            <p>Самостојност</p>
+          </div>
+          <div>
+            <div
+              class="w-14 h-14 mx-auto bg-[#1F2C3D] rounded-full mb-2 p-[10px]"
+            >
+              <svg
+                class="fill-[white]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                  d="M326.7 403.7c-22.1 8-45.9 12.3-70.7 12.3s-48.7-4.4-70.7-12.3l-.8-.3c-30-11-56.8-28.7-78.6-51.4C70 314.6 48 263.9 48 208C48 93.1 141.1 0 256 0S464 93.1 464 208c0 55.9-22 106.6-57.9 144c-1 1-2 2.1-3 3.1c-21.4 21.4-47.4 38.1-76.3 48.6zM256 91.9c-11.1 0-20.1 9-20.1 20.1l0 6c-5.6 1.2-10.9 2.9-15.9 5.1c-15 6.8-27.9 19.4-31.1 37.7c-1.8 10.2-.8 20 3.4 29c4.2 8.8 10.7 15 17.3 19.5c11.6 7.9 26.9 12.5 38.6 16l2.2 .7c13.9 4.2 23.4 7.4 29.3 11.7c2.5 1.8 3.4 3.2 3.7 4c.3 .8 .9 2.6 .2 6.7c-.6 3.5-2.5 6.4-8 8.8c-6.1 2.6-16 3.9-28.8 1.9c-6-1-16.7-4.6-26.2-7.9c0 0 0 0 0 0s0 0 0 0s0 0 0 0c-2.2-.7-4.3-1.5-6.4-2.1c-10.5-3.5-21.8 2.2-25.3 12.7s2.2 21.8 12.7 25.3c1.2 .4 2.7 .9 4.4 1.5c7.9 2.7 20.3 6.9 29.8 9.1l0 6.4c0 11.1 9 20.1 20.1 20.1s20.1-9 20.1-20.1l0-5.5c5.3-1 10.5-2.5 15.4-4.6c15.7-6.7 28.4-19.7 31.6-38.7c1.8-10.4 1-20.3-3-29.4c-3.9-9-10.2-15.6-16.9-20.5c-12.2-8.8-28.3-13.7-40.4-17.4l-.8-.2c-14.2-4.3-23.8-7.3-29.9-11.4c-2.6-1.8-3.4-3-3.6-3.5c-.2-.3-.7-1.6-.1-5c.3-1.9 1.9-5.2 8.2-8.1c6.4-2.9 16.4-4.5 28.6-2.6c4.3 .7 17.9 3.3 21.7 4.3c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-4.4-1.2-14.4-3.2-21-4.4l0-6.3c0-11.1-9-20.1-20.1-20.1zM48 352l16 0c19.5 25.9 44 47.7 72.2 64L64 416l0 32 192 0 192 0 0-32-72.2 0c28.2-16.3 52.8-38.1 72.2-64l16 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48z"
+                />
+              </svg>
+            </div>
+            <p>Финансиска писменост</p>
+          </div>
+          <div>
+            <div
+              class="w-14 h-14 mx-auto bg-[#1F2C3D] rounded-full mb-2 p-[10px]"
+            >
+              <svg
+                class="fill-[white]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+              >
+                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                  d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"
+                />
+              </svg>
+            </div>
+            <p>Тимска работа</p>
+          </div>
+          <div>
+            <div
+              class="w-14 h-14 mx-auto bg-[#1F2C3D] rounded-full mb-2 p-[10px]"
+            >
+              <svg
+                class="fill-[white]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+              >
+                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                  d="M160 64c0-35.3 28.7-64 64-64L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-239.2 0c-11.8-25.5-29.9-47.5-52.4-64l99.6 0 0-32c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 32 64 0 0-288L224 64l0 49.1C205.2 102.2 183.3 96 160 96l0-32zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352l53.3 0C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7L26.7 512C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"
+                />
+              </svg>
+            </div>
+            <p>Дигитална писменост</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-white border border-[#387B88] rounded-3xl shadow-md max-w-[100rem] mx-1 sm:mx-auto my-10 p-6 md:p-10"
+      >
+        <div class="grid gap-2 md:grid-cols-2 mt-[5rem] sm:mt-[7rem]">
+          <div
+            class="flex items-start space-x-4 md:border-r-[5px] border-[#387B88] md:pr-[20px]"
+          >
+            <svg
+              class="w-12 sm:w-12 md:w-16 lg:w-16 xl:w-16 text-[#387B88] flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <title>bullseye-arrow</title>
+              <path
+                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,10.84 21.79,9.69 21.39,8.61L19.79,10.21C19.93,10.8 20,11.4 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.6,4 13.2,4.07 13.79,4.21L15.4,2.6C14.31,2.21 13.16,2 12,2M19,2L15,6V7.5L12.45,10.05C12.3,10 12.15,10 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12C14,11.85 14,11.7 13.95,11.55L16.5,9H18L22,5H19V2M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12H16A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8V6Z"
+              />
+            </svg>
+            <div>
+              <h2 class="text-[#1F2C3D] font-bold text-lg sm:text-xl mb-2">
+                <span class="text-[#A26702]">МИСИЈА</span> ШТО ИНСПИРИРА,<br />ОБРАЗУВА
+                И ОСПОСОБУВА
+              </h2>
+              <br />
+              <p class="text-[#387B88] text-lg font-semibold">
+                Обезбедување на иновативни програми кои го развиваат критичкото
+                размислување, лидерските способности и решавањето проблеми кај
+                младите. Поттикнувањето на претприемништвото овозможува
+                трансформација на идеите во конкретни и успешни проекти.
+                Обучувањето на родителите да играат активна улога во процесот на
+                поддршка е клучно за долгорочен успех и раст.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4 md:pl-[20px]">
+            <svg
+              class="w-12 sm:w-12 md:w-16 lg:w-16 xl:w-16 text-[#387B88] flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <title>lightbulb-on-outline</title>
+              <path
+                d="M20,11H23V13H20V11M1,11H4V13H1V11M13,1V4H11V1H13M4.92,3.5L7.05,5.64L5.63,7.05L3.5,4.93L4.92,3.5M16.95,5.63L19.07,3.5L20.5,4.93L18.37,7.05L16.95,5.63M12,6A6,6 0 0,1 18,12C18,14.22 16.79,16.16 15,17.2V19A1,1 0 0,1 14,20H10A1,1 0 0,1 9,19V17.2C7.21,16.16 6,14.22 6,12A6,6 0 0,1 12,6M14,21V22A1,1 0 0,1 13,23H11A1,1 0 0,1 10,22V21H14M11,18H13V15.87C14.73,15.43 16,13.86 16,12A4,4 0 0,0 12,8A4,4 0 0,0 8,12C8,13.86 9.27,15.43 11,15.87V18Z"
+              />
+            </svg>
+            <div>
+              <h2 class="text-[#1F2C3D] font-bold text-lg sm:text-xl mb-2">
+                <span class="text-[#A26702]">ВИЗИЈА</span> ЗА ИДНИ ЛИДЕРИ,<br />ИНОВАТОРИ
+                И КРЕАТОРИ
+              </h2>
+              <br />
+              <p class="text-[#387B88] text-lg font-semibold">
+                Креирање на иднината преку поттикнување на претприемничкиот дух
+                кај децата и младите. Веруваме дека еден ден, овие млади умови
+                ќе станат основачи и лидери кои ќе го променат светот на
+                подобро. Наша цел е да создадеме генерација која ќе биде
+                опремена со вештини, креативност и самодоверба за да се соочи со
+                предизвиците на иднината
+              </p>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 text-center mt-6">
+            <a
+              href="#"
+              class="inline-block bg-[#387B88] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#2B2B2B] transition w-56"
+            >
+              Нашите програми
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
