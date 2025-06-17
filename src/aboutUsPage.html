@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleBig Founders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-[#D9DCE2] font-bold min-h-screen"
+    style="font-family: 'M PLUS Rounded 1c', sans-serif"
+  >
+    <!-- Navbar -->
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="/docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="./index.html">ДОМА</a></li>
+          <li><a href="./aboutUs.html">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="./lecturersPage.html">ПРЕДАВАЧИ</a></li>
+          <li><a href="./methodologyPage.html">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="./servicePage.html">УСЛУГИ</a></li>
+          <li><a href="#">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="./index.html" class="hover:text-blue-600">ДОМА</a>
+      <a href="./aboutUs.html" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="./lecturersPage.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="./methodologyPage.html" class="hover:text-blue-600"
+        >МЕТОДОЛОГИЈА</a
+      >
+      <a href="./servicePage.html" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">КОНТАКТ</a>
+    </div>
+
+    <!-- About us page -->
+    <main class="main-content">
+      <section class="px-4 pt-10 text-[#2B2B2B] -mt-72 md:mt-10">
+        <h1
+          class="text-4xl lg:text-6xl md:text-5xl text-[#44597A] mb-16 text-center"
+        >
+          Добредојдовте во
+          <span class="text-[#387B88]">LittleBig Founders</span>!
+        </h1>
+        <div class="grid gap-8 justify-items-center">
+          <div class="flex gap-2">
+            <div class="w-6 h-6 shrink-0">
+              <img
+                src="./images/star (1).png"
+                alt="star"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <p class="md:text-2xl text-xl text-left md:text-center">
+              Секое дете носи потенцијал за креативност, иновација и лидерство!
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-6 h-6 shrink-0">
+              <img
+                src="./images/star (1).png"
+                alt="star"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <p class="md:text-2xl text-xl md:text-center text-left">
+              Нашиот тим од искусни претприемачи и едукатори е тука да го развие
+              претприемачкиот дух кај младите!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="text-center my-7 px-6 py-6 text-[#387B88] max-w-[79rem] mx-auto md:text-2xl text-xl"
+      >
+        <span class="text-[#A26702] md:text-3xl text-2xl">15+ години</span>
+        искуство како консултанти, инвеститори и претприемачи, имаме привилегија
+        да поддржиме безброј бизниси и стартапи во нивниот раст и напредок,
+        помагајќи им да ги надминат предизвиците на конкурентни пазари.
+      </section>
+
+      <section
+        class="bg-opacity-80 bg-[#387B88] text-[#1F2C3D] py-10 px-6 rounded-[50px] max-w-6xl md:mx-20 md:place-self-center mx-10 text-center -mb-[7rem] relative"
+      >
+        <p class="md:text-2xl text-xl">
+          Со иновативни програми засновани на
+          <span class="text-white underline">Монтесори методологијата</span>,
+          поттикнуваме:
+        </p>
+        <br />
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xl">
+          <div class="grid justify-items-center">
+            <div class="w-16 h-16 mb-4 mx-auto">
+              <img src="./images/motivation (1).png" alt="motivation-icon" />
+            </div>
+            <p>Самостојност</p>
+          </div>
+          <div class="grid justify-items-center">
+            <div class="w-16 h-16 mb-4 mx-auto">
+              <img src="./images/financial (1).png" alt="financial-icon" />
+            </div>
+            <p>Финансиска писменост</p>
+          </div>
+          <div class="grid justify-items-center">
+            <div class="w-16 h-16 mb-4 mx-auto">
+              <img src="./images/teamwork (1).png" alt="team-work-icon" />
+            </div>
+            <p>Тимска работа</p>
+          </div>
+          <div class="grid justify-items-center">
+            <div class="w-16 h-16 mb-4 mx-auto">
+              <img src="./images/e-book (1).png" alt="e-book-icon" />
+            </div>
+            <p>Дигитална писменост</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-white border border-[#387B88] rounded-3xl shadow-md max-w-[90rem] md:mx-1 md:mx-10 md:place-self-center mx-6 my-10 p-6 md:p-10"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-[auto_min-content_auto] gap-2 mt-[5rem] md:mt-[7rem] items-start"
+        >
+          <div class="flex items-start space-x-4 md:pr-[20px]">
+            <svg
+              class="w-12 md:w-16 lg:w-16 xl:w-16 text-[#387B88] flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <title>bullseye-arrow</title>
+              <path
+                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,10.84 21.79,9.69 21.39,8.61L19.79,10.21C19.93,10.8 20,11.4 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.6,4 13.2,4.07 13.79,4.21L15.4,2.6C14.31,2.21 13.16,2 12,2M19,2L15,6V7.5L12.45,10.05C12.3,10 12.15,10 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12C14,11.85 14,11.7 13.95,11.55L16.5,9H18L22,5H19V2M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12H16A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8V6Z"
+              />
+            </svg>
+            <div>
+              <h2 class="text-[#1F2C3D] text-lg md:text-xl mb-2">
+                <span class="text-[#A26702]">МИСИЈА</span> ШТО ИНСПИРИРА,<br />ОБРАЗУВА
+                И ОСПОСОБУВА
+              </h2>
+              <br />
+              <p class="text-[#387B88] text-lg">
+                Обезбедување на иновативни програми кои го развиваат критичкото
+                размислување, лидерските способности и решавањето проблеми кај
+                младите. Поттикнувањето на претприемништвото овозможува
+                трансформација на идеите во конкретни и успешни проекти.
+                Обучувањето на родителите да играат активна улога во процесот на
+                поддршка е клучно за долгорочен успех и раст.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="m-10 place-self-center rounded-full border-[#387B88] border-t-4 md:border-t-0 md:border-l-4 w-60 h-0 md:w-0 md:h-64"
+          ></div>
+
+          <div class="flex items-start space-x-4 md:pl-[20px] mb-8">
+            <svg
+              class="w-12 md:w-16 lg:w-16 xl:w-16 text-[#387B88] flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <title>lightbulb-on-outline</title>
+              <path
+                d="M20,11H23V13H20V11M1,11H4V13H1V11M13,1V4H11V1H13M4.92,3.5L7.05,5.64L5.63,7.05L3.5,4.93L4.92,3.5M16.95,5.63L19.07,3.5L20.5,4.93L18.37,7.05L16.95,5.63M12,6A6,6 0 0,1 18,12C18,14.22 16.79,16.16 15,17.2V19A1,1 0 0,1 14,20H10A1,1 0 0,1 9,19V17.2C7.21,16.16 6,14.22 6,12A6,6 0 0,1 12,6M14,21V22A1,1 0 0,1 13,23H11A1,1 0 0,1 10,22V21H14M11,18H13V15.87C14.73,15.43 16,13.86 16,12A4,4 0 0,0 12,8A4,4 0 0,0 8,12C8,13.86 9.27,15.43 11,15.87V18Z"
+              />
+            </svg>
+            <div>
+              <h2 class="text-[#1F2C3D] text-lg md:text-xl mb-2">
+                <span class="text-[#A26702]">ВИЗИЈА</span> ЗА ИДНИ ЛИДЕРИ,<br />ИНОВАТОРИ
+                И КРЕАТОРИ
+              </h2>
+              <br />
+              <p class="text-[#387B88] text-lg">
+                Креирање на иднината преку поттикнување на претприемничкиот дух
+                кај децата и младите. Веруваме дека еден ден, овие млади умови
+                ќе станат основачи и лидери кои ќе го променат светот на
+                подобро. Наша цел е да создадеме генерација која ќе биде
+                опремена со вештини, креативност и самодоверба за да се соочи со
+                предизвиците на иднината
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2 text-center mt-6">
+          <a
+            href="#"
+            class="inline-block bg-[#387B88] text-white px-6 py-3 rounded-xl hover:bg-[#2B2B2B] transition w-40"
+          >
+            ПРОГРАМИ
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/aboutUsScript.js"></script>
+  </body>
+</html>
