@@ -88,7 +88,7 @@ export default class ProgramService {
 
     // Пагинација на Програми
 
-    const page = 2;
+    const page = 1;
     const totalPrograms = parsedData.length;
     const totalPages = Math.ceil(totalPrograms / ProgramsPerPage);
     const startPagination = (page - 1) * ProgramsPerPage;
@@ -120,3 +120,4 @@ export default class ProgramService {
     return foundProgram;
   }
 }
+console.log(ProgramService.getAll());
