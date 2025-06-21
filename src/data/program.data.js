@@ -5,6 +5,7 @@ const PROGRAMS = [
     id: "1",
     name: "Мали Креатори",
     forWho: "за деца од 6 до 9 години",
+    ageRange: { from: 6, to: 9 },
     dateFrom: "",
     dateTo: "",
     description:
@@ -16,6 +17,7 @@ const PROGRAMS = [
     id: "2",
     name: "Идни Основачи",
     forWho: "за деца од 10 до 14 години",
+    ageRange: { from: 10, to: 14 },
     dateFrom: "",
     dateTo: "",
     description:
@@ -27,6 +29,7 @@ const PROGRAMS = [
     id: "3",
     name: "Мини Стартапџии",
     forWho: "за млади од 15 до 18 години",
+    ageRange: { from: 15, to: 18 },
     dateFrom: "",
     dateTo: "",
     description:

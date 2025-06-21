@@ -8,6 +8,7 @@ export default class ProgramService {
       PriceTo,
       instructors = [],
       sortBy,
+      age,
       direction = "asc",
       ProgramsPerPage = 3,
     } = filters;
@@ -63,6 +64,13 @@ export default class ProgramService {
         instructors.some((instructor) =>
           program.instructors.includes(instructor)
         )
+      );
+    }
+    if (age) {
+      parsedData = parsedData.filter(
+        (program) =>
+          age >= program.ageRange.from &&
+          age <= program.ageRange.to
       );
     }
 

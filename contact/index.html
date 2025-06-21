@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="description"
+      content="LittleBig Founders е иновативен проект посветен на развој на претприемачкиот дух кај децата и младите. Со 15+ години експертиза во поддршка на бизниси и стартапи, нашата мисија е да ги оспособиме младите умови да размислуваат критички, да решаваат проблеми и да ги претворат своите идеи во реалност."
+    />
+    <meta
+      name="keywords"
+      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
+    />
+
+    <title>LittleBig Founders</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@700&display=swap"
       rel="stylesheet"
     />
-    <title>Предавачи</title>
+
+    <style>
+      .font-rounded-mplus {
+        font-family: "Rounded Mplus 1c", sans-serif;
+        font-weight: 700;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body
-    class="bg-[#D9DCE2] font-bold min-h-screen"
-    style="font-family: 'M PLUS Rounded 1c', sans-serif"
-  >
+  <body class="bg-[#D9DCE2] overflow-y-auto">
+    <!-- Navbar -->
     <nav
       class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
     >
@@ -40,7 +54,7 @@
           <li><a href="../lecturers/index.html">ПРЕДАВАЧИ</a></li>
           <li><a href="../methodology/index.html">МЕТОДОЛОГИЈА</a></li>
           <li><a href="../service/index.html">УСЛУГИ</a></li>
-          <li><a href="../contact/index.html">КОНТАКТ</a></li>
+          <li><a href="../contact/contactPage.html">КОНТАКТ</a></li>
         </ul>
       </div>
 
@@ -94,77 +108,151 @@
     <!-- Mobile  -->
     <div
       id="mobileMenu"
-      class="flex max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
     >
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
       <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
       <a href="../lecturers/index.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
-      <a href="../methodology/index.html" class="hover:text-blue-600"
-        >МЕТОДОЛОГИЈА</a
-      >
+      <a href="../methodology/index.html" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
       <a href="../service/index.html" class="hover:text-blue-600">УСЛУГИ</a>
-      <a href="../contact/index.html" class="hover:text-blue-600">КОНТАКТ</a>
+      <a href="./contactPage.html" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
-    <main>
-      <article id="lecturersHome">
+
+    <section class="h-screen sm:-mt-20 md:mt-32 overflow-hidden">
+      <div
+        class="bg-cover bg-center absolute inset-0"
+        style="background-image: url(../src/img/contactPage-img.jpg)"
+      ></div>
+      <div class="absolute inset-0 bg-white/50"></div>
+
+      <div
+        class="relative z-20 px-4 py-8 md:py-0 md:max-w-none mx-auto mt-[-2rem] sm:mt-0"
+      >
         <h1
-          class="text-center -mt-64 md:m-20 text-4xl md:text-5xl lg:text-6xl font-bold text-[#387B88]"
+          class="text-center text-3xl sm:text-4xl md:text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
         >
-          ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
+          БИДИ ВО <span class="text-[#44597A]">КОНТАКТ</span> СО ИДНИНАТА
         </h1>
-        <section
-          class="text-center m-16 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#1F2C3D]"
+      </div>
+
+      <!-- Contacts div -->
+      <section class="px-4 py-16 max-w-7xl mx-auto">
+        <div
+          class="relative w-full flex justify-center mt-40 max-w-6xl mx-auto p-4 mt-12 mb-20"
         >
-          Во <span class="text-[#000000]">LittleBig Founders</span>, веруваме
-          дека вистинската промена започнува со квалитетно менторство.
-          <br />
-          <br />
-          Запознај го нашиот тим што составен од искусни претприемачи,
-          едукатори, ментори и креативци кои ја споделуваат истата
-          <span class="text-[#0082F3]">мисија</span> – да ги инспирираат и
-          поддржат младите умови во нивното патување кон личен и професионален
-          раст.
-        </section>
-        <!-- Lecturers -->
-        <section
-          id="lecturers"
-          class="grid grid-flow-col md:grid-rows-2 grid-rows-4 justify-center gap-20 m-10 md:m-20"
-        ></section>
-        <section
-          id="pagination"
-          class="flex flex-row max-w-lg justify-between mx-auto text-[#1F2C3D]"
-        >
-          <button id="prevBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
-            <
-          </button>
-          <div> <span id="currentPage"></span>/ <span id="maxPage"></span></div>
-          <button id="nextBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
+          <div
+            class="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10 bg-[#387B8898] w-[80vw] h-[12rem] sm:w-[90vw] sm:h-[16rem] md:w-[45rem] md:h-[10rem] rounded-[20px] flex justify-center items-center p-4 text-[#1F2C3D] text-base md:text-xl text-center font-rounded-mplus"
+          >
+            <h2 class="text-xl md:text-2xl">
+              Имате <span class="underline">прашања</span> или сакате да се
+              <span class="underline"
+                >приклучите на некоја од нашите програми?</span
+              >
+              <br />
+              <span class="text-white"
+                >Пополнете го формуларот и ќе ви се јавиме наскоро!</span
+              >
+            </h2>
+          </div>
+
+          <!-- form and contact info -->
+          <div
+            class="-mt-[1px] font-rounded-mplus text-[#1F2C3D] text-xl flex flex-col md:flex-row gap-4 items-start md:items-center bg-white w-full max-w-full md:w-[65rem] h-auto md:h-[45rem] rounded-[40px] p-8 pt-36 border-[#44597A] z-0"
+          >
+            <div
+              class="flex-1 flex flex-col gap-4 text-[#44597A] mx-3 text-2xl w-full"
             >
-          </button>
-        </section>
-        <h2
-          class="text-center mt-40 mb-10 text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2C3D]"
-        >
-          ГОСТИ ПРЕДАВАЧИ
-        </h2>
-        <section
-          class="text-left grid justify-center m-16 text-lg md:text-xl lg:text-2xl leading-relaxed text-[#1F2C3D] gap-4"
-        >
-          <p>Катерина Динева - Директор за финансии, Аутомотив Груп</p>
-          <p>Климент Глигоров - Директор на продажба, Македонија Осигурување</p>
-          <p>Бојан Георгиевски - Сопственик на ДИМА Шпедиција и Акантус</p>
-          <p>Спасе Спасески - Сопственик на АСП ПАК</p>
-          <p>Кристијан Стефановски - Сопственик на Scoop Artisan Gelato</p>
-          <p>Борјан Тошевски - Сопственик на Приматекс</p>
-          <p>Менче Стојановска - Наставник по македонски јазик</p>
-          <p>Јасмина Пешева - Сопственик на маркетинг агенција Република</p>
-          <p>Бојан Јаневски - Регионален Менаџер за операции, Индитекс</p>
-          <p>Игор Довезенски - Сопственик на Буџинкан Македонија</p>
-        </section>
-      </article>
-      <article id="profiles" style="display: none"></article>
-    </main>
+              <form>
+                <label class="font-rounded-mplus">Вашето Име</label>
+                <input
+                  type="text"
+                  placeholder="Внеси тука..."
+                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                />
+                <label class="font-rounded-mplus mt-4">Вашето Презиме</label>
+                <input
+                  type="text"
+                  placeholder="Внеси тука..."
+                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                />
+                <label class="font-rounded-mplus mt-4"
+                  >Вашата Е-маил Адреса</label
+                >
+                <input
+                  type="email"
+                  placeholder="Внеси тука..."
+                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                />
+                <label class="font-rounded-mplus mt-4">Налов На Пораката</label>
+                <input
+                  type="text"
+                  placeholder="Внеси тука..."
+                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                />
+                <label class="font-rounded-mplus mt-4">Порака</label>
+                <textarea
+                  placeholder="Внеси тука..."
+                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="font-rounded-mplus bg-[#1F2C3D] text-white text-xl rounded-[20px] w-full md:w-[9rem] h-[3rem] mt-6 md:hover:scale-110 transition-transform duration-300"
+                >
+                  ИСПРАТИ
+                </button>
+              </form>
+            </div>
+
+            <!-- divider line  -->
+            <div class="hidden md:block w-[0.5%] bg-[#387B88] h-[80%]"></div>
+
+            <div
+              class="flex-1 flex-col items-start justify-center space-y-6 text-[#1F2C3D] px-4 sm:px-8 font-rounded-mplus"
+            >
+              <p class="flex items-center space-x-4">
+                <img
+                  src="../src/img/phone.png"
+                  alt="phone icon"
+                  class="w-6 sm:w-10 h-auto rounded-full"
+                />
+                <span class="md:text-xl text-sm" style="word-break: normal"
+                  >+389(0)70800651</span
+                >
+              </p>
+              <p class="flex items-center space-x-4">
+                <img
+                  src="../src/img/email.png"
+                  alt="email icon"
+                  class="w-6 sm:w-10 h-auto rounded-full"
+                />
+                <span class="md:text-xl text-sm" style="line-break: normal"
+                  >littlebigfounders@gmail.com</span
+                >
+              </p>
+              <p class="flex items-center space-x-4">
+                <img
+                  src="../src/img/location.png"
+                  alt="location icon"
+                  class="w-6 sm:w-10 h-auto rounded-full"
+                />
+                <span class="md:text-xl text-sm" style="word-break: normal"
+                  >Бул. Партизански Одреди 6/1 Скопје, Македонија</span
+                >
+              </p>
+              <iframe
+                src="https://www.google.com/maps?q=Bul.+Partizanski+Odredi+6%2F1+Skopje&output=embed"
+                class="w-full max-w-xs sm:max-w-sm mx-auto h-48 border-2 border-[#1f2c3d] rounded-lg"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- footer -->
     <footer class="bg-[#415577]  text-white w-full">
       <!-- Top Section -->
       <div
@@ -290,6 +378,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./script.js"></script>i
   </body>
 </html>
