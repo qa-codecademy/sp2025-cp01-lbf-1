@@ -10,9 +10,9 @@ menuToggle.addEventListener("click", () => {
 import ProgramService from "../services/program.service.js";
 
 const programImages = [
-  "./img/business-kids(6-9 years).jpg",
-  "./img/business-kids(10-14 years).jpg",
-  "./img/business-kids(15-18 years).jpg",
+  "./src/img/business-kids(6-9 years).jpg",
+  "./src/img/business-kids(10-14 years).jpg",
+  "./src/img/business-kids(15-18 years).jpg",
 ];
 const programColors = ["#CC4541", "#A26702", "#44597A"];
 const cardsContainer = document.getElementById("programSection");
