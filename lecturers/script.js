@@ -102,7 +102,7 @@ function getLecturerProfile(lecturer) {
             <div class="grid justify-items-start gap-2 mt-4 justify-center">
               <div class="flex flex-row justify-center gap-2">
                 <img
-                  src="/src/img/mail (1).png"
+                  src="../src/img/mail (1).png"
                   alt="mail"
                   class="md:w-6 md:h-6 w-4 h-4"
                 />
@@ -110,7 +110,7 @@ function getLecturerProfile(lecturer) {
               </div>
               <div class="flex flex-row justify-center gap-2">
                 <img
-                  src="/src/img/linkedin.png"
+                  src="../src/img/linkedin.png"
                   alt="linkedin"
                   class="md:w-6 md:h-6 w-4 h-4"
                 />
@@ -169,7 +169,7 @@ function getLecturerProfile(lecturer) {
           >
             <div class="flex flex-row m-2 flex-wrap">
               <img
-                src="/src/img/writer${lecturer.id}.png"
+                src="../src/img/writer${lecturer.id}.png"
                 alt="writer"
                 class="md:w-10 md:h-10 mt-1 w-4 h-4 relative left-5"
               />
@@ -193,7 +193,7 @@ function getLecturerProfile(lecturer) {
           >
             <div class="flex flex-row m-2 flex-wrap">
               <img
-                src="/src/img/mortarboard${lecturer.id}.png"
+                src="../src/img/mortarboard${lecturer.id}.png"
                 alt="mortarboard"
                 class="md:w-10 md:h-10 mt-1 w-4 h-4 relative left-5"
               />
@@ -227,7 +227,7 @@ function getLecturerProfile(lecturer) {
           >
             <div class="flex flex-row m-2 flex-wrap">
               <img
-                src="/src/img/career${lecturer.id}.png"
+                src="../src/img/career${lecturer.id}.png"
                 alt="career"
                 class="md:w-10 md:h-10 mt-1 w-4 h-4 relative left-5"
               />
@@ -260,7 +260,7 @@ function getLecturerProfile(lecturer) {
           >
             <div class="flex flex-row m-2 flex-wrap">
               <img
-                src="/src/img/notebook${lecturer.id}.png"
+                src="../src/img/notebook${lecturer.id}.png"
                 alt="notebook"
                 class="md:w-10 md:h-10 mt-1 w-4 h-4 relative left-5"
               />
