@@ -41,7 +41,7 @@ programs.forEach((program, index) => {
     </div>
     <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
       <p id="program${program.id}-price"></p>
-      <a href="#" class="bg-white rounded-[35px] text-[${color}] w-[7.3rem] h-[2rem] flex justify-center items-center">
+      <a href="../../contact/index.html" class="bg-white rounded-[35px] text-[${color}] w-[7.3rem] h-[2rem] flex justify-center items-center">
         ПРИЈАВИ СЕ
       </a>
     </div>
