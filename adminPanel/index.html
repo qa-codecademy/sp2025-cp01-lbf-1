@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LittleBig Founders е иновативен проект посветен на развој на претприемачкиот дух кај децата и младите. Со 15+ години експертиза во поддршка на бизниси и стартапи, нашата мисија е да ги оспособиме младите умови да размислуваат критички, да решаваат проблеми и да ги претворат своите идеи во реалност."
+    />
+    <meta
+      name="keywords"
+      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin Panel | LittleBig Founders</title>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="font-family: 'M PLUS Rounded 1c', sans-serif" class="m-0 b-0 overflow-x-hidden scroll-smooth bg-[#D9DCE2]  font-bold overflow-y-auto">
+    <!-- Navbar -->
+    <nav
+      class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
+    >
+      <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
+        <img
+          id="customLogo"
+          src="../docs/client-info/image.png"
+          alt="Logo"
+          class="h-10 w-auto object-contain mix-blend-multiply"
+        />
+      </div>
+
+      <!-- Nav links -->
+      <!-- Remove overflow-x-auto if not accepted from ul -->
+      <div class="max-md:hidden pl-2 pr-2">
+        <ul
+          class="md:flex space-x-6 text-gray-600 text-sm font-bold whitespace-nowrap"
+        >
+          <li><a href="../index.html">ДОМА</a></li>
+          <li><a href="../about-us/index.html">ЗА НАС</a></li>
+          <li><a href="#">ПРОГРАМИ</a></li>
+          <li><a href="../lecturers/index.html">ПРЕДАВАЧИ</a></li>
+          <li><a href="../methodology/index.html">МЕТОДОЛОГИЈА</a></li>
+          <li><a href="../service/index.html">УСЛУГИ</a></li>
+          <li><a href="../contact/index.html">КОНТАКТ</a></li>
+        </ul>
+      </div>
+
+      <!-- Search -->
+      <div
+        class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
+      >
+        <input
+          type="text"
+          placeholder="Пребарај..."
+          class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <span
+          class="absolute inset-y-0 right-2 flex items-center text-gray-400"
+        >
+          <!-- Magnifying Glass Icon -->
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 21l-4.35-4.35M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0z" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="menuToggle" class="text-gray-800 focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile  -->
+    <div
+      id="mobileMenu"
+      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+    >
+      <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
+      <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
+      <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="../lecturers/index.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="../methodology/index.html" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="../service/index.html" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="../contact/index.html" class="hover:text-blue-600">КОНТАКТ</a>
+    </div>
+    <footer class="bg-[#415577]  text-white w-full">
+      <!-- Top Section -->
+      <div
+        class="flex flex-col lg:flex-row justify-evenly items-center lg:items-start gap-12 py-6"
+      >
+        <!-- Left Column -->
+        <div class="text-center md:text-left ml-0 md:ml-4 lg:ml-12 xl:ml-32">
+          <p class="underline decoration-red-600 mb-2">Бидете информирани!</p>
+          <p>Добивајте ги најновите вести директно во вашето сандаче.</p>
+        </div>
+        <!-- Email subscription -->
+        <div
+          class="flex items-center gap-3 bg-gray-200 rounded-full px-1 py-1 w-full max-w-md"
+        >
+          <input
+            type="email"
+            placeholder="Email..."
+            class="bg-gray-200 flex-1 rounded-full px-3 py-2 outline-none w-11/12 placeholder-gray-600 text-black"
+          />
+          <button
+            class="bg-red-500 text-white rounded-full px-5 py-2 whitespace-nowrap"
+          >
+            Регистрирај се
+          </button>
+        </div>
+        <!-- Social links -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 text-center my-auto"
+        >
+          <a target="_blank" href="#" class="hover:underline">LittleBigFounders-App</a>
+          <a target="_blank" href="https://www.facebook.com/people/LittleBig-Founders/61574958621497" class="hover:underline">Facebook</a>
+          <a target="_blank" href="https://www.instagram.com/littlebigfounders/" class="hover:underline">Instagram</a>
+          <a target="_blank" href="#" class="hover:underline">LinkedIn</a>
+        </div>
+      </div>
+      <hr />
+      <!-- Navigation & Contact -->
+      <div
+        class="flex flex-col md:flex-row flex-wrap justify-evenly gap-12 px-4 py-6"
+      >
+        <div class="px-4">
+          <h2 class="mt-8 text-base text-black text-center md:text-left">
+            LittleBig Founders
+          </h2>
+          <h1 class="mt-8 mb-6 text-lg text-center lg:text-left">
+            Создај <span class="underline decoration-red-600">ИДНИНА</span> што
+            ќе ја водиш ти!
+          </h1>
+        </div>
+        <!-- Navigation -->
+        <div>
+          <h2 class="mb-2 underline text-lg decoration-red-600 text-center">
+            Навигација
+          </h2>
+          <div
+            class="flex flex-wrap gap-16 ml-8 justify-center"
+          >
+            <ul class="flex flex-col">
+              <li><a href="../index.html" class="hover:underline">Дома</a></li>
+              <li><a href="../about-us/index.html" class="hover:underline">За нас</a></li>
+              <li><a href="#" class="hover:underline">Програми</a></li>
+            </ul>
+            <ul class="flex flex-col">
+              <li><a href="../lecturers/index.html" class="hover:underline">Предавачи</a></li>
+              <li><a href="../methodology/index.html" class="hover:underline">Методологија</a></li>
+              <li><a href="../service/index.html" class="hover:underline">Услуги</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <p
+            class="underline decoration-red-600 text-center lg:text-left md:ml-8"
+          >
+            Контакт
+          </p>
+          <div class="flex items-center mt-2 justify-center sm:justify-center lg:justify-start">
+            <img
+              src="../src/img/phone-call.png"
+              alt="phone-call"
+              class="w-6 h-6 mr-2"
+            />
+            <span>+389(0)70800651</span>
+          </div>
+          <div class="flex items-center mt-4 justify-center justify-center lg:justify-start">
+            <img
+              src="../src/img/mail.png"
+              alt="mail"
+              class="w-6 h-6 mr-2"
+            />
+            <span>littlebigfounders@gmail.com</span>
+          </div>
+          <div
+            class="flex items-center mt-4 justify-center justify-center lg:justify-start"
+          >
+            <img
+              src="../src/img/placeholder.png"
+              alt="placeholder"
+              class="w-6 h-6 mr-2"
+            />
+            <span>Бул. Партизански Одреди 6/1 Скопје, Македонија</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left  px-4"
+      >
+        <div class="mb-5 mt-4 sm:ml-20 text-xs">
+          <p class="ml-0  xl:ml-32">
+            <span class="text-[#C2F750]">©</span> 2025
+            <span class="text-black">LittleBig Founders.</span> All Rights
+            Reserved.
+          </p>
+        </div>
+        <div>
+          <div
+            class="mt-4 mb-5 text-xs sm:mr-10 flex flex-col sm:flex-row gap-2 justify-center sm:justify-end"
+          >
+            <a href="#" class="hover:underline">Terms and Conditions</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./script.js"></script>
+    </body>
+</html>

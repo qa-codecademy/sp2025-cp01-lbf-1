@@ -68,9 +68,7 @@ export default class ProgramService {
     }
     if (age) {
       parsedData = parsedData.filter(
-        (program) =>
-          age >= program.ageRange.from &&
-          age <= program.ageRange.to
+        (program) => age >= program.ageRange.from && age <= program.ageRange.to
       );
     }
 
@@ -117,15 +115,51 @@ export default class ProgramService {
     const id = programId.toString();
 
     const foundProgram = programs.find((program) => program.id === id);
+    if (!foundProgram) {
+      throw new Error("Program was not found.");
+    }
     foundProgram.shortDescription = foundProgram.description.slice(
       0,
       charSlice
     );
-    if (!foundProgram) {
-      throw new Error("Program was not found.");
-    }
 
     return foundProgram;
   }
+  static createProgram(program) {
+    const programs = JSON.parse(localStorage.getItem("programs")) || [];
+    program.id = (programs.length + 1).toString();
+    programs.push(program);
+    localStorage.setItem("programs", JSON.stringify(programs));
+    return "Успешно креирана програма";
+  }
+
+  static updateProgram(programId, program) {
+    const id = programId.toString();
+    const programs = JSON.parse(localStorage.getItem("programs"));
+    if (!programs) {
+      return "Проблем во земање на програмите";
+    }
+    const programIndex = programs.findIndex((program) => program.id === id);
+    if (programIndex === -1) {
+      return "Програмата која сакаш да ја смениш не постои";
+    }
+    program.id = id;
+    programs[programIndex] = { ...programs[programIndex], ...program };
+    localStorage.setItem("programs", JSON.stringify(programs));
+    return "Успешно апдејтирана програма";
+  }
+
+  static deleteProgram(programId) {
+    const id = programId.toString();
+    const programs = JSON.parse(localStorage.getItem("programs"));
+    if (!programs) {
+      return "Проблем во земање на програмите";
+    }
+    const filteredPrograms = programs.filter((program) => program.id !== id);
+    if (filteredPrograms.length === programs.length) {
+      return "Програмата не постои";
+    }
+    localStorage.setItem("programs", JSON.stringify(filteredPrograms));
+    return "Успешно избришана програма";
+  }
 }
-console.log(ProgramService.getAll());

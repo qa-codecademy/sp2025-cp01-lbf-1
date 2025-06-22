@@ -2,7 +2,13 @@ import LECTURERS from "../data/lecturers.data.js";
 
 export default class LecturersService {
   static getAll(filters = {}) {
-    const { name, sortBy, direction = "asc", lecturersPerPage = 4, page = 1} = filters;
+    const {
+      name,
+      sortBy,
+      direction = "asc",
+      lecturersPerPage = 4,
+      page = 1,
+    } = filters;
     const storedData = localStorage.getItem("lecturers");
     if (!storedData) {
       localStorage.setItem("lecturers", JSON.stringify(LECTURERS));
@@ -66,7 +72,7 @@ export default class LecturersService {
   static getById(id) {
     const lecturersJson = localStorage.getItem("lecturers");
 
-    const lecturers = JSON.parse(lecturersJson)
+    const lecturers = JSON.parse(lecturersJson);
     const lecturerId = id.toString();
 
     const foundLecturer = lecturers.find(
@@ -76,5 +82,45 @@ export default class LecturersService {
       throw new Error("Lecturer was not found.");
     }
     return foundLecturer;
+  }
+
+  static createLecturer(lecturer) {
+    const lecturers = JSON.parse(localStorage.getItem("lecturers")) || [];
+    lecturer.id = (lecturers.length + 1).toString();
+    lecturers.push(lecturer);
+    localStorage.setItem("lecturers", JSON.stringify(lecturers));
+    return "Успешно креиран професор";
+  }
+
+  static deleteLecturer(lecturerId) {
+    const id = lecturerId.toString();
+    const lecturers = JSON.parse(localStorage.getItem("lecturers"));
+    if (!lecturers) {
+      return "Проблем во земање на професорите";
+    }
+    const filteredLecturers = lecturers.filter(
+      (lecturer) => lecturer.id !== id
+    );
+    if (filteredLecturers.length === lecturers.length) {
+      return "Професорот не постои";
+    }
+    localStorage.setItem("lecturers", JSON.stringify(filteredLecturers));
+    return "Успешно избришан професор";
+  }
+
+  static updateLecturer(lecturerId, lecturer) {
+    const id = lecturerId.toString();
+    const lecturers = JSON.parse(localStorage.getItem("lecturers"));
+    if (!lecturers) {
+      return "Проблем во земање на професорите";
+    }
+    const lecturerIndex = lecturers.findIndex((lecturer) => lecturer.id === id);
+    if (lecturerIndex === -1) {
+      return "прфоесорот кој сакаш да го смениш не постои";
+    }
+    lecturer.id = id;
+    lecturers[lecturerIndex] = { ...lecturers[lecturerIndex], ...lecturer };
+    localStorage.setItem("lecturers", JSON.stringify(lecturers));
+    return "Успешно апдејтиран професор";
   }
 }
