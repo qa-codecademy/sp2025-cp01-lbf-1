@@ -3,32 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="LittleBig Founders е иновативен проект посветен на развој на претприемачкиот дух кај децата и младите. Со 15+ години експертиза во поддршка на бизниси и стартапи, нашата мисија е да ги оспособиме младите умови да размислуваат критички, да решаваат проблеми и да ги претворат своите идеи во реалност."
-    />
-    <meta
-      name="keywords"
-      content="LittleBig Founders, претприемачки дух, претприемачки програми, деца и млади, критичко размислување, решавање проблеми, бизниси и стартапи, трансформациска моќ, иновација и креативност, развој на вештини, реалзација на идеи, идни основачи и креатори, практично учење, родителска поддршка, лидерство"
-    />
-
-    <title>LittleBig Founders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      .font-rounded-mplus {
-        font-family: "Rounded Mplus 1c", sans-serif;
-        font-weight: 700;
-      }
-    </style>
-
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Koнтакти | LittleBig Founders</title>
+    <link rel="stylesheet" href="../src/styles/style.css" />
   </head>
-  <body class="bg-[#D9DCE2] overflow-y-auto">
+  <body
+    class="bg-[#D9DCE2] font-bold overflow-y-auto h-screen"
+    style="font-family: 'M PLUS Rounded 1c', sans-serif"
+  >
     <!-- Navbar -->
     <nav
       class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
@@ -113,13 +101,18 @@
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
       <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
-      <a href="../lecturers/index.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
-      <a href="../methodology/index.html" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="../lecturers/index.html" class="hover:text-blue-600"
+        >ПРЕДАВАЧИ</a
+      >
+      <a href="../methodology/index.html" class="hover:text-blue-600"
+        >МЕТОДОЛОГИЈА</a
+      >
       <a href="../service/index.html" class="hover:text-blue-600">УСЛУГИ</a>
       <a href="./index.html" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
 
-    <section class="h-screen sm:-mt-20 md:mt-32 overflow-hidden">
+    <!-- main -->
+    <main class="relative -mt-16 sm:-mt-64 md:-mt-16 overflow-hidden">
       <div
         class="bg-cover bg-center absolute inset-0"
         style="background-image: url(../src/img/contactPage-img.jpg)"
@@ -127,22 +120,23 @@
       <div class="absolute inset-0 bg-white/50"></div>
 
       <div
-        class="relative z-20 px-4 py-8 md:py-0 md:max-w-none mx-auto mt-[-2rem] sm:mt-0"
+        class="relative z-20 px-4 pt-10 sm:py-16 md:pt-32 md:pb-8 md:max-w-none mx-auto"
       >
         <h1
-          class="text-center text-3xl sm:text-4xl md:text-5xl tracking-wider text-[#1F2C3D] font-rounded-mplus"
+          class="text-center text-3xl sm:text-4xl md:text-5xl tracking-wider text-[#1F2C3D] word-break"
         >
           БИДИ ВО <span class="text-[#44597A]">КОНТАКТ</span> СО ИДНИНАТА
         </h1>
       </div>
 
       <!-- Contacts div -->
+
       <section class="px-4 py-16 max-w-7xl mx-auto">
         <div
           class="relative w-full flex justify-center mt-40 max-w-6xl mx-auto p-4 mt-12 mb-20"
         >
           <div
-            class="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10 bg-[#387B8898] w-[80vw] h-[12rem] sm:w-[90vw] sm:h-[16rem] md:w-[45rem] md:h-[10rem] rounded-[20px] flex justify-center items-center p-4 text-[#1F2C3D] text-base md:text-xl text-center font-rounded-mplus"
+            class="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10 bg-[#387B8898] w-[80vw] h-[12rem] sm:w-[90vw] sm:h-[16rem] md:w-[45rem] md:h-[10rem] rounded-[20px] flex justify-center items-center p-4 text-[#1F2C3D] text-base md:text-xl text-center"
           >
             <h2 class="text-xl md:text-2xl">
               Имате <span class="underline">прашања</span> или сакате да се
@@ -156,48 +150,46 @@
             </h2>
           </div>
 
-          <!-- form and contact info -->
+          <!-- Form and contact info -->
           <div
-            class="-mt-[1px] font-rounded-mplus text-[#1F2C3D] text-xl flex flex-col md:flex-row gap-4 items-start md:items-center bg-white w-full max-w-full md:w-[65rem] h-auto md:h-[45rem] rounded-[40px] p-8 pt-36 border-[#44597A] z-0"
+            class="-mt-[1px] text-[#1F2C3D] text-xl flex flex-col md:flex-row gap-4 items-start md:items-center bg-white w-full max-w-full md:w-[65rem] h-auto md:h-[45rem] rounded-[40px] p-8 pt-36 border-[#44597A] z-0"
           >
             <div
-              class="flex-1 flex flex-col gap-4 text-[#44597A] mx-3 text-2xl w-full"
+              class="flex-1 flex flex-col gap-4 text-[#44597A] mx-3 text-xl w-full"
             >
               <form>
-                <label class="font-rounded-mplus">Вашето Име</label>
+                <label>Вашето Име</label>
                 <input
                   type="text"
                   placeholder="Внеси тука..."
-                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                  class="border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
                 />
-                <label class="font-rounded-mplus mt-4">Вашето Презиме</label>
+                <label class="mt-4">Вашето Презиме</label>
                 <input
                   type="text"
                   placeholder="Внеси тука..."
-                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                  class="border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
                 />
-                <label class="font-rounded-mplus mt-4"
-                  >Вашата Е-маил Адреса</label
-                >
+                <label class="mt-4">Вашата Е-маил Адреса</label>
                 <input
                   type="email"
                   placeholder="Внеси тука..."
-                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                  class="border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
                 />
-                <label class="font-rounded-mplus mt-4">Налов На Пораката</label>
+                <label class="mt-4">Налов На Пораката</label>
                 <input
                   type="text"
                   placeholder="Внеси тука..."
-                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                  class="border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
                 />
-                <label class="font-rounded-mplus mt-4">Порака</label>
+                <label class="mt-4">Порака</label>
                 <textarea
                   placeholder="Внеси тука..."
-                  class="font-rounded-mplus border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
+                  class="border-2 border-[#44597A] rounded-[20px] w-full px-4 py-2"
                 ></textarea>
                 <button
                   type="submit"
-                  class="font-rounded-mplus bg-[#1F2C3D] text-white text-xl rounded-[20px] w-full md:w-[9rem] h-[3rem] mt-6 md:hover:scale-110 transition-transform duration-300"
+                  class="bg-[#1F2C3D] text-white text-xl rounded-[20px] w-full md:w-[9rem] h-[3rem] mt-6 md:hover:scale-110 transition-transform duration-300"
                 >
                   ИСПРАТИ
                 </button>
@@ -208,7 +200,7 @@
             <div class="hidden md:block w-[0.5%] bg-[#387B88] h-[80%]"></div>
 
             <div
-              class="flex-1 flex-col items-start justify-center space-y-6 text-[#1F2C3D] px-4 sm:px-8 font-rounded-mplus"
+              class="flex-1 flex-col items-start justify-center space-y-6 text-[#1F2C3D] px-4 sm:px-8 ="
             >
               <p class="flex items-center space-x-4">
                 <img
@@ -250,10 +242,10 @@
           </div>
         </div>
       </section>
-    </section>
+    </main>
 
     <!-- footer -->
-    <footer class="bg-[#415577]  text-white w-full">
+    <footer class="bg-[#415577] text-white w-full">
       <!-- Top Section -->
       <div
         class="flex flex-col lg:flex-row justify-evenly items-center lg:items-start gap-12 py-6"
@@ -282,9 +274,21 @@
         <div
           class="flex flex-wrap justify-center items-center gap-4 text-center my-auto"
         >
-          <a target="_blank" href="#" class="hover:underline">LittleBigFounders-App</a>
-          <a target="_blank" href="https://www.facebook.com/people/LittleBig-Founders/61574958621497" class="hover:underline">Facebook</a>
-          <a target="_blank" href="https://www.instagram.com/littlebigfounders/" class="hover:underline">Instagram</a>
+          <a target="_blank" href="#" class="hover:underline"
+            >LittleBigFounders-App</a
+          >
+          <a
+            target="_blank"
+            href="https://www.facebook.com/people/LittleBig-Founders/61574958621497"
+            class="hover:underline"
+            >Facebook</a
+          >
+          <a
+            target="_blank"
+            href="https://www.instagram.com/littlebigfounders/"
+            class="hover:underline"
+            >Instagram</a
+          >
           <a target="_blank" href="#" class="hover:underline">LinkedIn</a>
         </div>
       </div>
@@ -307,18 +311,32 @@
           <h2 class="mb-2 underline text-lg decoration-red-600 text-center">
             Навигација
           </h2>
-          <div
-            class="flex flex-wrap gap-16 ml-8 justify-center"
-          >
+          <div class="flex flex-wrap gap-16 ml-8 justify-center">
             <ul class="flex flex-col">
               <li><a href="../index.html" class="hover:underline">Дома</a></li>
-              <li><a href="../about-us/index.html" class="hover:underline">За нас</a></li>
+              <li>
+                <a href="../about-us/index.html" class="hover:underline"
+                  >За нас</a
+                >
+              </li>
               <li><a href="#" class="hover:underline">Програми</a></li>
             </ul>
             <ul class="flex flex-col">
-              <li><a href="../lecturers/index.html" class="hover:underline">Предавачи</a></li>
-              <li><a href="../methodology/index.html" class="hover:underline">Методологија</a></li>
-              <li><a href="../service/index.html" class="hover:underline">Услуги</a></li>
+              <li>
+                <a href="../lecturers/index.html" class="hover:underline"
+                  >Предавачи</a
+                >
+              </li>
+              <li>
+                <a href="../methodology/index.html" class="hover:underline"
+                  >Методологија</a
+                >
+              </li>
+              <li>
+                <a href="../service/index.html" class="hover:underline"
+                  >Услуги</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -329,7 +347,9 @@
           >
             Контакт
           </p>
-          <div class="flex items-center mt-2 justify-center sm:justify-center lg:justify-start">
+          <div
+            class="flex items-center mt-2 justify-center sm:justify-center lg:justify-start"
+          >
             <img
               src="../src/img/phone-call.png"
               alt="phone-call"
@@ -337,12 +357,10 @@
             />
             <span>+389(0)70800651</span>
           </div>
-          <div class="flex items-center mt-4 justify-center justify-center lg:justify-start">
-            <img
-              src="../src/img/mail.png"
-              alt="mail"
-              class="w-6 h-6 mr-2"
-            />
+          <div
+            class="flex items-center mt-4 justify-center justify-center lg:justify-start"
+          >
+            <img src="../src/img/mail.png" alt="mail" class="w-6 h-6 mr-2" />
             <span>littlebigfounders@gmail.com</span>
           </div>
           <div
@@ -359,10 +377,10 @@
       </div>
       <hr />
       <div
-        class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left  px-4"
+        class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left px-4"
       >
         <div class="mb-5 mt-4 sm:ml-20 text-xs">
-          <p class="ml-0  xl:ml-32">
+          <p class="ml-0 xl:ml-32">
             <span class="text-[#C2F750]">©</span> 2025
             <span class="text-black">LittleBig Founders.</span> All Rights
             Reserved.
@@ -378,6 +396,7 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./script.js"></script>i
+    <script type="module" src="./script.js"></script>
+    i
   </body>
 </html>
