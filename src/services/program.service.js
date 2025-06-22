@@ -1,74 +1,129 @@
 import PROGRAMS from "../data/program.data.js";
 
 export default class ProgramService {
-  static getAll() {
-    const storedData = localStorage.getItem("programs");
+  static getAll(filters = {}) {
+    const {
+      name,
+      PriceFrom,
+      PriceTo,
+      instructors = [],
+      sortBy,
+      age,
+      direction = "asc",
+      ProgramsPerPage = 3,
+    } = filters;
 
+    const storedData = localStorage.getItem("programs");
     if (!storedData) {
       localStorage.setItem("programs", JSON.stringify(PROGRAMS));
-      return [];
+      return {
+        data: [],
+        currentPage: 1,
+        totalPrograms: 0,
+        totalPages: 0,
+      };
     }
 
+    // Парсирање на Data
+
+    let parsedData;
     try {
-      return JSON.parse(storedData);
+      parsedData = JSON.parse(storedData);
     } catch (error) {
       console.error("Error parsing localStorage data:", error);
-      return [];
+      return {
+        data: [],
+        currentPage: 1,
+        totalPrograms: 0,
+        totalPages: 0,
+      };
     }
+
+    // Додавање на shortDescription
+
+    parsedData.forEach(
+      (program) =>
+        (program.shortDescription = program.description.slice(0, 155))
+    );
+
+    // Филтри за програми
+
+    if (name) {
+      parsedData = parsedData.filter((program) =>
+        program.name.toLowerCase().includes(name.toLowerCase())
+      );
+    }
+    if (PriceFrom) {
+      parsedData = parsedData.filter((program) => program.price >= PriceFrom);
+    }
+    if (PriceTo) {
+      parsedData = parsedData.filter((program) => program.price <= PriceTo);
+    }
+    if (instructors.length > 0) {
+      parsedData = parsedData.filter((program) =>
+        instructors.some((instructor) =>
+          program.instructors.includes(instructor)
+        )
+      );
+    }
+    if (age) {
+      parsedData = parsedData.filter(
+        (program) => age >= program.ageRange.from && age <= program.ageRange.to
+      );
+    }
+
+    // Сортирање на Програми
+
+    if (sortBy === "name") {
+      parsedData.sort((a, b) => {
+        if (direction === "asc") {
+          return a.name.localeCompare(b.name, "mk", { sensitivity: "base" });
+        } else if (direction === "desc") {
+          return b.name.localeCompare(a.name, "mk", { sensitivity: "base" });
+        }
+      });
+    } else if (sortBy === "price") {
+      parsedData.sort((a, b) => {
+        if (direction === "asc") {
+          return a.price - b.price;
+        } else if (direction === "desc") {
+          return b.price - a.price;
+        }
+      });
+    }
+
+    // Пагинација на Програми
+
+    const page = 1;
+    const totalPrograms = parsedData.length;
+    const totalPages = Math.ceil(totalPrograms / ProgramsPerPage);
+    const startPagination = (page - 1) * ProgramsPerPage;
+    const endPagination = startPagination + ProgramsPerPage;
+    const paginationData = parsedData.slice(startPagination, endPagination);
+
+    return {
+      data: paginationData,
+      currentPage: page,
+      totalPrograms: totalPrograms,
+      totalPages: totalPages,
+    };
   }
 
-  static getById(programId) {
-    const programs = ProgramService.getAll();
+  static getById(programId, charSlice) {
+    const programs = ProgramService.getAll().data;
 
     const id = programId.toString();
 
     const foundProgram = programs.find((program) => program.id === id);
-
+    foundProgram.shortDescription = foundProgram.description.slice(
+      0,
+      charSlice
+    );
     if (!foundProgram) {
       throw new Error("Program was not found.");
     }
 
     return foundProgram;
   }
-
-  static generateShortDescription(charNum, programId) {
-    const id = programId.toString();
-
-    const program = this.getById(id);
-
-    program.shortDescription = program.description.slice(0, charNum);
-
-    return program.shortDescription;
-  }
-
-  static sortPrograms(direction, sortBy) {
-    const programs = ProgramService.getAll();
-    let sorted = [];
-    if (sortBy === "name") {
-      if (direction === "asc") {
-        sorted = [...programs].sort((a, b) =>
-          a.name.localeCompare(b.name, "mk", { sensitivity: "base" })
-        );
-      } else if (direction === "desc") {
-        sorted = [...programs].sort((a, b) =>
-          b.name.localeCompare(a.name, "mk", { sensitivity: "base" })
-        );
-      }
-    } else if (sortBy === "price") {
-      if (direction === "asc") {
-        sorted = [...programs].sort((a, b) => a.price - b.price);
-      } else if (direction === "desc") {
-        sorted = [...programs].sort((a, b) => b.price - a.price);
-      }
-    } else {
-      sorted = programs;
-    }
-    localStorage.setItem("programs", JSON.stringify(sorted));
-    return sorted;
-  }
 }
 
-// ProgramService.getAll();
-// ProgramService.getById(2);
-// ProgramService.sortPrograms("desc", "price");
-// ProgramService.generateShortDescription(150, 2);

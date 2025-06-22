@@ -32,7 +32,7 @@
       <div class="flex items-center space-x-20 overflow-hidden min-w-0 pr-4">
         <img
           id="customLogo"
-          src="/docs/client-info/image.png"
+          src="../docs/client-info/image.png"
           alt="Logo"
           class="h-10 w-auto object-contain mix-blend-multiply"
         />
@@ -46,7 +46,7 @@
         >
           <li><a href="./index.html">ДОМА</a></li>
           <li><a href="#">ЗА НАС</a></li>
-          <li><a href="./programs.html">ПРОГРАМИ</a></li>
+          <li><a href="./programsPage.html">ПРОГРАМИ</a></li>
           <li><a href="#">ПРЕДАВАЧИ</a></li>
           <li><a href="#">МЕТОДОЛОГИЈА</a></li>
           <li><a href="#">УСЛУГИ</a></li>
@@ -108,145 +108,91 @@
     >
       <a href="#" class="hover:text-blue-600">ДОМА</a>
       <a href="#" class="hover:text-blue-600">ЗА НАС </a>
-      <a href="./programs.html" class="hover:text-blue-600">ПРОГРАМИ</a>
+      <a href="./programsPage.html" class="hover:text-blue-600">ПРОГРАМИ</a>
       <a href="#" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
       <a href="#" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
-      <a href="./services.html" class="hover:text-blue-600">УСЛУГИ</a>
+      <a href="#" class="hover:text-blue-600">УСЛУГИ</a>
       <a href="#" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
 
-    <!-- Main -->
+    <!-- Main Container -->
     <main
       class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center"
     >
-      <!-- Header -->
-      <div class="header -mt-52 md:mt-12">
-        <h1 class="text-center text-[#387B88] text-4xl px-2">
+      <!-- Page Header -->
+      <section class="-mt-52 md:mt-12">
+        <h1 class="text-center text-[#387B88] text-4xl px-4">
           ПРОГРАМИ
           <span class="text-[#44597A]">ШТО ГО РАЗВИВААТ</span>
           ПОТЕНЦИЈАЛОТ
         </h1>
-      </div>
-
-      <!-- Cards-->
-      <section
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 px-10 lg:px-24 text-white mt-20 tracking-wide justify-items-center"
-      >
-        <!-- Card 1 -->
-        <article
-          class="bg-[#CC4541] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-        >
-          <div class="relative mt-2" id="image1">
-            <img
-              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
-              src="./img/business-kids(6-9 years).jpg"
-              alt="business kids (6-9 years) image"
-            />
-
-            <div
-              class="absolute top-2 right-3 z-10 bg-[#CC4541] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
-              id="program1-ageLimit"
-            ></div>
-          </div>
-
-          <div class="text-center mt-2 mb-2">
-            <h3 class="mb-1 text-xl" id="program1-title"></h3>
-            <p
-              class="text-xs leading-5 mx-5 font-[500] tracking-wide"
-              id="program1-description"
-            ></p>
-            <button id="btn-1">▼</button>
-          </div>
-
-          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
-            <p id="program1-price"></p>
-            <a
-              href="#"
-              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#CC4541]"
-            >
-              ПРИЈАВИ СЕ
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article
-          class="bg-[#A26702] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-        >
-          <div class="relative mt-2" id="image2">
-            <img
-              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
-              src="./img/business-kids(10-14 years).jpg"
-              alt="business kids (10-14 years) image"
-            />
-            <div
-              class="absolute top-2 right-3 z-10 bg-[#A26702] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
-              id="program2-ageLimit"
-            ></div>
-          </div>
-
-          <div class="text-center mt-2 mb-2" id="description-div">
-            <h3 class="mb-1 text-xl" id="program2-title"></h3>
-            <p
-              class="text-xs leading-5 mx-5 font-[500]"
-              id="program2-description"
-            ></p>
-            <button id="btn-2">▼</button>
-          </div>
-
-          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
-            <p id="program2-price"></p>
-            <a
-              href="#"
-              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#A26702]"
-            >
-              ПРИЈАВИ СЕ
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article
-          class="bg-[#44597A] rounded-[35px] w-[22rem] h-[25rem] flex flex-col justify-center items-center md:col-span-2 xl:col-span-1 duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-        >
-          <div class="relative mt-2" id="image3">
-            <img
-              class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
-              src="./img/business-kids(15-18 years).jpg"
-              alt="business kids (15-18) image"
-            />
-            <div
-              class="absolute top-2 right-3 z-10 bg-[#44597A] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center font-[500]"
-              id="program3-ageLimit"
-            ></div>
-          </div>
-
-          <div class="text-center mt-2 mb-2">
-            <h3 class="mb-1 text-xl" id="program3-title"></h3>
-            <p
-              class="text-xs leading-5 mx-5 font-[500]"
-              id="program3-description"
-            ></p>
-            <button id="btn-3">▼</button>
-          </div>
-
-          <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
-            <p id="program3-price"></p>
-            <a
-              href="#"
-              class="bg-white rounded-[35px] w-[7.3rem] h-[2rem] flex justify-center items-center text-[#44597A]"
-            >
-              ПРИЈАВИ СЕ
-            </a>
-          </div>
-        </article>
       </section>
+
+      <!-- Filter Section -->
+      <section class="mt-12 text-sm flex flex-col [@media(min-width:800px)]:flex-row justify-center items-center gap-5">
+        <!-- Program Selector -->
+         <div>
+          <label for="allPrograms" class="mr-1">Програми:</label>  
+          <select name="allPrograms" id="programSelect" class="text-center p-2 rounded-md">
+            <option value="програма">Програма</option>
+          </select>
+        </div>
+
+        <!-- Age Input -->
+        <div>
+          <input type="number" id="ageInput" class="w-24 p-2 rounded-md text-center" placeholder="Возраст">
+        </div>
+
+        <!-- Price Range Inputs -->
+        <div>
+          <fieldset class="border border-gray-400 p-4 text-center">
+            <legend class="mx-auto px-2 text-center">Цена (од-до)</legend>
+
+            <input type="number" id="priceFromInput" class="w-20 p-1 rounded-md text-center mr-2" placeholder="3000">
+            <input type="number" id="priceToInput" class="w-20 p-1 rounded-md text-center" placeholder="3500">
+          </fieldset>
+        </div>
+
+        <!-- Instructors Dropdown -->
+        <div class="relative text-center">
+          <!-- Trigger Button -->
+          <button id="dropdownButton" class="bg-white p-2 rounded-md mb-1">
+            Инструктори ⌵
+          </button>
+      
+          <div id="dropdownMenu" class="hidden bg-white absolute left-1/2 translate-x-[-50%] rounded-md z-30 min-w-max"></div>
+        </div>
+       
+      </section>
+
+      <!-- Sorting Section -->
+      <section class="mt-5 text-sm flex flex-col [@media(min-width:800px)]:flex-row justify-center items-center">
+        <!-- Sort Selector -->
+        <div>
+          <label for="sortBy" class="mr-1">Сортирај по:</label>
+          <select name="sortBy" id="programSortSelect" class="text-center p-2 rounded-md mr-5">
+            <option value="sortByNameAsc">Име: А - Ш</option>
+            <option value="sortByNameDesc">Име: Ш - А</option>
+            <option value="sortByPriceAsc">Цена: ниска - висока</option>
+            <option value="sortByPriceDesc">Цена: висока - ниска</option>
+          </select>
+        </div>
+
+        <!-- Filter Button -->
+        <button type="button" id="filterBtn" class="p-2 bg-[#387B88] mt-5 text-white rounded-md duration-500 ease-in-out hover:scale-105 [@media(min-width:800px)]:mt-0">Филтрирај</button>
+      </section>
+      
+      <!-- Program Cards-->
+      <section
+        id="programSection"
+        class="text-white mt-16 tracking-wide justify-items-center grid grid-cols-1 md:grid-cols-2 [@media(min-width:1180px)]:grid-cols-3 gap-20 px-10 "
+      ></section>
     </main>
 
     <!-- Footer -->
     <footer></footer>
 
     <script src="./script.js"></script>
-    <script type="module" src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/programsScript.js"></script>
   </body>
 </html>

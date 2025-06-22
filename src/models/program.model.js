@@ -10,6 +10,7 @@ export default class Program {
     shortDescription,
     instructors = [],
     price,
+    ageRange,
   }) {
     this.id = id;
     this.name = name;
@@ -21,5 +22,6 @@ export default class Program {
     this.shortDescription = shortDescription;
     this.instructors = instructors;
     this.price = price;
+    this.ageRange = ageRange;
   }
 }
