@@ -82,3 +82,45 @@ function displayProgram(programId, program) {
       )
       .replace("до", "-");
 }
+
+// Lecturers
+import LecturersService from "../services/lecturers.service.js";
+
+const { data: lecturers } = LecturersService.getAll();
+
+const lecturersData = lecturers.map(({ id, fullName, photoUrl, role }) => ({
+  id,
+  fullName,
+  photoUrl,
+  role,
+}));
+
+const lecturersDiv = document.getElementById("lecturersCards");
+
+// Colors
+const colors = ["#cc4541", "#44597a", "#a26702", "#387b88"];
+
+lecturersData.forEach((lecturer) => {
+  let html = `
+  <div class="flex justify-center ">
+    <div class="w-60 text-center">
+      <img
+        src="${lecturer.photoUrl}"
+        alt="${lecturer.fullName}"
+        class="w-60 h-60 object-cover rounded-full border-4 border-[${
+          colors[Number(lecturer.id) - 1]
+        }] mx-auto"
+      />
+      <div class="mt-5">
+      <p class="text-[${
+        colors[Number(lecturer.id) - 1]
+      }] text-lg lg:text-2xl font-bold">
+        ${lecturer.fullName.toUpperCase()}
+      </p>
+      <p class="font-bold text-sm mt-1">${lecturer.role}</p>
+     </div>
+    </div>
+    </div>
+  `;
+  lecturersDiv.innerHTML += html;
+});
