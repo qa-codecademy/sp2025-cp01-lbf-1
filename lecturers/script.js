@@ -1,4 +1,5 @@
 import LecturersService from "../src/services/lecturers.service.js";
+// history.pushState({}, "", "/lecturers");
 
 // Navbar elements
 const menuToggle = document.getElementById("menuToggle");
@@ -72,7 +73,7 @@ let lecturersCards = (lecturers) => {
 };
 
 // PROFILES
-function getLecturerProfile(lecturer) {
+export function getLecturerProfile(lecturer) {
   let lecturerHTML = `<article
         id="profile${lecturer.id}" "
         class="flex flex-col md:flex-row justify-center gap-5 m-8 md:m-20 -mt-64"
@@ -348,6 +349,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Handle back/forward navigation
 window.addEventListener("popstate", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const idFromUrl = urlParams.get("id");
+
+  if (idFromUrl) {
+    const lecturer = LecturersService.getById(idFromUrl);
+    if (lecturer) {
+      profilesSection.style.display = "flex";
+      lecturersHomeSection.style.display = "none";
+      getLecturerProfile(lecturer);
+    }
+  } else {
+    profilesSection.style.display = "none";
+    lecturersHomeSection.style.display = "block";
+  }
+});
+
+//Used for smoother loading of the lecturers personal profiles
+document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const idFromUrl = urlParams.get("id");
 

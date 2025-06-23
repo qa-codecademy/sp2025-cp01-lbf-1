@@ -20,12 +20,14 @@
     <title>LittleBig Founders</title>
     <link rel="stylesheet" href="./src/styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
     <script src="./src/scripts/script.js"></script>
     <script type="module" src="./src/data/program.data.js"></script>
     <script type="module" src="./src/services/program.service.js"></script>
-  <body style="font-family: 'M PLUS Rounded 1c', sans-serif" class="m-0 b-0 overflow-x-hidden scroll-smooth bg-[#D9DCE2]  font-bold overflow-y-auto">
+  </head>
+  <body
+    style="font-family: 'M PLUS Rounded 1c', sans-serif"
+    class="m-0 b-0 overflow-x-hidden scroll-smooth bg-[#D9DCE2] font-bold overflow-y-auto"
+  >
     <!-- Navbar -->
     <nav
       class="max-[1160px]:mx-1 sticky top-4 z-50 bg-white rounded-3xl px-6 py-2 max-w-6xl mx-auto flex items-center justify-between mt-8 flex-nowrap overflow-hidden"
@@ -60,10 +62,20 @@
         class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
       >
         <input
+          id="search"
+          list="search-list"
+          autocomplete="off"
           type="text"
           placeholder="Пребарај..."
           class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
+        <ul
+          class="fixed rounded-3xl w-60 bg-white mt-1 text-gray-600 ml-3"
+          id="search-list"
+          style="display: none"
+        ></ul>
+        <datalist id="search-list"> </datalist>
+
         <span
           class="absolute inset-y-0 right-2 flex items-center text-gray-400"
         >
@@ -111,7 +123,9 @@
       <a href="./about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
       <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
       <a href="./lecturers/index.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
-      <a href="./methodology/index.html" class="hover:text-blue-600">МЕТОДОЛОГИЈА</a>
+      <a href="./methodology/index.html" class="hover:text-blue-600"
+        >МЕТОДОЛОГИЈА</a
+      >
       <a href="./service/index.html" class="hover:text-blue-600">УСЛУГИ</a>
       <a href="./contact/index.html" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
@@ -579,7 +593,7 @@
         >
       </div>
     </section>
-    <footer class="bg-[#415577]  text-white w-full">
+    <footer class="bg-[#415577] text-white w-full">
       <!-- Top Section -->
       <div
         class="flex flex-col lg:flex-row justify-evenly items-center lg:items-start gap-12 py-6"
@@ -608,9 +622,21 @@
         <div
           class="flex flex-wrap justify-center items-center gap-4 text-center my-auto"
         >
-          <a target="_blank" href="#" class="hover:underline">LittleBigFounders-App</a>
-          <a target="_blank" href="https://www.facebook.com/people/LittleBig-Founders/61574958621497" class="hover:underline">Facebook</a>
-          <a target="_blank" href="https://www.instagram.com/littlebigfounders/" class="hover:underline">Instagram</a>
+          <a target="_blank" href="#" class="hover:underline"
+            >LittleBigFounders-App</a
+          >
+          <a
+            target="_blank"
+            href="https://www.facebook.com/people/LittleBig-Founders/61574958621497"
+            class="hover:underline"
+            >Facebook</a
+          >
+          <a
+            target="_blank"
+            href="https://www.instagram.com/littlebigfounders/"
+            class="hover:underline"
+            >Instagram</a
+          >
           <a target="_blank" href="#" class="hover:underline">LinkedIn</a>
         </div>
       </div>
@@ -633,18 +659,32 @@
           <h2 class="mb-2 underline text-lg decoration-red-600 text-center">
             Навигација
           </h2>
-          <div
-            class="flex flex-wrap gap-16 ml-8 justify-center"
-          >
+          <div class="flex flex-wrap gap-16 ml-8 justify-center">
             <ul class="flex flex-col">
               <li><a href="./index.html" class="hover:underline">Дома</a></li>
-              <li><a href="./about-us/index.html" class="hover:underline">За нас</a></li>
+              <li>
+                <a href="./about-us/index.html" class="hover:underline"
+                  >За нас</a
+                >
+              </li>
               <li><a href="#" class="hover:underline">Програми</a></li>
             </ul>
             <ul class="flex flex-col">
-              <li><a href="./lecturers/index.html" class="hover:underline">Предавачи</a></li>
-              <li><a href="./methodology/index.html" class="hover:underline">Методологија</a></li>
-              <li><a href="./service/index.html" class="hover:underline">Услуги</a></li>
+              <li>
+                <a href="./lecturers/index.html" class="hover:underline"
+                  >Предавачи</a
+                >
+              </li>
+              <li>
+                <a href="./methodology/index.html" class="hover:underline"
+                  >Методологија</a
+                >
+              </li>
+              <li>
+                <a href="./service/index.html" class="hover:underline"
+                  >Услуги</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -655,7 +695,9 @@
           >
             Контакт
           </p>
-          <div class="flex items-center mt-2 justify-center sm:justify-center lg:justify-start">
+          <div
+            class="flex items-center mt-2 justify-center sm:justify-center lg:justify-start"
+          >
             <img
               src="./src/img/phone-call.png"
               alt="phone-call"
@@ -663,12 +705,10 @@
             />
             <span>+389(0)70800651</span>
           </div>
-          <div class="flex items-center mt-4 justify-center justify-center lg:justify-start">
-            <img
-              src="./src/img/mail.png"
-              alt="mail"
-              class="w-6 h-6 mr-2"
-            />
+          <div
+            class="flex items-center mt-4 justify-center justify-center lg:justify-start"
+          >
+            <img src="./src/img/mail.png" alt="mail" class="w-6 h-6 mr-2" />
             <span>littlebigfounders@gmail.com</span>
           </div>
           <div
@@ -685,10 +725,10 @@
       </div>
       <hr />
       <div
-        class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left  px-4"
+        class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left px-4"
       >
         <div class="mb-5 mt-4 sm:ml-20 text-xs">
-          <p class="ml-0  xl:ml-32">
+          <p class="ml-0 xl:ml-32">
             <span class="text-[#C2F750]">©</span> 2025
             <span class="text-black">LittleBig Founders.</span> All Rights
             Reserved.
