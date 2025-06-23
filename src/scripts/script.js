@@ -10,7 +10,6 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("visible");
   mobileMenu.classList.toggle("mb-96");;
 });
-import ProgramService from "../services/program.service.js";
 
 const programImages = [
   "./src/img/business-kids(6-9 years).jpg",
@@ -87,8 +86,6 @@ function displayProgram(programId, program) {
 }
 
 // Lecturers
-import LecturersService from "../services/lecturers.service.js";
-
 const { data: lecturers } = LecturersService.getAll();
 
 const lecturersData = lecturers.map(({ id, fullName, photoUrl, role }) => ({
