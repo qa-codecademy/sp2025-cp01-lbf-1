@@ -103,6 +103,21 @@ export default class ProgramService {
     };
   }
 
+  static search(name) {
+    const trimmedName = name.trim();
+
+    if (trimmedName.length === 0) {
+      return [];
+    }
+    const programs = PROGRAMS;
+
+    const filteredPrograms = programs.filter(
+      (program) => program.name.toLowerCase().search(name.toLowerCase()) !== -1
+    );
+
+    return filteredPrograms;
+  }
+
   static getById(programId, charSlice) {
     const programs = ProgramService.getAll();
 
@@ -120,4 +135,3 @@ export default class ProgramService {
     return foundProgram;
   }
 }
-console.log(ProgramService.getAll());

@@ -49,10 +49,18 @@
         class="relative flex-shrink-1 w-36 sm:w-44 md:w-56 lg:w-64 transition-all"
       >
         <input
+          id="search"
+          list="search-list"
+          autocomplete="off"
           type="text"
           placeholder="Пребарај..."
           class="w-full pl-3 pr-10 py-1 border border-gray-600 rounded-3xl text-xs font-bold placeholder-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
+        <ul
+          class="fixed rounded-3xl w-60 bg-white mt-1 text-gray-600 ml-3"
+          id="search-list"
+          style="display: none"
+        ></ul>
         <span
           class="absolute inset-y-0 right-2 flex items-center text-gray-400"
         >
@@ -99,7 +107,9 @@
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
       <a href="#" class="hover:text-blue-600">ПРОГРАМИ</a>
-      <a href="../lecturers/index.html" class="hover:text-blue-600">ПРЕДАВАЧИ</a>
+      <a href="../lecturers/index.html" class="hover:text-blue-600"
+        >ПРЕДАВАЧИ</a
+      >
       <a href="../methodology/index.html" class="hover:text-blue-600"
         >МЕТОДОЛОГИЈА</a
       >
@@ -107,7 +117,7 @@
       <a href="#" class="hover:text-blue-600">КОНТАКТ</a>
     </div>
     <main>
-      <article id="lecturersHome">
+      <article id="lecturersHome" style="display: none">
         <h1
           class="text-center -mt-64 md:m-20 text-3xl md:text-4xl lg:text-5xl font-bold text-[#387B88]"
         >
@@ -138,7 +148,7 @@
           <button id="prevBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
             <
           </button>
-          <div> <span id="currentPage"></span>/ <span id="maxPage"></span></div>
+          <div><span id="currentPage"></span>/ <span id="maxPage"></span></div>
           <button id="nextBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
             >
           </button>
@@ -166,5 +176,6 @@
       <article id="profiles" style="display: none"></article>
     </main>
     <script type="module" src="./script.js"></script>
+    <script type="module" src="../src/scripts/script.js"></script>
   </body>
 </html>

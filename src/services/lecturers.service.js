@@ -2,7 +2,13 @@ import LECTURERS from "../data/lecturers.data.js";
 
 export default class LecturersService {
   static getAll(filters = {}) {
-    const { name, sortBy, direction = "asc", lecturersPerPage = 4, page = 1} = filters;
+    const {
+      name,
+      sortBy,
+      direction = "asc",
+      lecturersPerPage = 4,
+      page = 1,
+    } = filters;
     const storedData = localStorage.getItem("lecturers");
     if (!storedData) {
       localStorage.setItem("lecturers", JSON.stringify(LECTURERS));
@@ -63,10 +69,26 @@ export default class LecturersService {
     };
   }
 
+  static search(name) {
+    const trimmedName = name.trim();
+
+    if (trimmedName.length === 0) {
+      return [];
+    }
+    const lecturers = LECTURERS;
+
+    const filteredLecturers = lecturers.filter(
+      (lecturer) =>
+        lecturer.fullName.toLowerCase().search(name.toLowerCase()) !== -1
+    );
+
+    return filteredLecturers;
+  }
+
   static getById(id) {
     const lecturersJson = localStorage.getItem("lecturers");
 
-    const lecturers = JSON.parse(lecturersJson)
+    const lecturers = JSON.parse(lecturersJson);
     const lecturerId = id.toString();
 
     const foundLecturer = lecturers.find(
