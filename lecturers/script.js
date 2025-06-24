@@ -15,14 +15,6 @@ const currentPageSpan = document.getElementById("currentPage");
 const maxPageSpan = document.getElementById("maxPage");
 const pagination = document.getElementById("pagination");
 
-// Navbar
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("opacity-0");
-  mobileMenu.classList.toggle("invisible");
-  mobileMenu.classList.toggle("visible");
-  mobileMenu.classList.toggle("mb-72");
-});
-
 // colors for cards and profiles
 const colors = ["#cc4541", "#44597a", "#a26702", "#387b88"];
 
@@ -381,4 +373,11 @@ document.addEventListener("DOMContentLoaded", function () {
     profilesSection.style.display = "none";
     lecturersHomeSection.style.display = "block";
   }
+});
+// Navbar
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("opacity-0");
+  mobileMenu.classList.toggle("invisible");
+  mobileMenu.classList.toggle("visible");
+  mobileMenu.classList.toggle("mb-64");
 });
