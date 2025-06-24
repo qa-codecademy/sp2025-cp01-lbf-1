@@ -1,6 +1,6 @@
 import ProgramService from "../services/program.service.js";
 
-// Fetch all programs from the service
+// All programs from the service
 let allPrograms = ProgramService.getAll().data;
 
 // Images and colors for each program
@@ -13,42 +13,57 @@ const programColors = ["#CC4541", "#A26702", "#44597A"];
 
 // Section where cards will be shown
 const cardsContainer = document.getElementById("programSection");
+const noResultsElement = document.getElementById("noResultsFound");
 
 // Show all programs as cards
 function displayPrograms(programs) {
-  cardsContainer.innerHTML = ""; 
+  cardsContainer.innerHTML = "";
 
-  //[21.4rem]
+  if (programs.length === 0) {
+    noResultsElement.classList.remove("hidden");
+  } else {
+    noResultsElement.classList.add("hidden");
+  }
 
-  programs.forEach((program) => {
+  programs.forEach((program, index) => {
     const color = programColors[program.id - 1];
     const image = programImages[program.id - 1];
 
     const article = document.createElement("article");
-    article.className = `rounded-[35px] w-4/4 [@media(min-width:410px)]:w-[22rem] h-[25rem] flex flex-col bg-[${color}] justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl`;
+    article.className = `bg-[${color}] text-sm flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl rounded-[35px] [@media(min-width:410px)]:w-[22rem] `;
     article.id = program.id;
+
+    if (programs.length === 3 && index === programs.length - 1) {
+      article.classList.add("md:col-span-2", "[@media(min-width:1180px)]:col-span-1"); 
+    } 
 
     // Adding content to the card
     article.innerHTML = `
-      <div class="relative mt-2" id="image${program.id}">
-        <img class="w-4/4 [@media(min-width:410px)]:w-[21.4rem] h-[12rem] rounded-[35px] z-0"
-             src="${image}"
-             alt="${program.name} image" />
-        <div class="absolute top-2 right-3 z-10 bg-[${color}] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center"
-             id="program${program.id}-ageLimit"></div>
+      <div class="relative mt-1" id="image${program.id}">
+        <img class="w-5/5 h-[12rem] px-1 rounded-[35px] z-0"
+          src="${image}"
+          alt="${program.name} image" 
+        />
+
+        <div class="absolute top-2 right-3 z-10 px-3 py-2 bg-[${color}] rounded-[35px] flex justify-center items-center"
+          id="program${program.id}-ageLimit"></div>
       </div>
 
-      <div class="text-center mt-2 mb-2">
+      <div class="text-center my-2">
         <h3 class="mb-1 text-xl" id="program${program.id}-title"></h3>
-        <p class="text-xs leading-5 mx-5 font-[500] tracking-wide"
-           id="program${program.id}-description"
-           style="font-family: 'M PLUS Rounded 1c', sans-serif"></p>
-        <button id="btn-${program.id}">▼</button>
+
+        <p class="text-center leading-5 px-4 font-[500]"
+          id="program${program.id}-description"
+          style="font-family: 'M PLUS Rounded 1c', sans-serif">
+        </p>
+
+        <button id="btn-${program.id}" class="text-base">▼</button>
       </div>
 
-      <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
+      <div class="flex items-center flex-nowrap mb-4 mt-2 mx-4 flex-col gap-3 [@media(min-width:410px)]:flex-row [@media(min-width:410px)]:gap-20">
         <p id="program${program.id}-price"></p>
-        <a href="#" class="bg-white rounded-[35px] text-[${color}] w-[7.3rem] h-[2rem] flex justify-center items-center">
+
+        <a href="#" class="bg-white rounded-[35px] text-[${color}] px-3 py-1.5">
           ПРИЈАВИ СЕ
         </a>
       </div>
@@ -87,13 +102,18 @@ function addProgramContent(programId, program) {
 
     image.style.display = expandedDescription ? "none" : "block";
 
-    if (programId === "2") {
-      /*document
-          .getElementById("description-div")
-          .classList.toggle("mt-7", expanded);*/
-      document
-        .getElementById("btn-2")
-        .classList.toggle("mt-5", expandedDescription);
+    const programDescription = document.getElementById(
+      `program${program.id}-description`
+    );
+
+    const article = document.querySelector("article");
+
+    if (expandedDescription) {
+      article.classList.add("h-auto");
+      programDescription.classList.add("text-justify");
+    } else {
+      article.classList.remove("h-auto");
+      programDescription.classList.remove("text-justify");
     }
   });
 
@@ -115,6 +135,8 @@ function addProgramContent(programId, program) {
       .replace("до", "-");
 }
 
+const programSelect = document.getElementById("programSelect");
+
 // Add program names
 function assigningPrograms(program) {
   const programOptionValue = program.name.toLowerCase().replace(/\s+/g, "-");
@@ -123,7 +145,7 @@ function assigningPrograms(program) {
     <option value="${programOptionValue}">${program.name}</option>
   `;
 
-  const programSelect = document.getElementById("programSelect");
+  //const programSelect = document.getElementById("programSelect");
   programSelect.innerHTML += programOptions;
 }
 
@@ -153,6 +175,7 @@ dropdownBtn.addEventListener("click", () => {
   dropdownMenu.classList.toggle("hidden");
 });
 
+// Assigning instructors
 assigningInstructors();
 
 // Track selected instructors
@@ -161,24 +184,21 @@ let selectedInstructors = [];
 const checkboxes = document.querySelectorAll('input[name="instructor"]');
 
 checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener('click', (e) => {
-    let instructor = e.target.value;
+  checkbox.addEventListener("click", (e) => {
+    let clickedInstructor = e.target.value;
 
-    if (!selectedInstructors.includes(instructor)) {
-      selectedInstructors.push(instructor);
+    if (!selectedInstructors.includes(clickedInstructor)) {
+      selectedInstructors.push(clickedInstructor);
     } else {
       selectedInstructors = selectedInstructors.filter(
-        (name) => name !== instructor
+        (name) => name !== clickedInstructor
       );
     }
   });
-})
+});
 
+// Assigning programs
 allPrograms.forEach(assigningPrograms);
-
-// for (let program of allPrograms) {
-//   assigningPrograms(program);
-// }
 
 // Sort option values
 let sortBy, direction;
@@ -191,49 +211,50 @@ const sortOptions = {
 };
 
 // Change sort value
-document.getElementById("programSortSelect").addEventListener("change", (e) => {
-  const selected = sortOptions[e.target.value];
+const programSortSelect = document.getElementById("programSortSelect");
 
-  if (selected) {
-    ({ sortBy, direction } = selected);
+programSortSelect.addEventListener("change", (e) => {
+  const selectedOption = sortOptions[e.target.value];
+
+  if (selectedOption) {
+    ({ sortBy, direction } = selectedOption);
   }
 });
 
 // Reset inputs on page load
-const programSortSelect = document.getElementById("programSortSelect");
+const selectedProgramValue = programSortSelect.value;
+const selectedOption = sortOptions[selectedProgramValue];
 
-const selectedProgramValue = programSortSelect.value; 
-const selected = sortOptions[selectedProgramValue];
-
-if (selected) {
-  ({ sortBy, direction } = selected);
+if (selectedOption) {
+  ({ sortBy, direction } = selectedOption);
 }
 
 document.getElementById("priceFromInput").value = "";
 document.getElementById("priceToInput").value = "";
 document.getElementById("ageInput").value = "";
 
-
 // When user clicks filter button
 document.getElementById("filterBtn").addEventListener("click", () => {
-  const programSelect = document.getElementById("programSelect");
-  let selectedValue = programSelect.value.replace(/-/g, " ");
-  if (selectedValue === "програма") {
-    selectedValue = "";
+  //const programSelect = document.getElementById("programSelect");
+  let programSelectedValue = programSelect.value.replace(/-/g, " ");
+  if (programSelectedValue === "програми") {
+    programSelectedValue = "";
   }
 
-  let priceFrom = document.getElementById("priceFromInput").value;
-  let priceTo = document.getElementById("priceToInput").value;
-  let ageNum = document.getElementById("ageInput").value;
+  dropdownMenu.classList.add("hidden");
+
+  let priceFromInput = document.getElementById("priceFromInput").value;
+  let priceToInput = document.getElementById("priceToInput").value;
+  let ageInput = document.getElementById("ageInput").value;
 
   // Get filtered programs
   let filteredPrograms = ProgramService.getAll({
-    name: selectedValue,
-    PriceFrom: priceFrom,
-    PriceTo: priceTo,
+    name: programSelectedValue,
+    PriceFrom: priceFromInput,
+    PriceTo: priceToInput,
     instructors: selectedInstructors,
     sortBy: sortBy,
-    age: ageNum,
+    age: ageInput,
     direction: direction,
   }).data;
 
@@ -255,22 +276,24 @@ document.getElementById("filterBtn").addEventListener("click", () => {
   }
 
   // Set layout based on how many results
-  const programSection = document.getElementById("programSection");
-
-  let layoutClass =
-    "grid gap-20 px-6 lg:px-24 text-white mt-16 tracking-wide justify-items-center";
+  cardsContainer.classList.remove(
+    "grid-cols-1",
+    "md:grid-cols-2",
+    "[@media(min-width:1180px)]:grid-cols-3"
+  );
 
   if (filteredPrograms.length === 1) {
-    layoutClass += "grid-cols-1";
+    cardsContainer.classList.add("grid-cols-1");
   } else if (filteredPrograms.length === 2) {
-    layoutClass += "grid-cols-1 md:grid-cols-2";
+    cardsContainer.classList.add("grid-cols-1", "md:grid-cols-2");
   } else {
-    layoutClass += "grid-cols-1 md:grid-cols-2 xl:grid-cols-3";
+    cardsContainer.classList.add(
+      "grid-cols-1",
+      "md:grid-cols-2",
+      "[@media(min-width:1180px)]:grid-cols-3"
+    );
   }
-
-  programSection.className = layoutClass;
 
   // Show new results
   displayPrograms(filteredPrograms);
 });
-

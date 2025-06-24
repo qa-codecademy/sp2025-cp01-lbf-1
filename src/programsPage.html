@@ -117,7 +117,7 @@
 
     <!-- Main Container -->
     <main
-      class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center"
+      class="bg-[#D9DCE2] font-bold flex flex-col justify-center items-center tracking-wide"
     >
       <!-- Page Header -->
       <section class="-mt-52 md:mt-12">
@@ -129,27 +129,46 @@
       </section>
 
       <!-- Filter Section -->
-      <section class="mt-12 text-sm flex flex-col [@media(min-width:800px)]:flex-row justify-center items-center gap-5">
+      <section
+        class="mt-12 text-sm flex flex-col justify-center items-center gap-6 [@media(min-width:800px)]:flex-row"
+      >
         <!-- Program Selector -->
-         <div>
-          <label for="allPrograms" class="mr-1">Програми:</label>  
-          <select name="allPrograms" id="programSelect" class="text-center p-2 rounded-md">
-            <option value="програма">Програма</option>
+        <div>
+          <select
+            id="programSelect"
+            class="text-center p-2 rounded-md"
+          >
+            <option value="програми">Сите програми</option>
           </select>
         </div>
 
         <!-- Age Input -->
         <div>
-          <input type="number" id="ageInput" class="w-24 p-2 rounded-md text-center" placeholder="Возраст">
+          <input
+            type="number"
+            id="ageInput"
+            class="w-24 p-2 rounded-md text-center"
+            placeholder="Возраст"
+          />
         </div>
 
         <!-- Price Range Inputs -->
         <div>
           <fieldset class="border border-gray-400 p-4 text-center">
-            <legend class="mx-auto px-2 text-center">Цена (од-до)</legend>
+            <legend class="mx-auto px-2">Цена (од-до)</legend>
 
-            <input type="number" id="priceFromInput" class="w-20 p-1 rounded-md text-center mr-2" placeholder="3000">
-            <input type="number" id="priceToInput" class="w-20 p-1 rounded-md text-center" placeholder="3500">
+            <input
+              type="number"
+              id="priceFromInput"
+              class="w-20 p-1 text-center rounded-md mr-2"
+              placeholder="3000"
+            />
+            <input
+              type="number"
+              id="priceToInput"
+              class="w-20 p-1 text-center rounded-md"
+              placeholder="3500"
+            />
           </fieldset>
         </div>
 
@@ -159,18 +178,26 @@
           <button id="dropdownButton" class="bg-white p-2 rounded-md mb-1">
             Инструктори ⌵
           </button>
-      
-          <div id="dropdownMenu" class="hidden bg-white absolute left-1/2 translate-x-[-50%] rounded-md z-30 min-w-max"></div>
+
+          <div
+            id="dropdownMenu"
+            class="hidden bg-white absolute left-1/2 translate-x-[-50%] rounded-md z-30 min-w-max"
+          ></div>
         </div>
-       
       </section>
 
       <!-- Sorting Section -->
-      <section class="mt-5 text-sm flex flex-col [@media(min-width:800px)]:flex-row justify-center items-center">
+      <section
+        class="mt-5 text-sm flex flex-col justify-center items-center [@media(min-width:800px)]:flex-row"
+      >
         <!-- Sort Selector -->
         <div>
-          <label for="sortBy" class="mr-1">Сортирај по:</label>
-          <select name="sortBy" id="programSortSelect" class="text-center p-2 rounded-md mr-5">
+          <label for="sortBy" class="mr-0.5">Сортирај по:</label>
+          <select
+            name="sortBy"
+            id="programSortSelect"
+            class="text-center p-2 rounded-md mr-5"
+          >
             <option value="sortByNameAsc">Име: А - Ш</option>
             <option value="sortByNameDesc">Име: Ш - А</option>
             <option value="sortByPriceAsc">Цена: ниска - висока</option>
@@ -179,18 +206,28 @@
         </div>
 
         <!-- Filter Button -->
-        <button type="button" id="filterBtn" class="p-2 bg-[#387B88] mt-5 text-white rounded-md duration-500 ease-in-out hover:scale-105 [@media(min-width:800px)]:mt-0">Филтрирај</button>
+        <button
+          type="button"
+          id="filterBtn"
+          class="p-2 bg-[#387B88] mt-5 text-white rounded-md duration-500 ease-in-out hover:scale-105 [@media(min-width:800px)]:mt-0"
+        >
+          Филтрирај
+        </button>
       </section>
-      
+
       <!-- Program Cards-->
       <section
         id="programSection"
-        class="text-white mt-16 tracking-wide justify-items-center grid grid-cols-1 md:grid-cols-2 [@media(min-width:1180px)]:grid-cols-3 gap-20 px-10 "
+        class="text-white mt-16 tracking-wide justify-items-center grid grid-cols-1 md:grid-cols-2 [@media(min-width:1180px)]:grid-cols-3 gap-20 px-10 items-start"
       ></section>
+
+      <!-- No results found -->
+      <h1 class="text-red-600 text-xl text-center mx-2" id="noResultsFound">Нема резултати кои одговараат на избраните филтри</h1> 
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+    </footer>
 
     <script src="./script.js"></script>
     <script type="module" src="./scripts/programsScript.js"></script>
