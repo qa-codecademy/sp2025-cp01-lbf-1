@@ -1,5 +1,15 @@
 import ProgramService from "../src/services/program.service.js";
 
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("opacity-0");
+  mobileMenu.classList.toggle("invisible");
+  mobileMenu.classList.toggle("visible");
+  mobileMenu.classList.toggle("mb-96");
+});
+
 // All programs from the service
 let allPrograms = ProgramService.getAll().data;
 
@@ -66,7 +76,7 @@ function displayPrograms(programs) {
       <div class="flex items-center flex-nowrap mb-4 mt-2 mx-4 flex-col gap-3 [@media(min-width:410px)]:flex-row [@media(min-width:410px)]:gap-20">
         <p id="program${program.id}-price"></p>
 
-        <a href="../about-us/index.html" class="bg-white rounded-[35px] text-[${color}] px-3 py-1.5">
+        <a href="../contact/index.html" class="bg-white rounded-[35px] text-[${color}] px-3 py-1.5">
           ПРИЈАВИ СЕ
         </a>
       </div>
@@ -113,10 +123,8 @@ function addProgramContent(programId, program) {
 
     if (expandedDescription) {
       article.classList.add("h-auto");
-      programDescription.classList.add("text-justify");
     } else {
       article.classList.remove("h-auto");
-      programDescription.classList.remove("text-justify");
     }
   });
 
