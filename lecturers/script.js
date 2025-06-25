@@ -281,7 +281,7 @@ export function getLecturerProfile(lecturer) {
   lecturerHTML += lecturer.programs.map((program) => {
     return `<p>
               <span class="text-[${colors[Number(lecturer.id) - 1]}]">
-                <a href="">${program.title} </a>
+                <a href="../programs/index.html">${program.title} </a>
               </span><span> ${program.ageGroup}</span>
               <span class="text-sm">${program.description}</span>
             </p>`;

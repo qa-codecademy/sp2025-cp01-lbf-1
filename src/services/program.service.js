@@ -43,7 +43,7 @@ export default class ProgramService {
 
     parsedData.forEach(
       (program) =>
-        (program.shortDescription = program.description.slice(0, 155))
+        (program.shortDescription = program.description.slice(0, 148))
     );
 
     // Филтри за програми
