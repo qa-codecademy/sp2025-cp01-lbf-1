@@ -379,5 +379,5 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("opacity-0");
   mobileMenu.classList.toggle("invisible");
   mobileMenu.classList.toggle("visible");
-  mobileMenu.classList.toggle("mb-64");
+  mobileMenu.classList.toggle("mb-96");
 });

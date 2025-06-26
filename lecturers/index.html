@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../src/styles/style.css" />
     <title>Предавачи</title>
     <script
       src="https://kit.fontawesome.com/d32ad62e17.js"
@@ -17,7 +18,7 @@
     ></script>
   </head>
   <body
-    class="bg-[#D9DCE2] font-bold min-h-screen"
+    class="bg-[#D9DCE2] font-bold"
     style="font-family: 'M PLUS Rounded 1c', sans-serif"
   >
     <nav
@@ -106,7 +107,7 @@
     <!-- Mobile  -->
     <div
       id="mobileMenu"
-      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+      class="max-[768px]:mx-1 flex mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
     >
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
@@ -123,7 +124,7 @@
     <main>
       <article id="lecturersHome" style="display: none">
         <h1
-          class="text-center md:m-20 text-4xl md:text-5xl lg:text-6xl font-bold text-[#387B88]"
+          class="text-center -mt-80 md:m-20 text-4xl md:text-5xl lg:text-6xl font-bold text-[#387B88]"
         >
           ТИМОТ <span class="text-[#1F2C3D]">ШТО</span> ИНСПИРИРА
         </h1>
@@ -150,7 +151,7 @@
           class="flex flex-row max-w-lg justify-between mx-auto text-[#1F2C3D]"
         >
           <button id="prevBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
-            <
+            
           </button>
           <div><span id="currentPage"></span>/ <span id="maxPage"></span></div>
           <button id="nextBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
@@ -249,9 +250,9 @@
           </h2>
           <div class="flex gap-16 justify-center">
             <ul class="flex flex-col">
-              <li><a href="./index.html" class="hover:underline">Дома</a></li>
+              <li><a href="../index.html" class="hover:underline">Дома</a></li>
               <li>
-                <a href="./about-us/index.html" class="hover:underline"
+                <a href="../about-us/index.html" class="hover:underline"
                   >За нас</a
                 >
               </li>
@@ -263,17 +264,15 @@
             </ul>
             <ul class="flex flex-col">
               <li>
-                <a href="./lecturers/index.html" class="hover:underline"
-                  >Предавачи</a
-                >
+                <a href="./index.html" class="hover:underline">Предавачи</a>
               </li>
               <li>
-                <a href="./methodology/index.html" class="hover:underline"
+                <a href="../methodology/index.html" class="hover:underline"
                   >Методологија</a
                 >
               </li>
               <li>
-                <a href="./service/index.html" class="hover:underline"
+                <a href="../service/index.html" class="hover:underline"
                   >Услуги</a
                 >
               </li>
@@ -327,6 +326,5 @@
       </div>
     </footer>
     <script type="module" src="./script.js"></script>
-    <script type="module" src="../src/scripts/script.js"></script>
   </body>
 </html>
