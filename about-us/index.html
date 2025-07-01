@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LittleBig Founders</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="../docs/client-info/image.png">
+    <link rel="icon" type="image/x-icon" href="../docs/client-info/image.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../src/styles/style.css" />
     <script
       src="https://kit.fontawesome.com/d32ad62e17.js"
       crossorigin="anonymous"
@@ -100,7 +101,7 @@
     <!-- Mobile  -->
     <div
       id="mobileMenu"
-      class="max-[768px]:mx-1 mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex flex-col transition-all duration-500 ease-in-out"
+      class="mobile-menu sticky top-20 z-50 max-[768px]:mx-1 md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex flex-col transition-all duration-500 ease-in-out"
     >
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
@@ -116,7 +117,7 @@
     </div>
 
     <!-- About us page -->
-    <main class="main-content mb-24">
+    <main class="main-content mb-24 mx-auto">
       <section class="px-4 pt-10 text-[#2B2B2B] -mt-72 md:mt-10">
         <h1
           class="text-4xl lg:text-6xl md:text-5xl text-[#44597A] mb-16 text-center"
@@ -163,7 +164,7 @@
       </section>
 
       <section
-        class="bg-opacity-80 bg-[#387B88] text-[#1F2C3D] py-10 px-6 rounded-[50px] max-w-6xl md:mx-20 md:place-self-center mx-10 text-center -mb-[7rem] relative"
+        class="bg-opacity-80 bg-[#387B88] text-[#1F2C3D] py-10 px-6 rounded-[50px] max-w-6xl md:place-self-center lg:mx-auto mx-4 text-center -mb-[7rem] relative"
       >
         <p class="md:text-2xl text-xl">
           Со иновативни програми засновани на
@@ -200,7 +201,7 @@
       </section>
 
       <section
-        class="bg-white border border-[#387B88] rounded-3xl shadow-md max-w-[90rem] md:mx-1 md:mx-10 md:place-self-center mx-6 my-10 p-6 md:p-10"
+        class="bg-white border border-[#387B88] rounded-3xl shadow-md max-w-[90rem] mx-4 md:place-self-center lg:mx-auto my-10 p-6 md:p-10"
       >
         <div
           class="grid grid-cols-1 md:grid-cols-[auto_min-content_auto] gap-2 mt-[5rem] md:mt-[7rem] items-start"
@@ -347,9 +348,7 @@
             <ul class="flex flex-col">
               <li><a href="../index.html" class="hover:underline">Дома</a></li>
               <li>
-                <a href="./index.html" class="hover:underline"
-                  >За нас</a
-                >
+                <a href="./index.html" class="hover:underline">За нас</a>
               </li>
               <li>
                 <a href="../programs/index.html" class="hover:underline"

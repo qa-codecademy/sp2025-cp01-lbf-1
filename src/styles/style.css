@@ -3,8 +3,9 @@ body {
 }
 
 .mobile-menu a {
-  display: block;
+  display: flex;
   padding: 0.5rem 0;
+  justify-content: center;
 }
 
 nav a {

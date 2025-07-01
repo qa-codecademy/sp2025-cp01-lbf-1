@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../src/styles/style.css" />
-    <link rel="icon" type="image/x-icon" href="../docs/client-info/image.png">
+    <link rel="icon" type="image/x-icon" href="../docs/client-info/image.png" />
     <title>Предавачи</title>
     <script
       src="https://kit.fontawesome.com/d32ad62e17.js"
@@ -108,7 +108,7 @@
     <!-- Mobile  -->
     <div
       id="mobileMenu"
-      class="max-[768px]:mx-1 flex mobile-menu md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
+      class="mobile-menu sticky top-20 z-50 max-[768px]:mx-1 flex md:hidden opacity-0 invisible bg-white rounded-xl px-6 py-4 max-w-6xl mx-auto text-gray-700 text-sm font-bold mt-6 space-y-4 flex-col transition-all duration-500 ease-in-out"
     >
       <a href="../index.html" class="hover:text-blue-600">ДОМА</a>
       <a href="../about-us/index.html" class="hover:text-blue-600">ЗА НАС </a>
@@ -151,9 +151,10 @@
           id="pagination"
           class="flex flex-row max-w-lg justify-between mx-auto text-[#1F2C3D]"
         >
-          <button id="prevBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
-            
-          </button>
+          <button
+            id="prevBtn"
+            class="border-4 border-[#387B88] p-4 rounded-xl"
+          ></button>
           <div><span id="currentPage"></span>/ <span id="maxPage"></span></div>
           <button id="nextBtn" class="border-4 border-[#387B88] p-4 rounded-xl">
             >
@@ -281,8 +282,10 @@
           </div>
         </div>
         <!-- Contact -->
-        <div class="flex flex-col items-center text-left ">
-          <h2 class="mb-2 underline decoration-[#CC4541] text-center">Контакт</h2>
+        <div class="flex flex-col items-center text-left">
+          <h2 class="mb-2 underline decoration-[#CC4541] text-center">
+            Контакт
+          </h2>
 
           <div class="flex flex-col w-fit">
             <div class="flex gap-3">

@@ -376,8 +376,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Navbar
 menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("opacity-0");
-  mobileMenu.classList.toggle("invisible");
-  mobileMenu.classList.toggle("visible");
-  mobileMenu.classList.toggle("mb-96");
+  const isHidden = mobileMenu.classList.contains("invisible");
+
+  if (isHidden) {
+    mobileMenu.classList.remove("opacity-0", "invisible");
+    mobileMenu.classList.add("opacity-100", "visible");
+  } else {
+    mobileMenu.classList.remove("opacity-100", "visible");
+    mobileMenu.classList.add("opacity-0", "invisible");
+  }
 });
