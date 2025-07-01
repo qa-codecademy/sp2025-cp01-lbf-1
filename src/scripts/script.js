@@ -19,63 +19,106 @@ const programImages = [
 const programColors = ["#CC4541", "#A26702", "#44597A"];
 const cardsContainer = document.getElementById("programSection");
 const programs = ProgramService.getAll().data;
-programs.forEach((program, index) => {
-  const color = programColors[index];
-  const image = programImages[index];
-  const article = document.createElement("article");
-  article.className = `rounded-[35px] w-[22rem] h-[25rem] flex flex-col bg-[${color}] justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl`;
-  article.innerHTML = `
-    <div class="relative mt-2" id="image${program.id}">
-      <img
-        class="w-[21.4rem] h-[12rem] rounded-[35px] z-0"
-        src="${image}"
-        alt="${program.name} image"
-      />
-      <div
-        class="absolute top-2 right-3 z-10 bg-[${color}] w-[7.5rem] h-[2rem] rounded-[35px] text-xs flex justify-center items-center "
-        id="program${program.id}-ageLimit"
-      ></div>
-    </div>
-    <div class="text-center mt-2 mb-2">
-      <h3 class="mb-1 text-xl" id="program${program.id}-title"></h3>
-      <p style="font-family: 'M PLUS Rounded 1c', sans-serif" class="text-xs font-[M_PLUS_Rounded_1c] leading-5 mx-5 font-[500] tracking-wide" id="program${program.id}-description"></p>
-      <button id="btn-${program.id}">▼</button>
-    </div>
-    <div class="flex items-center gap-24 mb-4 mt-2 text-xs">
-      <p id="program${program.id}-price"></p>
-      <a href="../../contact/index.html" class="bg-white rounded-[35px] text-[${color}] w-[7.3rem] h-[2rem] flex justify-center items-center">
-        ПРИЈАВИ СЕ
-      </a>
-    </div>
-  `;
-  cardsContainer.appendChild(article);
-  displayProgram(program.id, program);
-});
-function displayProgram(programId, program) {
+function displayPrograms(programs) {
+  cardsContainer.innerHTML = "";
+
+  programs.forEach((program, index) => {
+    const color = programColors[program.id - 1];
+    const image = programImages[program.id - 1];
+
+    const article = document.createElement("article");
+    article.className = `bg-[${color}] text-sm flex flex-col justify-center items-center duration-500 ease-in-out hover:scale-105 hover:shadow-2xl rounded-[35px] [@media(min-width:410px)]:w-[22rem] `;
+    article.id = program.id;
+
+    if (programs.length === 3 && index === programs.length - 1) {
+      article.classList.add(
+        "md:col-span-2",
+        "[@media(min-width:1180px)]:col-span-1"
+      );
+    }
+
+    // Adding content to the card
+    article.innerHTML = `
+      <div class="relative mt-1" id="image${program.id}">
+        <img class="w-full flex items-center h-[12rem] px-1 rounded-[35px] z-0"
+          src="${image}"
+          alt="${program.name} image" 
+        />
+
+        <div class="absolute top-2 right-3 z-10 px-3 py-2 bg-[${color}] rounded-[35px] flex justify-center items-center"
+          id="program${program.id}-ageLimit"></div>
+      </div>
+
+      <div class="text-center my-2">
+        <h3 class="mb-1 text-xl" id="program${program.id}-title"></h3>
+
+        <p class="text-center leading-5 px-4 font-[500]"
+          id="program${program.id}-description"
+          style="font-family: 'M PLUS Rounded 1c', sans-serif">
+        </p>
+
+        <button id="btn-${program.id}" class="text-base">▼</button>
+      </div>
+
+      <div class="flex items-center flex-nowrap mb-4 mt-2 mx-4 flex-col gap-3 [@media(min-width:410px)]:flex-row [@media(min-width:410px)]:gap-20">
+        <p id="program${program.id}-price"></p>
+
+        <a href="../contact/index.html" class="bg-white rounded-[35px] text-[${color}] px-3 py-1.5">
+          ПРИЈАВИ СЕ
+        </a>
+      </div>
+    `;
+    cardsContainer.appendChild(article);
+    addProgramContent(program.id, program);
+  });
+}
+displayPrograms(programs)
+
+function addProgramContent(programId, program) {
   document.getElementById(`program${programId}-title`).innerText =
     program.name.toUpperCase();
-  let expanded = false;
-  const btn = document.getElementById(`btn-${programId}`);
+
+  let expandedDescription = false;
+  const showDescriptionBtn = document.getElementById(`btn-${programId}`);
   const descriptionElement = document.getElementById(
     `program${programId}-description`
   );
   const image = document.getElementById(`image${programId}`);
   const shortDescription = (descriptionElement.innerText =
     program.shortDescription + "...");
-  btn.addEventListener("click", () => {
-    expanded = !expanded;
-    descriptionElement.innerText = expanded
+
+  // Toggle full/short description on click
+  showDescriptionBtn.addEventListener("click", () => {
+    expandedDescription = !expandedDescription;
+
+    descriptionElement.innerText = expandedDescription
       ? program.description
       : shortDescription;
-    btn.innerText = expanded ? "▲" : "▼";
-    image.style.display = expanded ? "none" : "block";
+
+    showDescriptionBtn.innerText = expandedDescription ? "▲" : "▼";
+
+    image.style.display = expandedDescription ? "none" : "block";
+
+    
+
+    const article = document.querySelector("article");
+
+    if (expandedDescription) {
+      article.classList.add("h-auto");
+    } else {
+      article.classList.remove("h-auto");
+    }
   });
+
+  // Show program price
   document.getElementById(`program${programId}-price`).innerText =
     "MKD " +
     program.price.toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
+
+  // Show age range
   document.getElementById(`program${programId}-ageLimit`).innerText =
     program.forWho
       .replace(
