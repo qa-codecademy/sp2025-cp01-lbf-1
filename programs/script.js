@@ -120,9 +120,7 @@ function addProgramContent(programId, program) {
 
     image.style.display = expandedDescription ? "none" : "block";
 
-    const programDescription = document.getElementById(
-      `program${program.id}-description`
-    );
+    
 
     const article = document.querySelector("article");
 
